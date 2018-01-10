@@ -43,12 +43,18 @@ const babelOptions = {
   ]
 }
 
+gulp.task('build:static',
+  async () => gulp.src(['src/static/**'], {base: 'src'})
+              .pipe(gulp.dest('dist/'))
+)
+
+// Pug Build
 gulp.task('build:pug',
   async () => gulp.src(['src/**/[^_]*.pug'])
               .pipe(pug(pugOptions))
               .pipe(gulp.dest('dist/'))
 )
-
+// Markdown Build
 gulp.task('build:markdown',
   async () => gulp.src(['src/**/*.md'])
               .pipe(markdown(markedOptions))
@@ -86,7 +92,8 @@ gulp.task('build', gulp.parallel(
   'build:pug',
   'build:markdown',
   'build:less',
-  'build:js'
+  'build:js',
+  'build:static',
 ))
 
 gulp.task('watch',
