@@ -30,6 +30,7 @@
     "gulp-markdown": "^1.2.0",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
+    "gulp-rework": "^2.0.0",
     "highlight.js": "^9.12.0",
     "less": "^2.7.2",
     "map-stream": "^0.0.7",
