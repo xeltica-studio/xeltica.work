@@ -4,10 +4,12 @@
 
 ## Build
 
-```
-$ git clone https://github.com/citringo/citringo.net
-$ cd citringo.net
-$ npm install && npm run build
+```sh
+git clone https://github.com/citringo/citringo.net
+
+cd citringo.net
+
+npm install && npm run build
 ```
 
 ## LICENSE
