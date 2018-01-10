@@ -1,6 +1,14 @@
-html
-	title ねこ
+extends _layout.pug
 
-body
-	h1 ねこ！
-	marquee ねいこ
+block meta
+	title Frontpage
+
+block content
+	h2 テスト
+	p pug のテスト
+	h2 コンテンツ
+	ul
+		li
+			a(href="neko.html") ねこ
+		li 
+			a(href="kani.html") かにおいしい
