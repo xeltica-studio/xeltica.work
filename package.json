@@ -1,0 +1,40 @@
+{
+  "name": "otyakai.github.io",
+  "version": "1.0.0",
+  "description": "otyakai website",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp watch",
+    "clean": "rm -rf dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/otyakai/otyakai.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/otyakai/otyakai.github.io/issues"
+  },
+  "homepage": "https://github.com/otyakai/otyakai.github.io#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.0",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "gh-pages": "^1.0.0",
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-layout": "^0.0.4",
+    "gulp-less": "^3.3.2",
+    "gulp-markdown": "^1.2.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "highlight.js": "^9.12.0",
+    "less": "^2.7.2",
+    "map-stream": "^0.0.7",
+    "postcss-cssnext": "^3.0.2",
+    "pug": "^2.0.0-rc.2",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

@@ -1,0 +1,6 @@
+# macOS Filesystem Metadata
+.DS_Store
+
+# Project Settings
+/node_modules
+/dist
