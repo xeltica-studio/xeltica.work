@@ -24,7 +24,7 @@
     "browser-sync": "^2.18.12",
     "browserify": "^14.4.0",
     "gh-pages": "^1.0.0",
-    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp": "^4.0.0",
     "gulp-layout": "^0.0.4",
     "gulp-less": "^3.3.2",
     "gulp-markdown": "^1.2.0",
