@@ -15,6 +15,9 @@ const cssnext = require('postcss-cssnext')
 const browserify = require('browserify')
 const babelify = require('babelify')
 
+const rework = require("gulp-rework")
+const reworkNpm = require("rework-npm")
+
 const pugOptions = {
   pretty: false
 }
@@ -74,6 +77,13 @@ gulp.task('build:less',
               .pipe(gulp.dest('dist/'))
 )
 
+gulp.task('build:css',
+  async () => gulp.src(['src/css/*.css'])
+              .pipe(rework(reworkNpm()))
+              .pipe(gulp.dest('dist/'))
+)
+
+
 gulp.task('build:js', async () => {
   const processor = (file) => {
     browserify(file.path, browserifyOptions)
@@ -94,6 +104,7 @@ gulp.task('build', gulp.parallel(
   'build:less',
   'build:js',
   'build:static',
+  'build:css',
 ))
 
 gulp.task('watch',
