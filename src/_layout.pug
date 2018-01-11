@@ -1,12 +1,16 @@
+doctype html
 mixin css(name)
 	link(href=name, rel="stylesheet", type="text/css", media="all")
 
 mixin js(name)
 	script(src=name)
 
-html
+html(lang="ja")
 	head
 		block meta
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
 		block style
 		// Bootstrap Rin
 		+css("http://cdn.honokak.osaka/rin/4.0.0-alpha.3/css/bootstrap.min.css")
@@ -15,19 +19,45 @@ html
 		// My Style
 		+css("/css/master.css")
 	body
+		
+					
 		header
 			block header
-
+			nav.navbar.navbar-light.navbar-fixed-top
+				.container
+					a.navbar-brand(href="/") Xeltica
+					button.navbar-toggler.hidden-sm-up.float-xs-right(type="button", data-toggle="collapse", data-target="#bar", aria-controls="navbar-header", aria-expanded="false", aria-label="Toggle navigation")
+						span.navbar-toggler-icon
+					.clearfix.hidden-sm-up
+					#bar.collapse.navbar-toggleable-xs
+						ul.nav.navbar-nav
+							li.nav-item
+								a.nav-link(href="product.html") Product
+							li.nav-item
+								a.nav-link(href="social.html") Social
+							li.nav-item
+								a.nav-link(href="link.html") Links
+							li.nav-item
+								a.nav-link(href="contacts.html") Contacts
+							li.nav-item
+								a.nav-link(href="//blog.citringo.net") Blog
+							li.nav-item
+								a.nav-link(href="//blog.citringo.net") Wyte
 		main
+			.top
 			block content
 
 		footer.text-muted
 			p (C)2018 Xeltica
+			p このコンテンツはMITライセンスで公開されています&nbsp;&nbsp;
+				a(href="https://github.com/citringo/xeltica-garage") GitHub
 			block footer
 
-		// UX 向上の為 javascript は後で読み込む
+		// Load js after the body contents because of UX improvement
 		block script
-		// Bootstrap
-		+js("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js")
 		// JQuery (required by bootstrap)
-		+js("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+		+js("//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+		// Clipboard (required by bootstrap)
+		+js("https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js")
+		// Bootstrap
+		+js("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js")

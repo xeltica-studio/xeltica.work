@@ -1,19 +1,53 @@
 extends _layout.pug
 
+mixin row(name, value)
+	tr
+		td= name
+		td= value
+
+
 block meta
-	title Frontpage
+	title ホームページ
 
 block content
-	.container
-		h2 テスト
-		p pug のテスト
-		h2 コンテンツ
-		ul
-			li
-				a(href="neko.html") ねこ
-			li 
-				a(href="kani.html") かにおいしい
-		img(src="static/img.png", alt="危険なコード")
-		p ↑ひどいコード
-		marquee ねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこねいこ
-		p ↑ひどいコード
+	.container-fluid
+		main.jumbotron.jumbotron-fluid
+			section#myname.text-lg-center.text-md-center.text-sm-center.text-xs-center
+				img.rounded-circle(width="256", src="static/cat.jpg", alt="Xelticat")
+				h1 Xeltica
+				p ゲームや音楽を作っている，普通の学生です．
+			section#introduction.container
+				h2 テキトーな自己紹介
+				table.table.table-striped
+					tbody
+						+row("名前", "ゼルチカ")
+						+row("年齢", "19歳")
+						+row("誕生日", "1998/11/29")
+						+row("趣味", "ゲーム開発/DTM")
+						+row("職業", "学生/エンジニア")
+						+row("好きなもの", "好き")
+						+row("嫌いなもの", "嫌い")
+			section#history.container
+				h2 テキトーな年表
+				table.table.table-striped
+					thead
+						tr
+							th 年代
+							th 出来事
+					tbody
+						+row("2011/4", "県内某中学に入学．まだ今の趣味とは関わりが薄かった．")
+						+row("2011/7", "Domino に出会い，MIDI での作曲をはじめる．")
+						+row("2011/8", "プロデルに出会い，プログラミングに足を突っ込み始める")
+						+row("2012/3", "Nintendo 3DSソフト「プチコンmkII」を手に入れ，，プログラミングをさらに磨く")
+						+row("2012/10", "プロデル製のゲーム「迷いワールド」という迷路ゲームを完成させ，文化祭で展示")
+						+row("2013/3", "プロデルの開発言語であることから C# という言語を知り，少しずつ触れるようになる")
+						+row("2014/4", "中学卒業．証書を受け取るときに先生に読み上げられた将来の夢は，ゲームクリエイター．")
+						+row("2014/4", "県内某高校に入学．パソコン部に所属する．")
+						+row("2014/4", "ゲーム「Defender Story」完成見込みがないため，同時開発していたMIDI音源「Music Sheet」を学祭で展示し，ウェブ公開．")
+						+row("2015/9", "ゲーム「Defender Story」 アルファ版を学祭で展示(完成には至らず)．")
+						+row("2016/9", "ゲーム「Take Up Jewel」 の学祭での展示 & 一般公開．")
+						+row("2017/2", "ソフトシンセ内蔵MIDIプレイヤー Groorine 完成．")
+						+row("2017/4", "都内某大学に入学．ゲーム制作サークルに入る．")
+						+row("2017/9", "都内IT企業に雇われ，アルバイトのエンジニアになる.")
+						+row("2018/1", "サークル新設を決意する.")
+						
