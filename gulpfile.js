@@ -18,6 +18,8 @@ const babelify = require('babelify')
 const rework = require("gulp-rework")
 const reworkNpm = require("rework-npm")
 
+const stylus = require("gulp-stylus")
+
 const pugOptions = {
   pretty: false
 }
@@ -27,6 +29,8 @@ const markedOptions = {
 }
 
 const lessOptions = {}
+
+const stylusOptions = {}
 
 const cssnextOptions = {
   browsers: '> 1% in JP' // 日本でシェア1%以上
@@ -68,6 +72,7 @@ gulp.task('build:markdown',
               .pipe(gulp.dest('dist/'))
 )
 
+// less Build
 gulp.task('build:less',
   async () => gulp.src(['src/**/[^_]*.less'])
               .pipe(less(lessOptions))
@@ -77,13 +82,17 @@ gulp.task('build:less',
               .pipe(gulp.dest('dist/'))
 )
 
-gulp.task('build:css',
-  async () => gulp.src(['src/css/*.css'])
-              .pipe(rework(reworkNpm()))
+// Stylus Build
+gulp.task('build:stylus', 
+  async() => gulp.src(['src/**/[^_]*.styl'])
+              .pipe(stylus(stylusOptions))
+              .pipe(postcss([
+                cssnext(cssnextOptions)
+              ]))
               .pipe(gulp.dest('dist/'))
 )
 
-
+// JavaScript Build
 gulp.task('build:js', async () => {
   const processor = (file) => {
     browserify(file.path, browserifyOptions)
@@ -98,15 +107,22 @@ gulp.task('build:js', async () => {
           .pipe(map(a => processor(a)))
 })
 
+// CSS Build
+gulp.task('build:css', gulp.parallel(
+  'build:stylus',
+  'build:less'
+))
+
+// All Build
 gulp.task('build', gulp.parallel(
   'build:pug',
   'build:markdown',
-  'build:less',
+  'build:css',
   'build:js',
   'build:static',
-  'build:css',
 ))
 
+// Browser Sync
 gulp.task('watch',
   gulp.series('build', async () => {
     browserSync({
@@ -119,6 +135,7 @@ gulp.task('watch',
       'src/**/*.pug',
       'src/**/*.md',
       'src/**/*.less',
+      'src/**/*.styl',
       'src/**/*.js'
     ], gulp.series(
       'build',
