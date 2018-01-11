@@ -1,14 +1,33 @@
+mixin css(name)
+	link(href=name, rel="stylesheet", type="text/css", media="all")
+
+mixin js(name)
+	script(src=name)
+
 html
 	head
 		block meta
-		block script
 		block style
+		// Bootstrap Rin
+		+css("http://cdn.honokak.osaka/rin/4.0.0-alpha.3/css/bootstrap.min.css")
+		// Font Awesome
+		+css("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+		// My Style
+		+css("/css/master.css")
 	body
 		header
-			h1 テストサイト
 			block header
+
 		main
 			block content
-		footer
+
+		footer.text-muted
 			p (C)2018 Xeltica
 			block footer
+
+		// UX 向上の為 javascript は後で読み込む
+		block script
+		// Bootstrap
+		+js("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js")
+		// JQuery (required by bootstrap)
+		+js("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
