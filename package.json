@@ -1,7 +1,7 @@
 {
-  "name": "otyakai.github.io",
+  "name": "Xeltica Garage",
   "version": "1.0.0",
-  "description": "otyakai website",
+  "description": "Xeltica's website",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/otyakai/otyakai.github.io.git"
+    "url": "git+ssh://git@github.com/citringo/xeltica-garage.git"
   },
-  "author": "",
+  "author": "Tosuke, Xeltica",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/otyakai/otyakai.github.io/issues"
+    "url": "https://github.com/citringo/xeltica-garage/issues"
   },
-  "homepage": "https://github.com/otyakai/otyakai.github.io#readme",
+  "homepage": "https://github.com/citringo/xeltica-garage/blob/master/readme.md",
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
