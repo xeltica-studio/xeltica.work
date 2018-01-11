@@ -21,7 +21,7 @@ const reworkNpm = require("rework-npm")
 const stylus = require("gulp-stylus")
 
 const pugOptions = {
-  pretty: false
+  pretty: true
 }
 
 const markedOptions = {
