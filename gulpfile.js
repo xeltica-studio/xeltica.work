@@ -19,6 +19,7 @@ const rework = require("gulp-rework")
 const reworkNpm = require("rework-npm")
 
 const stylus = require("gulp-stylus")
+const sass = require("gulp-sass")
 
 const pugOptions = {
   pretty: true
@@ -31,6 +32,8 @@ const markedOptions = {
 const lessOptions = {}
 
 const stylusOptions = {}
+
+const sassOptions = {}
 
 const cssnextOptions = {
   browsers: '> 1% in JP' // 日本でシェア1%以上
@@ -50,6 +53,7 @@ const babelOptions = {
   ]
 }
 
+// Copy Static Assets
 gulp.task('build:static',
   async () => gulp.src(['src/static/**'], {base: 'src'})
               .pipe(gulp.dest('dist/'))
@@ -92,6 +96,16 @@ gulp.task('build:stylus',
               .pipe(gulp.dest('dist/'))
 )
 
+// Sass Build
+gulp.task('build:sass',
+  async() => gulp.src(['src/**/[^_]*.s[ac]ss'])
+              .pipe(sass(sassOptions))
+              .pipe(postcss([
+                cssnext(cssnextOptions)
+              ]))
+              .pipe(gulp.dest('dist/'))
+)
+
 // JavaScript Build
 gulp.task('build:js', async () => {
   const processor = (file) => {
@@ -110,7 +124,8 @@ gulp.task('build:js', async () => {
 // CSS Build
 gulp.task('build:css', gulp.parallel(
   'build:stylus',
-  'build:less'
+  'build:less',
+  "build:sass",
 ))
 
 // All Build
@@ -135,8 +150,10 @@ gulp.task('watch',
       'src/**/*.pug',
       'src/**/*.md',
       'src/**/*.less',
+      'src/**/*.sass',
+      'src/**/*.scss',
       'src/**/*.styl',
-      'src/**/*.js'
+      'src/**/*.js',
     ], gulp.series(
       'build',
       async () => {

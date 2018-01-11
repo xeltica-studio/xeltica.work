@@ -1,3 +1,12 @@
 {
-	"pugbeautify.fillTab": true
+	"pugbeautify.fillTab": true,
+	"css.remoteStyleSheets": [
+		"http://cdn.honokak.osaka/rin/4.0.0-alpha.3/css/bootstrap.min.css",
+		"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+	],
+	"css.fileExtensions": [
+		"css",
+		"scss",
+		"styl"
+	]
 }
