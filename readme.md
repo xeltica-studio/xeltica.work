@@ -2,6 +2,17 @@
 
 ゼルチカ個人サイトのリポジトリ．
 
+静的サイトジェネレーターになっている．
+
+# Supported Technology
+
+- pug
+- less
+- stylus
+- js
+- markdown (with pug template)
+- other file to copy (should locate in `static` directory.
+
 ## Build
 
 ```sh
