@@ -1,0 +1,43 @@
+extends _layout.pug
+
+block meta
+	title 連絡先
+
+block style
+	+css("css/contact.css")
+
+block content
+	.container
+		h1 連絡先
+		p 私の連絡先は次の通りです．リンク申請，お問い合わせなどにお使いください．
+
+		.row
+			#twitter.col-sm-6
+				.card
+					.card-block
+						h3.card-title
+							span.fa.fa-twitter 
+							| &emsp;Twitter
+						p ゼルチカの Twitter アカウントです．創作の話がメインです．
+						p フォロー・非フォローなど気にしないので，お気軽に(なお失礼なきように)リプライ送ってください
+						<a href="https://twitter.com/intent/tweet?screen_name=Xelticat" class="twitter-mention-button" data-lang="ja" data-size="large" data-related="Xelticat">Xelticat にツイートする</a>
+										script.
+												!function (d, s, id) {
+														var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+														if (!d.getElementById(id)) {
+																js = d.createElement(s);
+																js.id = id;
+																js.src = p + '://platform.twitter.com/widgets.js';
+																fjs.parentNode.insertBefore(js, fjs);
+														}
+												}(document, 'script', 'twitter-wjs');
+			#mstdn.col-sm-6
+				.card
+					.card-block
+						h3.card-title Mastodon
+						p 
+							| ゼルチカはマストドンを
+							strong ときどき
+							| 利用しています．
+						p 不自由なTwitterが嫌いな方は，(一応)メインで監視している次のアカウントに，リプライを送ってください
+						a(href="https://mstdn.otyakai.xyz/@Xeltica") @xeltica@mstdn.otyakai.xyz
