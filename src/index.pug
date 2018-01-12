@@ -1,11 +1,15 @@
 extends _layout.pug
 
-mixin row(name, value)
-	tr
-		td= name
-		td= value
 
-
+mixin card(title, href, btn)
+	.card
+		.card-block
+			h3.card-title= title
+			if (block)
+				block
+			else
+				p No text.
+			a.btn.btn-primary.btn-lg.btn-block(href=href)= btn ? btn : "移動する"
 block meta
 	title ホームページ
 
@@ -18,36 +22,113 @@ block content
 				p ゲームや音楽を作っている，普通の学生です．
 			section#introduction.container
 				h2 テキトーな自己紹介
-				table.table.table-striped
+				table.table.table-inverse
 					tbody
-						+row("名前", "ゼルチカ")
-						+row("年齢", "19歳")
-						+row("誕生日", "1998/11/29")
-						+row("趣味", "ゲーム開発/DTM")
-						+row("職業", "学生/エンジニア")
-						+row("好きなもの", "肉，猫，メガネっ娘")
-						+row("嫌いなもの", "虫，脳筋")
+						tr
+							td 
+								span.fa.fa-user
+								span &emsp;名前
+							td ゼルチカ
+						tr
+							td 
+								span.fa.fa-birthday-cake
+								span &emsp;誕生日
+							td 1998/11/29
+						tr
+							td 
+								span.fa.fa-gamepad
+								span &emsp;趣味
+							td ゲーム開発/DTM
+						tr
+							td 
+								span.fa.fa-laptop
+								span &emsp;職業
+							td 学生/エンジニア
+						tr
+							td 
+								span.fa.fa-thumbs-up
+								span &emsp;好きなもの
+							td 肉，猫，メガネっ娘
+						tr
+							td 
+								span.fa.fa-thumbs-down
+								span &emsp;嫌いなもの
+							td 虫，脳筋
 			section#history.container
 				h2 テキトーな年表
-				table.table.table-striped
+				table.table.table-inverse
 					thead
 						tr
 							th 年代
 							th 出来事
 					tbody
-						+row("2011/4", "県内某中学に入学．まだ今の趣味とは関わりが薄かった．")
-						+row("2011/7", "Domino に出会い，MIDI での作曲をはじめる．")
-						+row("2011/8", "プロデルに出会い，プログラミングに足を突っ込み始める")
-						+row("2012/3", "Nintendo 3DSソフト「プチコンmkII」を手に入れ，，プログラミングをさらに磨く")
-						+row("2012/10", "プロデル製のゲーム「迷いワールド」という迷路ゲームを完成させ，文化祭で展示")
-						+row("2013/3", "プロデルの開発言語であることから C# という言語を知り，少しずつ触れるようになる")
-						+row("2014/4", "中学卒業．証書を受け取るときに先生に読み上げられた将来の夢は，ゲームクリエイター．")
-						+row("2014/4", "県内某高校に入学．パソコン部に所属する．")
-						+row("2014/4", "ゲーム「Defender Story」完成見込みがないため，同時開発していたMIDI音源「Music Sheet」を学祭で展示し，ウェブ公開．")
-						+row("2015/9", "ゲーム「Defender Story」 アルファ版を学祭で展示(完成には至らず)．")
-						+row("2016/9", "ゲーム「Take Up Jewel」 の学祭での展示 & 一般公開．")
-						+row("2017/2", "ソフトシンセ内蔵MIDIプレイヤー Groorine 完成．")
-						+row("2017/4", "都内某大学に入学．ゲーム制作サークルに入る．")
-						+row("2017/9", "都内IT企業に雇われ，アルバイトのエンジニアになる.")
-						+row("2018/1", "サークル新設を決意する.")
-						
+						tr
+							td 2011/4
+							td 県内某中学に入学．まだ今の趣味とは関わりが薄かった．
+						tr
+							td 2011/7
+							td Domino に出会い，MIDI での作曲をはじめる．
+						tr
+							td 2011/8
+							td プロデルに出会い，プログラミングに足を突っ込み始める
+						tr
+							td 2012/3
+							td Nintendo 3DSソフト「プチコンmkII」を手に入れ，，プログラミングをさらに磨く
+						tr
+							td 2012/10
+							td プロデル製のゲーム「迷いワールド」という迷路ゲームを完成させ，文化祭で展示
+						tr
+							td 2013/3
+							td プロデルの開発言語であることから C# という言語を知り，少しずつ触れるようになる
+						tr
+							td 2014/4
+							td 中学卒業．証書を受け取るときに先生に読み上げられた将来の夢は，ゲームクリエイター．
+						tr
+							td 2014/4
+							td 県内某高校に入学．パソコン部に所属する．
+						tr
+							td 2014/4
+							td ゲーム「Defender Story」完成見込みがないため，同時開発していたMIDI音源「Music Sheet」を学祭で展示し，ウェブ公開．
+						tr
+							td 2015/9
+							td ゲーム「Defender Story」 アルファ版を学祭で展示(完成には至らず)．
+						tr
+							td 2016/9
+							td ゲーム「Take Up Jewel」 の学祭での展示 & 一般公開．
+						tr
+							td 2017/2
+							td ソフトシンセ内蔵MIDIプレイヤー Groorine 完成．
+						tr
+							td 2017/4
+							td 都内某大学に入学．ゲーム制作サークルに入る．
+						tr
+							td 2017/9
+							td 都内IT企業に雇われ，アルバイトのエンジニアになる.
+						tr
+							td 2018/1
+							td サークル新設を決意する.
+			section#map.container
+				h2 サイトマップ
+				p このサイトには次のページがあります
+				// Website Layout
+				.row
+					.col-sm-6
+						+card("製品", "product.html")
+							p 開発した作品の紹介を行います
+					.col-sm-6
+						+card("ソーシャル", "social.html")
+							p 私のソーシャルアカウント一覧です
+				.row
+					.col-sm-6
+						+card("リンク", "links.html")
+							p 個人的なリンク一覧です
+					.col-sm-6
+						+card("連絡先", "contact.html")
+							p 開発した作品の紹介を行います
+				.row
+					.col-sm-6
+						+card("ぜるろぐ", "https://blog.citringo.net")
+							p 私のブログです．開発日記や雑記だらけなので，物好きな方は見てやってください
+					.col-sm-6
+						+card("Project Wyte", "wyte.html")
+							p Unity のための2Dアクションゲーム用アセット「Wyte Engine」を含む，Project Wyteのページです
