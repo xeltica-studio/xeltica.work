@@ -9,6 +9,7 @@
 - pug
 - less
 - stylus
+- sass
 - js
 - markdown (with pug template)
 - other file to copy (should locate in `static` directory.
