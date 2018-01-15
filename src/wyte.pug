@@ -1,1 +1,82 @@
 extends _layout.pug
+
+block style
+	+css("css/wyte.css")
+
+block content
+	.container.p-3
+		h1 Wyte Engine
+
+		img(src="static/wyte-scr.png", alt="WyteEngine Screenshot" width="640").m-3
+		
+		p Wyte Engineは，Unityのための2Dアクションゲームエンジンです．
+		p 
+			strong.text-warning この記事は書きかけです．詳しくは
+				a(href="https://github.com/WyteEngine/WyteEngine") GitHub
+				| をチェックしてください．
+		
+
+		section#allpurpose.text-left
+			h1 たくさんの便利な機能
+			p 　Wyte Engine は，(特にドット絵の)2Dアクションアドベンチャー，またはアクションRPGを作るための，便利で柔軟な機能を揃えます．
+					
+			.row
+				.col-md-6
+					h2 手間を取らせないイベント定義		
+					p いくら面白いシナリオのアイデアが浮かんでも，開発ツールがその実現を邪魔してしまっては本末転倒です．
+					p Wyte Engine には，軽量なスクリプト言語 <i>Novel Script</i> が用意されています．
+					p セリフ表示やNPCの制御，マップ移動などの演出を軽量でシンプルなスクリプトによって実現できます．
+				.col-md-6
+					pre
+						code
+							span.label # gold_ball
+							br
+							span.arg gbman
+							span.prefix :
+							span おーい　そこの君！
+							br
+							span.arg gbman
+							span.prefix :
+							span おとなしく　これを　受け取ってくれ。
+							br
+							br
+							span.comment // アイテムを渡す
+							br
+							span.prefix +
+							span.cmd additem 
+							span.arg "jem.gold_ball"
+							br
+							span.prefix +
+							span.cmd sfx 
+							span.arg "jingle.get_item"
+							br
+							span.prefix :
+							span きんのたまを　手に入れた！
+							br
+							span.arg gbman
+							span.prefix :
+							span それは　おじさんの　きんのたま。有効に　活用してくれ。
+							br
+							span.arg gbman
+							span.prefix :
+							span おじさんの　きんのたま　だからね！
+							br
+							br
+							span.prefix +
+							span.cmd fade 
+							span.arg in
+							span , 
+							span.arg 0.3
+							br
+							span.prefix :
+							span ・・・世界には　あと６個の きんのたまが　あるようだ．
+							br
+							span.prefix +
+							span.cmd pfreeze 
+							span.arg off
+							br
+							span.prefix +
+							span.cmd end
+
+			.card.text-center.card-primary
+				.card-block.text-black この記事は，まだ書きかけです．後に加筆しますのでしばらくお待ち下さい．
