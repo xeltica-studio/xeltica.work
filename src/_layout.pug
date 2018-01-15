@@ -11,7 +11,6 @@ html(lang="ja")
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
-		block style
 		// Bootstrap Rin
 		+css("http://cdn.honokak.osaka/rin/4.0.0-alpha.3/css/bootstrap.min.css")
 		// Font Awesome
@@ -19,7 +18,7 @@ html(lang="ja")
 		// My Style
 		+css("/css/master.css")
 		block style
-	body.no-thank-yu
+	body
 		
 					
 		header
@@ -31,7 +30,7 @@ html(lang="ja")
 						span.navbar-toggler-icon
 					.clearfix.hidden-sm-up
 					#bar.collapse.navbar-toggleable-xs
-						ul.nav.navbar-nav
+						ul.nav.navbar-nav.float-sm-right
 							li.nav-item
 								a.nav-link(href="/product.html") 製品
 							li.nav-item
@@ -54,8 +53,6 @@ html(lang="ja")
 				a(href="https://github.com/citringo/xeltica-garage") GitHub
 			block footer
 
-		// Load js after the body contents because of UX improvement
-		block script
 		// JQuery (required by bootstrap)
 		+js("//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
 		// Clipboard (required by bootstrap)
@@ -63,3 +60,6 @@ html(lang="ja")
 		// Bootstrap
 		+js("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js")
 		+js("https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js")
+
+		// Load js after the body contents because of UX improvement
+		block script
