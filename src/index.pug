@@ -13,6 +13,9 @@ mixin card(title, href, btn)
 block meta
 	title ホームページ
 
+block style
+	+css("css/index.css")
+	
 block content
 	.container-fluid
 		main.jumbotron.jumbotron-fluid
@@ -20,93 +23,42 @@ block content
 				img.rounded-circle(width="256", src="static/cat.jpg", alt="Xelticat")
 				h1 Xeltica
 				p ゲームや音楽を作っている，普通の学生です．
-			section#introduction.container
-				h2 テキトーな自己紹介
-				table.table.table-inverse
-					tbody
-						tr
-							td 
-								span.fa.fa-user
-								span &emsp;名前
-							td ゼルチカ
-						tr
-							td 
-								span.fa.fa-birthday-cake
-								span &emsp;誕生日
-							td 1998/11/29
-						tr
-							td 
-								span.fa.fa-gamepad
-								span &emsp;趣味
-							td ゲーム開発/DTM
-						tr
-							td 
-								span.fa.fa-laptop
-								span &emsp;職業
-							td 学生/エンジニア
-						tr
-							td 
-								span.fa.fa-thumbs-up
-								span &emsp;好きなもの
-							td 肉，猫，メガネっ娘
-						tr
-							td 
-								span.fa.fa-thumbs-down
-								span &emsp;嫌いなもの
-							td 虫，脳筋
-			section#history.container
-				h2 テキトーな年表
-				table.table.table-inverse
-					thead
-						tr
-							th 年代
-							th 出来事
-					tbody
-						tr
-							td 2011/4
-							td 県内某中学に入学．まだ今の趣味とは関わりが薄かった．
-						tr
-							td 2011/7
-							td Domino に出会い，MIDI での作曲をはじめる．
-						tr
-							td 2011/8
-							td プロデルに出会い，プログラミングに足を突っ込み始める
-						tr
-							td 2012/3
-							td Nintendo 3DSソフト「プチコンmkII」を手に入れ，，プログラミングをさらに磨く
-						tr
-							td 2012/10
-							td プロデル製のゲーム「迷いワールド」という迷路ゲームを完成させ，文化祭で展示
-						tr
-							td 2013/3
-							td プロデルの開発言語であることから C# という言語を知り，少しずつ触れるようになる
-						tr
-							td 2014/4
-							td 中学卒業．証書を受け取るときに先生に読み上げられた将来の夢は，ゲームクリエイター．
-						tr
-							td 2014/4
-							td 県内某高校に入学．パソコン部に所属する．
-						tr
-							td 2014/4
-							td ゲーム「Defender Story」完成見込みがないため，同時開発していたMIDI音源「Music Sheet」を学祭で展示し，ウェブ公開．
-						tr
-							td 2015/9
-							td ゲーム「Defender Story」 アルファ版を学祭で展示(完成には至らず)．
-						tr
-							td 2016/9
-							td ゲーム「Take Up Jewel」 の学祭での展示 & 一般公開．
-						tr
-							td 2017/2
-							td ソフトシンセ内蔵MIDIプレイヤー Groorine 完成．
-						tr
-							td 2017/4
-							td 都内某大学に入学．ゲーム制作サークルに入る．
-						tr
-							td 2017/9
-							td 都内IT企業に雇われ，アルバイトのエンジニアになる.
-						tr
-							td 2018/1
-							td サークル新設を決意する.
+
+				section#introduction.container
+					h2 テキトーな自己紹介
+					table.table.table-striped
+						tbody
+							tr
+								td 
+									span.fa.fa-user
+									span &emsp;名前
+								td ゼルチカ
+							tr
+								td 
+									span.fa.fa-birthday-cake
+									span &emsp;誕生日
+								td 1998/11/29
+							tr
+								td 
+									span.fa.fa-gamepad
+									span &emsp;趣味
+								td ゲーム開発/DTM
+							tr
+								td 
+									span.fa.fa-laptop
+									span &emsp;職業
+								td 学生/エンジニア
+							tr
+								td 
+									span.fa.fa-thumbs-up
+									span &emsp;好きなもの
+								td 肉，猫，メガネっ娘
+							tr
+								td 
+									span.fa.fa-thumbs-down
+									span &emsp;嫌いなもの
+								td 虫，脳筋
+			
 			section#map.container
 				h2 サイトマップ
 				p このサイトには次のページがあります
@@ -130,5 +82,5 @@ block content
 						+card("ぜるろぐ", "https://blog.citringo.net")
 							p 私のブログです．開発日記や雑記だらけなので，物好きな方は見てやってください
 					.col-sm-6
-						+card("Project Wyte", "wyte.html")
+						+card("Project Wyte", "wyte.html") 
 							p Unity のための2Dアクションゲーム用アセット「Wyte Engine」を含む，Project Wyteのページです
