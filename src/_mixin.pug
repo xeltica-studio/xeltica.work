@@ -20,9 +20,8 @@ mixin content-b(title, imgsrc)
 					hr
 					block
 				.col-lg-5.pull-sm-6.col-sm-6
-					if (imgsrc)
-						figure
-							img.img-fluid(src=imgsrc)
+					figure
+						img.img-fluid(src=imgsrc ? imgsrc : "static/no_image.png")
 
 mixin css(name)
 	link(href=name, rel="stylesheet", type="text/css", media="all")
