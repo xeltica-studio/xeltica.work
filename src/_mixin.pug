@@ -1,0 +1,44 @@
+mixin content-a(title, imgsrc)
+	section.content-a
+		.container
+			.row
+				.col-lg-5.col-sm-6
+					h2= title
+					hr
+					block
+				.col-lg-5.offset-lg-2.col-sm-6
+					if (imgsrc)
+						figure
+							img.img-fluid(src=imgsrc)
+
+mixin content-b(title, imgsrc)
+	section.content-b
+		.container
+			.row
+				.col-lg-5.offset-lg-1.push-sm-6.col-sm-6
+					h2= title
+					hr
+					block
+				.col-lg-5.pull-sm-6.col-sm-6
+					if (imgsrc)
+						figure
+							img.img-fluid(src=imgsrc)
+
+mixin css(name)
+	link(href=name, rel="stylesheet", type="text/css", media="all")
+
+mixin js(name)
+	script(src=name)
+
+mixin btn(btn, href)
+	a.btn(href=href)= btn ? btn : "No Text"
+mixin btn-primary(btn, href)
+	a.btn.btn-primary(href=href)= btn ? btn : "No Text"
+mixin btn-danger(btn, href)
+	a.btn.btn-danger(href=href)= btn ? btn : "No Text"
+mixin btn-warning(btn, href)
+	a.btn.btn-warning(href=href)= btn ? btn : "No Text"
+mixin btn-success(btn, href)
+	a.btn.btn-success(href=href)= btn ? btn : "No Text"
+mixin btn-info(btn, href)
+	a.btn.btn-info(href=href)= btn ? btn : "No Text"
