@@ -6,10 +6,9 @@ mixin content-a(title, imgsrc)
 					h2= title
 					hr
 					block
-				.col-lg-5.offset-lg-2.col-sm-6
-					if (imgsrc)
-						figure
-							img.img-fluid(src=imgsrc)
+				.col-lg-5.pull-sm-6.col-sm-6
+					figure
+						img.img-fluid(src=imgsrc ? imgsrc : "static/no_image.png")
 
 mixin content-b(title, imgsrc)
 	section.content-b
