@@ -1,1 +1,31 @@
 extends _layout.pug
+
+
+block content
+	.text-center.pt-1.pb-3.bg-inverse.text-white
+		.container
+			h1.my-3 Products
+			p ゼルチカは様々な創作に携わっています．個人開発プロジェクトから，共同開発まで含まれます．
+			p ここでは，それらを紹介します．一部のコンテンツはサブページもあるのでぜひ御覧ください．
+
+	+content-a("Project Wyte", "static/wyte-scr.png")
+		p Project Wyte は，2Dプラットフォームアクションアドベンチャーゲームを作るためのUnity用の便利なアセット「Wyte Engine」を開発するプロジェクトです．
+		p Wyte Engine の完成次第，一本ゲームの開発を予定しているのでお待ち下さい．
+		+btn-primary("詳細をみる", "/wyte.html")
+	
+	+content-b("Groorine")
+		p Groorine は，Music Sheetの後継である，クロスプラットフォームの8bitライクなソフトウェアシンセサイザー+MIDIプレイヤーです．
+		//-+btn-primary("詳細をみる", "/wyte.html")
+		p 未完成ながら，動作可能な Windows 向けバージョンがあります．上級者の方はご利用ください．
+		+btn-danger("ダウンロード(α版)", "https://github.com/Citringo/Groorine_1/releases/download/beta161128/GroorineTest-Beta161128.zip")
+
+	+content-a("Take Up Jewel", "static/tuj.png")
+		h2 宝物を奪い返せ．
+		p レトロゲームライクなアクションゲームです．
+		p トランジスタ王国のレジスタ街にある孤児院「ハフマンの家」で大切にされてきた宝物を，悪の組織「スパイウェ団」に盗まれてしまいました．
+		p 立ち上がった主人公が，宝物を取り返す旅に出ます．
+		+btn-primary("ダウンロード(via DropBox)", "https://www.dropbox.com/s/m92ms22qlanxp85/take-up-jewel-1.1.0-release.zip?raw=1")
+	+content-b("Music Sheet", "static/ms.png")
+		p Music Sheet は，Windows 向けの MIDI プレイヤー．
+		p 古き良き電子音源「波形メモリ音源」別名ウェーブテーブルシンセを再現．あなたのMIDIファイルがゲーム音楽になります．
+		+btn-primary("ダウンロード(via DropBox)", "https://www.dropbox.com/s/y8rkbcygvyymuf2/MusicSheetv110.zip?raw=1")
