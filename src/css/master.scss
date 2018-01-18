@@ -42,14 +42,17 @@ table.table {
 
 $content-padding: 4rem;
 
+$bg-content-a: #cfcfcf;
+$bg-content-b: #f0f0f0;
+
 .content-a {
-  background: #cfcfcf;
+  background: $bg-content-a;
   padding-top: $content-padding;
   padding-bottom: $content-padding;
 }
 
 .content-b {
-  background: #f0f0f0;
+  background: $bg-content-b;
   padding-top: $content-padding;
   padding-bottom: $content-padding;
 }

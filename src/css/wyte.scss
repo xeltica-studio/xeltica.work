@@ -2,8 +2,9 @@
 
 body {
   color: map-get($colors, white);
-  background-image: linear-gradient(180deg, #101010, #222230);
-  text-align: center;
+  background-image: linear-gradient(180deg, #00339f, #007f3f, #7f3f00);
+  background-attachment: fixed;
+  //text-align: center;
 }
 
 footer {
@@ -25,7 +26,7 @@ section {
 
 pre > code {
   display: block;
-  background: map-get($colors, black);
+  background:  rgba(0, 0, 0, 0.2);
   font-size: 10pt;
   padding: 1rem;
   margin-top: 2rem;
@@ -58,4 +59,8 @@ pre > code {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: 1.8rem;
+}
+
+.bg-a {
+  background: rgba(0, 0, 0, 0.4);
 }
