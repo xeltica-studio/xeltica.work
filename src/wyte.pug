@@ -4,21 +4,23 @@ block style
 	+css("css/wyte.css")
 
 block content
-	.container.p-3
-		h1 Wyte Engine
+	header.text-center
+		.container.pt-3
+			h1 Wyte Engine
 
-		img(src="static/wyte-scr.png", alt="WyteEngine Screenshot" width="640").m-3
-		
-		p Wyte Engineは，Unityのための2Dアクションゲームエンジンです．
-		p 
-			strong.text-warning この記事は書きかけです．詳しくは
-				a(href="https://github.com/WyteEngine/WyteEngine") GitHub
-				| をチェックしてください．
-		
-
-		section#allpurpose.text-left
+			img.img-fluid(src="static/wyte-scr.png", alt="WyteEngine Screenshot" width="640").my-3
+			
+			p Wyte Engineは，Unityのための2Dアクションゲームエンジンです．
+			p 
+				strong.text-warning この記事は書きかけです．詳しくは
+					a(href="https://github.com/WyteEngine/WyteEngine") GitHub
+					| をチェックしてください．
+			
 			h1 たくさんの便利な機能
 			p 　Wyte Engine は，(特にドット絵の)2Dアクションアドベンチャー，またはアクションRPGを作るための，便利で柔軟な機能を揃えます．
+			
+	section#allpurpose.text-left.bg-a
+		.container.py-1
 					
 			.row
 				.col-md-6
@@ -78,5 +80,7 @@ block content
 							span.prefix +
 							span.cmd end
 
-			.card.text-center.card-primary
-				.card-block.text-black この記事は，まだ書きかけです．後に加筆しますのでしばらくお待ち下さい．
+	.card.text-center.bg-a.mt-3
+		.card-block.py-0 
+			h3 この記事は工事中です👷
+			p 完成までもうちょっとお待ち下さい🐢
