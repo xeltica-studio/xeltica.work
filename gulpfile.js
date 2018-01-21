@@ -9,17 +9,17 @@ const markdown = require('gulp-markdown')
 const highlight = require('highlight.js')
 
 const less = require('gulp-less')
+const stylus = require("gulp-stylus")
+const sass = require("gulp-sass")
 const postcss = require('gulp-postcss')
 const cssnext = require('postcss-cssnext')
 
 const browserify = require('browserify')
 const babelify = require('babelify')
 
-const rework = require("gulp-rework")
-const reworkNpm = require("rework-npm")
+const frontMatter = require('gulp-front-matter')
 
-const stylus = require("gulp-stylus")
-const sass = require("gulp-sass")
+const del = require('del')
 
 const pugOptions = {
   pretty: true
@@ -68,11 +68,14 @@ gulp.task('build:pug',
 // Markdown Build
 gulp.task('build:markdown',
   async () => gulp.src(['src/**/*.md'])
-              .pipe(markdown(markedOptions))
-              .pipe(layout({
-                title: 'markdown',
-                layout: 'src/_md-template.pug',
+              .pipe(frontMatter({
+                property: 'meta'
               }))
+              .pipe(markdown(markedOptions))
+              .pipe(layout(file => ({
+                title: file.meta.title ? file.meta.title : 'markdown',
+                layout: 'src/_md-template.pug',
+              })))
               .pipe(gulp.dest('dist/'))
 )
 
