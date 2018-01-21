@@ -4,9 +4,10 @@ mixin balloon(img, name)
 	.balloon
 		.faceicon
 			img(src="static/" + img, alt=name)
-		.says
 			h1.say= name
-			block
+		.chatting
+			.says
+				block
 
 mixin citr()
 	+balloon("gallery/mi4_citrine.png", "シトリン")
