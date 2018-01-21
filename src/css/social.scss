@@ -1,12 +1,24 @@
 @import "include/_color.scss";
 
 .point-circle {
-	width: 12rem;
-	height: 12rem;
+	width: 8rem;
+	height: 8rem;
 	margin: 0 auto;
-	font-size: 6rem;
-	line-height: 12rem;
+	font-size: 4rem;
+	line-height: 8rem;
 	color: map-get($colors, white);
 	border-radius: 100%;
 	text-align: center;
+}
+
+.icon-mstdn {
+	&:before {
+		content: "🐘"
+	}
+}
+
+.card h1 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	margin-top: 0.5rem;
 }
