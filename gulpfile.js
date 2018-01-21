@@ -143,7 +143,7 @@ gulp.task('build', gulp.parallel(
 
 
 // Clean All
-gulp.task('clean', del.bind(null, [destination]))
+gulp.task('clean', del.bind(null, [destination], { force: true }))
 
 // Rebuild All
 gulp.task('rebuild', gulp.series(

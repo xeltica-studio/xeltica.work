@@ -7,3 +7,6 @@
 
 # Secret
 conf.json
+
+
+*.log
