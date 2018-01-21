@@ -1,0 +1,61 @@
+$col: rgba(255, 255, 255, 0.7);
+$backcol: rgba(100, 100, 100, 0.3);
+
+body {
+	color: $col;
+	background-image: linear-gradient(180deg, #000000, #00003f);
+	background-attachment: fixed;
+}
+
+.bg-inverse {
+	background: $backcol !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: white !important;
+}
+
+.section {
+	background: rgba(100, 100, 100, 0.4);
+	padding: 1.4rem;
+	margin-bottom: 1rem;
+	hr {
+		border-top: 1px solid rgba(0, 0, 0, 0.4);
+	}
+}
+
+
+#sidebar {
+	margin-left: 0.5rem;
+	h1 {
+		font-size: 1rem;
+	}
+	a:link, a:visited {
+		color: $col;
+	}
+}
+
+#gallery {
+	h1, h2, h3 {
+		a:link, a:visited {
+			color: white;
+		}
+	}
+}
+
+.gallery {
+	h2 {
+		font-size: 1.3rem;
+		margin-bottom: 0.9rem;
+	}
+}
+
+
+.section-header {
+	color: $col;
+	padding: 2rem;
+}
+
+.text-white {
+	color: $col !important;
+}
