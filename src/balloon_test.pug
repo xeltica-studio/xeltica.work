@@ -1,0 +1,53 @@
+extends _layout.pug
+
+mixin balloon(img, name)
+	.balloon
+		.faceicon
+			img(src="static/" + img, alt=name)
+		.says
+			h1.say= name
+			block
+
+mixin citr()
+	+balloon("gallery/mi4_citrine.png", "シトリン")
+		block
+
+mixin kaho()
+	+balloon("gallery/mi4_kaho.png", "カホ")
+		block
+
+block meta
+	title 講座テスト - Xeltica
+
+block style
+	+css("css/balloon.css")
+
+block content
+	+header("講座テスト")
+		p バルーン
+	.container
+		+citr()
+			p ...ここはいったい？
+		+kaho
+			p ...お話のテストルームらしいよ！
+		+citr
+			p 何そのメタ的なお部屋...
+		+kaho
+			p まあよくわかんないけど，来たからにはなんか話そうよー！
+		+citr
+			p えー...何も話すことなんか
+		+kaho
+			p そういや Unity 2018.1 は .NET Standard 2.0 に準拠だとか
+		+citr
+			p そうそう！！！そうなの！ 
+			p Unity は元々 Mono のバージョン古くて，そもそも C# 4.0すら使えなかったのが Unity 2017.1 とかでようやく6.0が使えるようになって...
+		+kaho
+			p ...
+		+citr
+			p あ，ご，ごめん... つい熱くなって...
+		+kaho
+			p シトリンちゃんって，好きなこと話すとき早口だよね！
+		+citr
+			p ハッキリ言いなさんな！
+
+			
