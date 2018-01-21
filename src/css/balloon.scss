@@ -42,10 +42,16 @@ $kaho: #d7ebfe;
 
   &.citrine {
     background: $citrine;
+    &:after {
+      border-right-color: $citrine;
+    }
   }
   
   &.kaho {
     background: $kaho;
+    &:after {
+      border-right-color: $kaho;
+    }
   }
 
   &:after {
@@ -56,13 +62,6 @@ $kaho: #d7ebfe;
     left: -24px;
     border: 12px solid transparent;
     border-right: 12px solid #d7ebfe;
-    &.citrine {
-      border-right-color: $citrine;
-    }
-
-    &.kaho {
-      border-right-color: $kaho;
-    }
   }
 
   p {
