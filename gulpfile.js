@@ -1,48 +1,45 @@
+// Builder Core
 const gulp = require('gulp')
 const browserSync = require('browser-sync')
-const map = require('map-stream')
-const source = require('vinyl-source-stream')
+const del = require('del')
 
+// HTML Processor
 const pug = require('gulp-pug')
 const layout = require('gulp-layout')
 const markdown = require('gulp-markdown')
 const highlight = require('highlight.js')
+const frontMatter = require('gulp-front-matter')
 
+// CSS Processor
 const less = require('gulp-less')
 const stylus = require("gulp-stylus")
 const sass = require("gulp-sass")
 const postcss = require('gulp-postcss')
 const cssnext = require('postcss-cssnext')
 
+// Javascript Processor
+const map = require('map-stream')
+const source = require('vinyl-source-stream')
 const browserify = require('browserify')
 const babelify = require('babelify')
 
-const frontMatter = require('gulp-front-matter')
 
-const del = require('del')
-
+// Define Options
 const pugOptions = {
   pretty: true
 }
-
 const markedOptions = {
   highlight: (code) => highlight.highlightAuto(code).value
 }
-
 const lessOptions = {}
-
 const stylusOptions = {}
-
 const sassOptions = {}
-
 const cssnextOptions = {
   browsers: '> 1% in JP' // 日本でシェア1%以上
 }
-
 const browserifyOptions = {
   debug: true
 }
-
 const babelOptions = {
   presets: [
     ['env', {
@@ -53,19 +50,20 @@ const babelOptions = {
   ]
 }
 
+
 // Copy Static Assets
 gulp.task('build:static',
   async () => gulp.src(['src/static/**'], {base: 'src'})
               .pipe(gulp.dest('dist/'))
 )
 
-// Pug Build
+// Build Pug
 gulp.task('build:pug',
   async () => gulp.src(['src/**/[^_]*.pug'])
               .pipe(pug(pugOptions))
               .pipe(gulp.dest('dist/'))
 )
-// Markdown Build
+// Build Markdown
 gulp.task('build:markdown',
   async () => gulp.src(['src/**/*.md'])
               .pipe(frontMatter({
@@ -79,7 +77,7 @@ gulp.task('build:markdown',
               .pipe(gulp.dest('dist/'))
 )
 
-// less Build
+// Build less
 gulp.task('build:less',
   async () => gulp.src(['src/**/[^_]*.less'])
               .pipe(less(lessOptions))
@@ -89,7 +87,7 @@ gulp.task('build:less',
               .pipe(gulp.dest('dist/'))
 )
 
-// Stylus Build
+// Build Stylus
 gulp.task('build:stylus', 
   async() => gulp.src(['src/**/[^_]*.styl'])
               .pipe(stylus(stylusOptions))
@@ -99,7 +97,7 @@ gulp.task('build:stylus',
               .pipe(gulp.dest('dist/'))
 )
 
-// Sass Build
+// Build Sass
 gulp.task('build:sass',
   async() => gulp.src(['src/**/[^_]*.s[ac]ss'])
               .pipe(sass(sassOptions))
@@ -109,7 +107,7 @@ gulp.task('build:sass',
               .pipe(gulp.dest('dist/'))
 )
 
-// JavaScript Build
+// Build JavaScript
 gulp.task('build:js', async () => {
   const processor = (file) => {
     browserify(file.path, browserifyOptions)
@@ -124,14 +122,14 @@ gulp.task('build:js', async () => {
           .pipe(map(a => processor(a)))
 })
 
-// CSS Build
+// Build CSS
 gulp.task('build:css', gulp.parallel(
   'build:stylus',
   'build:less',
   "build:sass",
 ))
 
-// All Build
+// Build All
 gulp.task('build', gulp.parallel(
   'build:pug',
   'build:markdown',
@@ -140,7 +138,16 @@ gulp.task('build', gulp.parallel(
   'build:static',
 ))
 
-// Browser Sync
+// Rebuild All
+gulp.task('rebuild', gulp.series(
+  'clean',
+  'build'
+))
+
+// Clean All
+gulp.task('clean', del.bind(null, ['dist']))
+
+// Run with Debug
 gulp.task('watch',
   gulp.series('build', async () => {
     browserSync({
