@@ -1,3 +1,6 @@
+$citrine: #dbfed7;
+$kaho: #d7ebfe;
+
 .balloon {
   width: 100%;
   margin: 1.5rem 0;
@@ -10,7 +13,18 @@
       width: 100%;
       height: auto;
       border: solid 3px #d7ebfe;
+
       border-radius: 50%;
+    }
+    &.citrine {
+      img {
+        border-color: $citrine
+      }
+    }
+    &.kaho {
+      img {
+        border-color: $kaho
+      }
     }
   }
   .chatting {
@@ -24,7 +38,15 @@
   margin: 5px 0 0 105px;
   padding: 17px 13px;
   border-radius: 12px;
-  background: #d7ebfe;
+  background: white;
+
+  &.citrine {
+    background: $citrine;
+  }
+  
+  &.kaho {
+    background: $kaho;
+  }
 
   &:after {
     content: "";
@@ -34,6 +56,13 @@
     left: -24px;
     border: 12px solid transparent;
     border-right: 12px solid #d7ebfe;
+    &.citrine {
+      border-right-color: $citrine;
+    }
+
+    &.kaho {
+      border-right-color: $kaho;
+    }
   }
 
   p {
@@ -47,3 +76,4 @@ h1.say {
   font-size: 0.8rem;
   text-align: center;
 }
+

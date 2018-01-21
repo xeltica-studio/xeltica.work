@@ -1,12 +1,13 @@
 extends _layout.pug
 
 mixin balloon(img, name)
+	- var c = name == "シトリン" ? "citrine" : name == "カホ" ? "kaho" : "";
 	.balloon
-		.faceicon
+		.faceicon(class=c)
 			img(src="static/" + img, alt=name)
 			h1.say= name
 		.chatting
-			.says
+			.says(class=c)
 				block
 
 mixin citr()
@@ -27,7 +28,7 @@ block content
 	+header("講座テスト")
 		p バルーン
 	.container
-		+citr()
+		+citr
 			p ...ここはいったい？
 		+kaho
 			p ...お話のテストルームらしいよ！
