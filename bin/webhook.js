@@ -14,6 +14,7 @@ const handler = createHandler({
   secret: SECRET
 })
 
+
 http.createServer((req, res) => {
   handler(req, res, (err) => {
     res.statusCode = 404
@@ -32,6 +33,10 @@ handler.on("push", (event) => {
   const repoName = payload.repository.name
   const branch = payload.ref.split("/").pop()
   if (repoName === REPOSITORY_NAME && branch === "master") {
-    cmd.run('git pull && npm run rebuild');
+    cmd.get('git pull && npm run rebuild', (e, d, se) => {
+      console.log(d);
+      console.log(e);
+      console.log(se);
+    });
   }
 })
