@@ -1,0 +1,8 @@
+{
+	"webhook": {
+		"secret": "github_webhook_secret",
+		"repo": "https://github.com/citringo/xeltica-garage.git",
+		"branch": "master"
+	},
+	"dest": "/srv/http/citringo.net"
+}
