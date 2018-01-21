@@ -1,6 +1,9 @@
 extends _layout.pug
 
 
+block meta
+	title Xeltica
+
 mixin card(title, href, font, btn)
 	.card
 		.card-block
@@ -14,8 +17,6 @@ mixin card(title, href, font, btn)
 			else
 				p No text.
 			a.btn.btn-primary.btn-lg.btn-block(href=href)= btn ? btn : "移動する"
-block meta
-	title ホームページ
 
 block style
 	+css("css/index.css")
