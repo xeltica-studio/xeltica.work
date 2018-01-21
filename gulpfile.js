@@ -23,6 +23,8 @@ const source = require('vinyl-source-stream')
 const browserify = require('browserify')
 const babelify = require('babelify')
 
+// Configuration File
+const conf = require('./lib/conf.js')
 
 // Define Options
 const pugOptions = {
@@ -50,18 +52,19 @@ const babelOptions = {
   ]
 }
 
+const destination = conf.dest;
 
 // Copy Static Assets
 gulp.task('build:static',
   async () => gulp.src(['src/static/**'], {base: 'src'})
-              .pipe(gulp.dest('dist/'))
+              .pipe(gulp.dest(destination))
 )
 
 // Build Pug
 gulp.task('build:pug',
   async () => gulp.src(['src/**/[^_]*.pug'])
               .pipe(pug(pugOptions))
-              .pipe(gulp.dest('dist/'))
+              .pipe(gulp.dest(destination))
 )
 // Build Markdown
 gulp.task('build:markdown',
@@ -74,7 +77,7 @@ gulp.task('build:markdown',
                 title: file.meta.title ? file.meta.title : 'markdown',
                 layout: 'src/_md-template.pug',
               })))
-              .pipe(gulp.dest('dist/'))
+              .pipe(gulp.dest(destination))
 )
 
 // Build less
@@ -84,7 +87,7 @@ gulp.task('build:less',
               .pipe(postcss([
                 cssnext(cssnextOptions)
               ]))
-              .pipe(gulp.dest('dist/'))
+              .pipe(gulp.dest(destination))
 )
 
 // Build Stylus
@@ -94,7 +97,7 @@ gulp.task('build:stylus',
               .pipe(postcss([
                 cssnext(cssnextOptions)
               ]))
-              .pipe(gulp.dest('dist/'))
+              .pipe(gulp.dest(destination))
 )
 
 // Build Sass
@@ -104,7 +107,7 @@ gulp.task('build:sass',
               .pipe(postcss([
                 cssnext(cssnextOptions)
               ]))
-              .pipe(gulp.dest('dist/'))
+              .pipe(gulp.dest(destination))
 )
 
 // Build JavaScript
@@ -115,7 +118,7 @@ gulp.task('build:js', async () => {
       .bundle()
       .on('error', (err) => console.error(`Error: ${err.message}`))
       .pipe(source(file.path.replace(file.base, '')))
-      .pipe(gulp.dest('dist/'))
+      .pipe(gulp.dest(destination))
   }
 
   return gulp.src(['src/**/[^_]*.js'])
@@ -138,21 +141,22 @@ gulp.task('build', gulp.parallel(
   'build:static',
 ))
 
+
+// Clean All
+gulp.task('clean', del.bind(null, [destination]))
+
 // Rebuild All
 gulp.task('rebuild', gulp.series(
   'clean',
   'build'
 ))
 
-// Clean All
-gulp.task('clean', del.bind(null, ['dist']))
-
 // Run with Debug
 gulp.task('watch',
   gulp.series('build', async () => {
     browserSync({
       server: {
-        baseDir: './dist'
+        baseDir: destination
       }
     })
 
