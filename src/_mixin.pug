@@ -2,7 +2,7 @@ mixin content-a(title, imgsrc)
 	section.content-a
 		.container
 			.row
-				.col-lg-5.col-sm-6
+				.col-lg-5.col-sm-6.mb-1
 					h2= title
 					hr
 					block
@@ -14,7 +14,7 @@ mixin content-b(title, imgsrc)
 	section.content-b
 		.container
 			.row
-				.col-lg-5.offset-lg-1.push-sm-6.col-sm-6
+				.col-lg-5.offset-lg-1.push-sm-6.col-sm-6.mb-1
 					h2= title
 					hr
 					block
@@ -40,3 +40,9 @@ mixin btn-success(btn, href)
 	a.btn.btn-success(href=href)= btn ? btn : "No Text"
 mixin btn-info(btn, href)
 	a.btn.btn-info(href=href)= btn ? btn : "No Text"
+
+mixin header(title)
+	.text-center.pt-1.pb-3.bg-inverse.text-white
+			.container
+				h1.my-3= title
+				block

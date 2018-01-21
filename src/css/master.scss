@@ -3,13 +3,19 @@
 footer {
   background-color: map-get($colors, gray);
   padding: 2rem 0;
-  margin-top: 2rem;
+//  margin-top: 2rem;
   font-size: 0.8em;
   text-align: center;
   color: #818a91;
 }
 
 $xelticolor: #FF464A !default;
+
+.dropdown .dropdown-menu {
+  box-shadow: 0 0 0.5rem 0.1rem #555;
+  background: #fff;
+  border-radius: 2%;
+}
 
 table.table {
   text-align: left;

@@ -7,7 +7,7 @@ html(lang="ja")
 		block meta
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-
+		
 		// Bootstrap Rin
 		+css("http://cdn.honokak.osaka/rin/4.0.0-alpha.3/css/bootstrap.min.css")
 		// Font Awesome
@@ -28,8 +28,11 @@ html(lang="ja")
 					.clearfix.hidden-sm-up
 					#bar.collapse.navbar-toggleable-xs
 						ul.nav.navbar-nav.float-sm-right
-							li.nav-item
+							li.nav-item.dropdown
 								a.nav-link(href="/product.html") 製品
+								a.nav-link.dropdown-toggle#dd_product(href="#", data-toggle="dropdown" aria-haspopup="true" aria-expanded="false", style="display: inline; margin: 0")
+								.dropdown-menu(aria-labelledby="dd_product")
+									a.dropdown-item(href="/wyte.html") Project Wyte
 							li.nav-item
 								a.nav-link(href="/social.html") ソーシャル
 							li.nav-item
@@ -37,17 +40,24 @@ html(lang="ja")
 							li.nav-item
 								a.nav-link(href="/contact.html") 連絡先
 							li.nav-item
-								a.nav-link(href="//blog.citringo.net") ブログ
+								a.nav-link(href="/char.html") キャラ
 							li.nav-item
-								a.nav-link(href="wyte.html") Wyte
+								a.nav-link(href="/gallery.html") ギャラリー
+							li.nav-item
+								a.nav-link(href="//blog.citringo.net") ブログ
 		main
 			.top
 			block content
 
 		footer.text-muted
 			p (C)2018 Xeltica
-			p このコンテンツはMITライセンスで公開されています&nbsp;&nbsp;
+			p このコンテンツはMITライセンスで公開されています&ensp;
 				a(href="https://github.com/citringo/xeltica-garage") GitHub
+			p Powered by 
+				a(href="https://v4-alpha.rinhoshizo.la") Bootstrap-rin v4&ensp;
+				| and&ensp;
+				a(href="https://fontawesome.com/") Font Awesome
+				| .
 			block footer
 
 		// JQuery (required by bootstrap)
