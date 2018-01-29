@@ -35,50 +35,51 @@ block style
 block content
 	+header("ギャラリー")
 		p 自作や頂いたイラストを掲載します．
-	.row.mt-1.mx-3
-		article#gallery.col-sm-12
-			section#gift
-				h2.section-header いただきもの
-				section#citrine.section
-					.container
-						h3: a(href="/") シトリン
-						hr
+	.container
+		.row.mt-1
+			article#gallery.col-sm-12
+				section#gift
+					h2.section-header いただきもの
+					section#citrine.section
 						.container
-							+gallery("シトリン立ち絵", "/static/gallery/micra_citrine.jpg")
-								+thanks("_micra_", "micra")
-								p 大人びた知的な感じを再現していただきました．
-							+gallery("温泉に浸かるシトリン", "/static/gallery/moh_citrine.jpg")
-								+thanks("moh6an", "moh")
-								p 温泉で一息つくシトリン．お風呂では印象が変わって見えるようです．
-							+gallery("めるアイコン4", "/static/gallery/mi4_citrine.png")
-								p
-									a(href="https://twitter.com/V_Melville") メルビルさん
-									| 作のアイコンシリーズ「めるアイコン」の4枚目です．
-									a(href="https://ja.m.wikipedia.org/wiki/C_Sharp") Cより半音高い言語
-									| をモチーフとした髪飾りがつきました．
-								p めるアイコンの規格更新ごとに描いて頂いています．
-							+gallery("めるアイコン3", "/static/gallery/mi3_citrine.jpg")
-								p めるアイコン版シトリン3枚目です．黒髪ロングになりました．
-							+gallery("めるアイコン2016", "/static/gallery/mi16_citrine.png")
-								p めるアイコン版シトリン2枚目です．斜めアイコンの歴史が始まる．
-							+gallery("めるアイコン2015(初代)", "/static/gallery/mi15_citrine.png")
-								p 初代めるアイコン版シトリンです．初代めるアイコンの原型はシトリンの線画から生まれました．
-				section#kaho.section
-					.container
-						h3: a(href="/") カホ
-						hr
+							h3: a(href="/") シトリン
+							hr
+							.container
+								+gallery("シトリン立ち絵", "/static/gallery/micra_citrine.jpg")
+									+thanks("_micra_", "micra")
+									p 大人びた知的な感じを再現していただきました．
+								+gallery("温泉に浸かるシトリン", "/static/gallery/moh_citrine.jpg")
+									+thanks("moh6an", "moh")
+									p 温泉で一息つくシトリン．お風呂では印象が変わって見えるようです．
+								+gallery("めるアイコン4", "/static/gallery/mi4_citrine.png")
+									p
+										a(href="https://twitter.com/V_Melville") メルビルさん
+										| 作のアイコンシリーズ「めるアイコン」の4枚目です．
+										a(href="https://ja.m.wikipedia.org/wiki/C_Sharp") Cより半音高い言語
+										| をモチーフとした髪飾りがつきました．
+									p めるアイコンの規格更新ごとに描いて頂いています．
+								+gallery("めるアイコン3", "/static/gallery/mi3_citrine.jpg")
+									p めるアイコン版シトリン3枚目です．黒髪ロングになりました．
+								+gallery("めるアイコン2016", "/static/gallery/mi16_citrine.png")
+									p めるアイコン版シトリン2枚目です．斜めアイコンの歴史が始まる．
+								+gallery("めるアイコン2015(初代)", "/static/gallery/mi15_citrine.png")
+									p 初代めるアイコン版シトリンです．初代めるアイコンの原型はシトリンの線画から生まれました．
+					section#kaho.section
 						.container
-							+gallery("Lv100さん作", "/static/gallery/lv100_kaho.png")
-								+thanks("lv100tomato", "Lv100")
-							+gallery("めるアイコン4", "/static/gallery/mi4_kaho.png")
-								+thanks("V_Melville", "メルビル")
-							+gallery("妹ちゃんさん作", "/static/gallery/sis_kaho.jpg")
-								+thanks(null, "妹ちゃん")
-//-				
-		.col-sm-3
-			nav#sidebar.card.card-primary
-				.card-block
-					h1: a(href="#gift") いただきもの
-					ul
-					li: a(href="#citrine") シトリン
-					li: a(href="#kaho") カホ
+							h3: a(href="/") カホ
+							hr
+							.container
+								+gallery("Lv100さん作", "/static/gallery/lv100_kaho.png")
+									+thanks("lv100tomato", "Lv100")
+								+gallery("めるアイコン4", "/static/gallery/mi4_kaho.png")
+									+thanks("V_Melville", "メルビル")
+								+gallery("妹ちゃんさん作", "/static/gallery/sis_kaho.jpg")
+									+thanks(null, "妹ちゃん")
+	//-				
+			.col-sm-3
+				nav#sidebar.card.card-primary
+					.card-block
+						h1: a(href="#gift") いただきもの
+						ul
+						li: a(href="#citrine") シトリン
+						li: a(href="#kaho") カホ
