@@ -1,10 +1,10 @@
-# ねいことは？
+## ねいことは？
 ねいことは，ねいあのことである．
 
-# ねいあとは？
+## ねいあとは？
 ねいあとは，ねいこのことである．
 
-# C# 実装
+## C# 実装
 
 ```cs
 using System;
@@ -24,5 +24,5 @@ class Neiko
 }
 ```
 
-# つまり
-<span style="text-size: 64pt; color: #00ff00; background-color: black">ねこかわいい！</span>
+## つまり
+<span style="font-size: 64pt; color: #00ff00; background-color: black">ねこかわいい！</span>
