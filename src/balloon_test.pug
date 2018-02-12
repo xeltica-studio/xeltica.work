@@ -1,55 +1,19 @@
 extends _layout.pug
 
-mixin balloon(img, name)
-	- var c = name == "シトリン" ? "citrine" : name == "カホ" ? "kaho" : "";
-	.balloon
-		.faceicon(class=c)
-			img(src="static/" + img, alt=name)
-			h1.say= name
-		.chatting
-			.says(class=c)
-				block
-
-mixin citr()
-	+balloon("gallery/mi4_citrine.png", "シトリン")
-		block
-
-mixin kaho()
-	+balloon("gallery/mi4_kaho.png", "カホ")
-		block
-
 block meta
 	title 講座テスト - Xeltica
 
-block style
-	+css("css/balloon.css")
 
 block content
 	+header("講座テスト")
-		p バルーン
+		p バルーン機能の実験場です．
 	.container
-		+citr
-			p ...ここはいったい？
-		+kaho
-			p ...お話のテストルームらしいよ！
-		+citr
-			p 何そのメタ的なお部屋...
-		+kaho
-			p まあよくわかんないけど，来たからにはなんか話そうよー！
-		+citr
-			p えー...何も話すことなんか
-		+kaho
-			p そういや Unity 2018.1 は .NET Standard 2.0 に準拠だとか
-		+citr
-			p そうそう！！！そうなの！ 
-			p Unity は元々 Mono のバージョン古くて，そもそも C# 4.0すら使えなかったのが Unity 2017.1 とかでようやく6.0が使えるようになって...
-		+kaho
-			p ...
-		+citr
-			p あ，ご，ごめん... つい熱くなって...
-		+kaho
-			p シトリンちゃんって，好きなこと話すとき早口だよね！
-		+citr
-			p ハッキリ言いなさんな！
-
-			
+		+kaho(): p ここは...どこ？
+		+citr(): p 講義室よ．技術は人に伝えていかなきゃいけないからね．
+		+kaho(): p 講座をやる予定があるのかしら？
+		+citr(): p そうじゃない？でなければこんなスタイルシートが用意されたり―
+		+kaho(): p スタイルシートって？
+		+citr(): p ん，なんのこと？
+		hr
+		+balloon("cat.jpg", "Xeltica"): p このページのバルーン機能は，今後講座などに利用します．
+		

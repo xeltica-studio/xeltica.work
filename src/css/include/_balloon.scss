@@ -12,8 +12,8 @@ $kaho: #d7ebfe;
     img {
       width: 100%;
       height: auto;
-      border: solid 3px #d7ebfe;
-
+      //border: solid 3px #d7ebfe;
+      
       border-radius: 50%;
     }
     &.citrine {
@@ -38,7 +38,9 @@ $kaho: #d7ebfe;
   margin: 5px 0 0 105px;
   padding: 17px 13px;
   border-radius: 12px;
-  background: white;
+  background: #fff3b0;
+  
+
 
   &.citrine {
     background: $citrine;
@@ -61,7 +63,7 @@ $kaho: #d7ebfe;
     top: 18px; 
     left: -24px;
     border: 12px solid transparent;
-    border-right: 12px solid #d7ebfe;
+    border-right: 12px solid #fff3b0;
   }
 
   p {

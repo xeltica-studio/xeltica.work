@@ -22,7 +22,7 @@ html(lang="ja")
 			block header
 			nav.navbar.navbar-light.navbar-fixed-top
 				.container
-					a.navbar-brand(href="/") Xeltica
+					a.navbar-brand(href="/") Xeltica Garage
 					button.navbar-toggler.hidden-sm-up.float-xs-right(type="button", data-toggle="collapse", data-target="#bar", aria-controls="navbar-header", aria-expanded="false", aria-label="Toggle navigation")
 						span.navbar-toggler-icon
 					.clearfix.hidden-sm-up
@@ -44,21 +44,22 @@ html(lang="ja")
 							li.nav-item
 								a.nav-link(href="/contact.html") 連絡先
 							li.nav-item
-								a.nav-link(href="//blog.citringo.net") ブログ
+								a.nav-link(href="//blog.citringo.net") ぜるろぐ
 		main
 			.top
 			block content
 
 		footer.text-muted
+			block pre_footer
 			p (C)2018 Xeltica
 			p このコンテンツはMITライセンスで公開されています&ensp;
-				a(href="https://github.com/citringo/xeltica-garage") GitHub
+				a(href="https://github.com/citringo/xeltica-garage") Fork me on GitHub
 			p Powered by 
 				a(href="https://v4-alpha.rinhoshizo.la") Bootstrap-rin v4&ensp;
 				| and&ensp;
 				a(href="https://fontawesome.com/") Font Awesome
 				| .
-			block footer
+			block post_footer
 
 		// JQuery (required by bootstrap)
 		+js("//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")

@@ -46,3 +46,24 @@ mixin header(title)
 			.container
 				h1.my-3= title
 				block
+
+mixin citr()
+	+balloon("gallery/mi4_citrine.png", "シトリン")
+		block
+
+mixin kaho()
+	+balloon("gallery/mi4_kaho.png", "カホ")
+		block
+
+mixin balloon(img, name)
+	- var c = name == "シトリン" ? "citrine" : name == "カホ" ? "kaho" : "";
+	.balloon
+		.faceicon(class=c)
+			if img
+				img(src="static/" + img, alt=name)
+			else
+				img(src="static/no_image.png")
+			h1.say= name
+		.chatting
+			.says(class=c)
+				block	
