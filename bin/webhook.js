@@ -34,9 +34,9 @@ handler.on("push", (event) => {
   const branch = payload.ref.split("/").pop()
   if (repoName === REPOSITORY_NAME && branch === "master") {
     cmd.get('git pull && npm run rebuild', (e, d, se) => {
-      console.log(d);
-      console.log(e);
-      console.log(se);
+      console.log(d ? d : "");
+      console.log(e ? e : "");
+      console.log(se ? se : "");
     });
   }
 })
