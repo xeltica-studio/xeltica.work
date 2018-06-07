@@ -116,7 +116,7 @@ gulp.task('build:js', async () => {
     browserify(file.path, browserifyOptions)
       .transform(babelify, babelOptions)
       .bundle()
-      .on('error', (err) => console.error(`Error: ${err.message}`))
+      .on('error', (err) => console.error(`Error: ${err.message} ${file.path} ${file.base}`))
       .pipe(source(file.path.replace(file.base, '')))
       .pipe(gulp.dest(destination))
   }
