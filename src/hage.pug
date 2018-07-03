@@ -39,7 +39,7 @@ block script
 			},
 			methods: {
 				click: async function (e) {
-					let res = await (await fetch(`http://api.citringo.net/hage/${encodeURI(this.name)}`)).json();
+					let res = await (await fetch(`https://api.citringo.net/hage/${encodeURI(this.name)}`)).json();
 					this.result = `${this.name} はハゲて${res.is_hage ? "います" : "いません"}`;
 					this.hage = res.is_hage;
 					this.twitter_url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${this.result}\n #ハゲチェッカー https://citringo.net/hage.html`)}`;
