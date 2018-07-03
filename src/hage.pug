@@ -16,7 +16,7 @@ block content
 				input(type="text", v-model="name", id="name", name="name")
 				button.btn.btn-primary(v-on:click="click") チェック！
 			div.mb-1(v-if="result != ''")
-				p.alert.alert-success {{ result }}
+				p.alert(v-bind:class="resultClass") {{ result }}
 				a.btn.btn-primary(v-bind:href="twitter_url") 結果をツイートする
 
 block pre_footer
@@ -31,6 +31,14 @@ block script
 
 		const app = new Vue({
 			el: "#main",
+			computed: {
+				resultClass: function () {
+					return {
+						'alert-success': !this.hage,
+						'alert-danger': this.hage
+					};
+				}
+			},
 			data: {
 				name: "ねこ",
 				result: "",
