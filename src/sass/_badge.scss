@@ -1,0 +1,26 @@
+.badge {
+	padding: 0.1rem;
+	margin-right: 0.3rem;
+	font-size: 0.5rem;
+	color: white;
+	border-radius: 0.3rem;
+	&.primary {
+		background: #3F51B5;
+	}
+
+	&.success {
+		background: #4CAF50;
+	}
+
+	&.danger {
+		background: #f44336;
+	}
+
+	&.info {
+		background: #2196F3;
+	}
+
+	&.warn {
+		background: #FFC107;
+	}
+}

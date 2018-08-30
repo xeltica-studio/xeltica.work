@@ -5,21 +5,21 @@
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all -s clean build:*",
-    "build:sass": "node-sass ./src/sass --output  ${npm_package_config_dist}css --output-style compressed",
-    "build:pug": "pug ./src/pug --out  ${npm_package_config_dist} --pretty",
+    "build:sass": "cross-conf-env node-sass ./src/sass --output  $npm_package_config_dist/css --output-style compressed",
+    "build:pug": "cross-conf-env pug ./src/pug --out $npm_package_config_dist/ --pretty",
     "build:ts": "tsc",
-    "build:static": "cpx ./src/assets/**/* ${npm_package_config_dist}assets/",
+    "build:static": "cross-conf-env cpx ./src/assets/**/* $npm_package_config_dist/assets/",
     "watch": "npm-run-all -p watch:*",
-    "watch:sass": "node-sass ./src/sass --output  ${npm_package_config_dist}css --output-style compressed -w",
-    "watch:pug": "pug ./src/pug --out ${npm_package_config_dist} --pretty -w",
+    "watch:sass": "cross-conf-env node-sass ./src/sass --output  $npm_package_config_dist/css --output-style compressed -w",
+    "watch:pug": "cross-conf-env pug ./src/pug --out $npm_package_config_dist/ --pretty -w",
     "watch:ts": "tsc -w",
-    "clean": "rimraf  ${npm_package_config_dist}",
+    "clean": "cross-conf-env rimraf  $npm_package_config_dist/",
     "srv": "npm-run-all -s build -p watch browser",
-    "browser": "browser-sync start --server --ss ${npm_package_config_dist}",
+    "browser": "cross-conf-env browser-sync start --server --ss $npm_package_config_dist/",
     "webhook": "node ./bin/webhook.js"
   },
   "config": {
-    "dist": "./dist/"
+    "dist": "./dist"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/citringo/xeltica-garage/blob/master/readme.md",
   "devDependencies": {
+    "cross-conf-env": "^1.1.2"
   },
   "dependencies": {
     "github-webhook-handler": "^0.7.1",

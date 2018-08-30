@@ -1,0 +1,110 @@
+extends _layout
+
+
+block title
+	title ギャラリー - Xeltica
+	+og(
+		"ギャラリー - Xeltica", 
+		"戴き物の絵を掲載しています",
+		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
+		"assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+mixin twilink(id, name)
+	a(href='https://twitter.com/'+id)= name
+
+mixin thanks(id, name)
+	p
+		if id
+			p
+				+twilink(id, name)
+				| さんに描いていただきました．
+		else
+			p
+				!= name
+				| さんに描いていただきました．
+
+mixin gallery(title, imgsrc)
+	section.card
+		.container
+			.row
+				.col-8
+					h2= title
+					.ml-1
+						block
+				.col-4
+					figure
+						a(href=imgsrc): img.img-fluid(src=imgsrc ? imgsrc : "assets/no_image.png")
+
+	
+
+block body
+	header#header.root
+		h1 
+			a(href="Xeltica") Xeltica
+			|  / Gallery
+		p 
+			span.nobr 多くの
+			span.nobr ファンアートを
+			span.nobr 頂いております。
+			span.nobr 頂いた
+			span.nobr イラストを、
+			span.nobr ここに
+			span.nobr 掲載しております。
+
+		p
+			span.nobr うちの子
+			span.nobr 「シトリン」と
+			span.nobr 「カホ」の
+			span.nobr ファンアートを
+			span.nobr 随時募集中です。
+			span.nobr 送って
+			span.nobr いただければ
+			span.nobr もれなく
+			span.nobr 掲載いたします。
+
+		p
+			span.nobr 二次創作に
+			span.nobr ついては
+			span.nobr
+				a(href="/char/guideline.html") ガイドライン
+				| を	
+			span.nobr  ご確認ください。
+	.container
+		.row
+			article#gallery.col-12
+				section#citrine.section
+					.container
+						h2 シトリン
+						.container
+							+gallery("シトリン立ち絵", "/assets/gallery/micra_citrine.jpg")
+								+thanks("_micra_", "micra")
+								p 大人びた知的な感じを再現していただきました．
+							+gallery("温泉に浸かるシトリン", "/assets/gallery/moh_citrine.jpg")
+								+thanks("moh6an", "moh")
+								p 温泉で一息つくシトリン．お風呂では印象が変わって見えるようです．
+							+gallery("めるアイコン4", "/assets/gallery/mi4_citrine.png")
+								p
+									a(href="https://twitter.com/V_Melville") メルビルさん
+									| 作のアイコンシリーズ「めるアイコン」の4枚目です．
+									a(href="https://ja.m.wikipedia.org/wiki/C_Sharp") Cより半音高い言語
+									| をモチーフとした髪飾りがつきました．
+								p めるアイコンの規格更新ごとに描いて頂いています．
+							+gallery("めるアイコン3", "/assets/gallery/mi3_citrine.jpg")
+								p めるアイコン版シトリン3枚目です．黒髪ロングになりました．
+							+gallery("めるアイコン2016", "/assets/gallery/mi16_citrine.png")
+								p めるアイコン版シトリン2枚目です．斜めアイコンの歴史が始まる．
+							+gallery("めるアイコン2015(初代)", "/assets/gallery/mi15_citrine.png")
+								p 初代めるアイコン版シトリンです．初代めるアイコンの原型はシトリンの線画から生まれました．
+				section#kaho.section
+					.container
+						h2 カホ
+						.container
+							+gallery("Lv100さん作", "/assets/gallery/lv100_kaho.png")
+								+thanks("lv100tomato", "Lv100")
+							+gallery("めるアイコン4", "/assets/gallery/mi4_kaho.png")
+								+thanks("V_Melville", "メルビル")
+							+gallery("妹ちゃんさん作", "/assets/gallery/sis_kaho.jpg")
+								+thanks(null, "妹ちゃん")

@@ -1,0 +1,123 @@
+.root {
+	max-width: 920px;
+	margin: auto;
+}
+
+#header {
+	h1 {
+		font-weight: normal;
+		font-size: 3rem;
+		margin-bottom: 3rem;
+		font-family: 'Courier New', Courier, monospace;
+		&:before {
+			content: "> ";
+			margin-right: 1rem;
+		}
+	}
+}
+
+main {
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 600;
+	}
+
+	img.face {
+		width: 12rem;
+		height: 12rem;
+
+		border-radius: 100%;
+		filter: drop-shadow(0 0 8px $shadow);
+
+	}
+
+	.desc {
+		text-align: left;
+	}
+
+	ul.buttons {
+		padding: 0;
+		padding-top: 1.2rem;
+		padding-bottom: 1.2rem;
+		display: block;
+		list-style: none;
+		li.button {
+			display: inline-block;
+			background: $window-background;
+			box-shadow: 0 0 0.1rem $shadow;
+			margin: 0.5rem;
+			border-radius: 100%;
+			padding: 0.7rem;
+			padding-top: 0.79rem;
+			padding-bottom: 0.79rem;
+		
+			&:hover, &:active {
+				box-shadow: 0 0 1.2rem $shadow;
+			}
+		
+			transition: all 0.2s ease;
+			
+			font-size: 1.3rem;
+			color: $black;
+
+			a {
+				text-decoration-line: none;
+				color: $black;
+				&#twitter{ color: #55acee; }
+				&#github{ color: #333; }
+				&#soundcloud{ color: #ff3300; }
+				&#misskey{ color: #2FA2BB; }
+				&#youtube{ color: #cd201f; }
+				&#wordpress{ color: #21759b; }
+			}
+
+		}
+	}
+}
+
+.img-fluid {
+	width: 100%;
+	height: auto;
+}
+
+.card {
+	background: $window-background;
+	box-shadow: 0 0 1rem $shadow;
+	padding: 1rem;
+	margin: 2rem;
+	margin-left: 0;
+
+	.card-body {
+		&:after {
+			display: block;
+			content: "";
+			margin-top: 0.3rem;
+			margin-bottom: 0.3rem;
+			color: rgba($shadow, 0.4);
+			border-style: none;
+			border-top-style: solid;
+			border-width: 1px;
+		}
+	}
+
+	.card-command {
+		font-size: 14pt;
+		a {
+			margin-right: 1rem;
+		}
+	}
+}
+
+
+
+@media only screen and (max-width: 800px) {
+	.root {
+		margin: 1rem;
+	}
+
+	main {
+		.desc {
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+extends _layout
+
+mixin article(title, link, linkText)
+	article.card
+		.card-body
+			h1=title
+			block
+		.card-command
+			a(href=link)= linkText ? linkText : "詳細..."
+
+block title
+	title Xeltica
+	+og(
+		"Xeltica", 
+		"Webとネイティブのアプリと、ゲームを作る人",
+		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
+		"assets/cat.jpg",
+		true
+		)
+	meta(name="theme-color", content="#f44336")
+	
+block body
+	.root
+		header#header
+			h1 Xeltica
+		main
+			.container
+				.row
+					.col-4
+						img.face(src="assets/cat.jpg")
+					.col-8.desc
+						p 
+							span.nobr ウェブアプリ、
+							span.nobr ネイティブアプリ、
+							span.nobr ゲームなどを
+							span.nobr 作っています。
+						p 
+							a(href="//axella.jp") Axella 
+							| の管理人やってます。
+						
+						ul.buttons
+							li.button: a#twitter(href="https://twitter.com/XelticaWorks"): span.fab.fa-twitter.fa-fw
+							li.button: a#soundcloud(href="https://soundcloud.com/Xeltica"): span.fab.fa-soundcloud.fa-fw
+							li.button: a#github(href="https://github.com/citringo"): span.fab.fa-github.fa-fw
+							li.button: a#misskey(href="https://misskey.xyz/xeltica") Mi
+							li.button: a#youtube(href="https://www.youtube.com/channel/UCljiMx6DoPrDnsy6uqHlPTw"): span.fab.fa-youtube.fa-fw
+							li.button: a#wordpress(href="https://blog.citringo.net"): span.fab.fa-wordpress.fa-fw
+							li.button: a(href="https://musica.citringo.net"): span.fas.fa-music.fa-fw
+
+							+article("プロダクト", "/product.html")
+								p 開発した作品はこちら。。
+							+article("ギャラリー", "/gallery.html")
+								p 戴き物のイラスト一覧。
+							+article("キャラクター", "/char.html")
+								p うちの子のページです。
+							+article("リンク集", "/product.html")
+								p 私の知人のウェブサイト紹介。
+								
