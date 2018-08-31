@@ -1,9 +1,13 @@
 .badge {
-	padding: 0.1rem;
-	margin-right: 0.3rem;
-	font-size: 0.5rem;
+	padding: 0.3rem;
+	margin: 0 0 0.6rem 0.3rem;
+	position: relative;
+	font-size: 0.8rem;
 	color: white;
-	border-radius: 0.3rem;
+	border-radius: 0.8rem;
+	font-weight: bold;
+	display: inline-block;
+
 	&.primary {
 		background: #3F51B5;
 	}
@@ -22,5 +26,15 @@
 
 	&.warn {
 		background: #FFC107;
+		color: #212121;
+	}
+
+	&.dark {
+		background: #455A64;
+	}
+
+	&.light {
+		background: #CFD8DC;
+		color: #212121;
 	}
 }

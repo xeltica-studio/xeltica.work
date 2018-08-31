@@ -102,13 +102,17 @@ main {
 
 	.card-command {
 		font-size: 14pt;
+		font-weight: 500;
 		a {
 			margin-right: 1rem;
 		}
 	}
 }
 
-
+hr {
+	border-width: 0.5px;
+	border-style: solid;
+}
 
 @media only screen and (max-width: 800px) {
 	.root {
