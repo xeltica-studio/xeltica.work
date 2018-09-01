@@ -27,8 +27,14 @@ body {
 // index.html
 @import "_index.scss";
 
-// badge ui
+// badge components
 @import "_badge.scss";
+
+// card components
+@import "_card.scss";
+
+// view system
+@import "_view.scss";
 
 // grid system
 @import "_simple-grid.scss";
