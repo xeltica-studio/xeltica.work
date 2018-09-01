@@ -18,7 +18,25 @@ block title
 		true
 		)
 	meta(name="theme-color", content="#f44336")
-	
+
+block script
+	+js("https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min")
+	script.
+		window.onload = function () {
+			let icon = document.getElementById("xeltica_face");
+			let anm = anime({
+					targets: icon,
+					rotateZ: 360,
+					duration: 600,
+					easing: "easeInOutCubic",
+					autoplay: false
+				});
+			icon.addEventListener("click", () => {
+				anm.restart();
+			});
+		}
+
+
 block body
 	.root
 		header#header
@@ -27,7 +45,7 @@ block body
 			.container
 				.row
 					.col-4
-						img.face(src="assets/cat.jpg")
+						img#xeltica_face.face(src="assets/cat.jpg")
 					.col-8.desc
 						p 
 							span.nobr ウェブアプリ、

@@ -28,6 +28,7 @@ main {
 
 		border-radius: 100%;
 		filter: drop-shadow(0 0 8px $shadow);
+		cursor: pointer;
 
 	}
 
@@ -63,6 +64,7 @@ main {
 			a {
 				text-decoration-line: none;
 				color: $black;
+			}
 
 			&#twitter a{ color: #55acee; }
 			&#github a{ color: #333; }
