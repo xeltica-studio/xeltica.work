@@ -21,9 +21,11 @@ html(lang="en")
 		block head
 	body
 		block body
-		
+		#page-top
+			span.fas.fa-arrow-up
 		footer#footer
 			block footer
 			hr
 			p (C)2018 Xeltica
 		block script
+		+js("js/main")
