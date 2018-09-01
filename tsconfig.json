@@ -5,7 +5,6 @@
 		"noImplicitAny": false,
 		"removeComments": true,
 		"preserveConstEnums": true,
-		"outDir": "/srv/http/citringo.net/js/",
 		"sourceMap": false,
 		"allowJs": true,
 	},
