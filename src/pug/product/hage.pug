@@ -27,10 +27,16 @@ block body
 		#main
 			div
 				input(type="text", v-model="name", id="name", name="name" placeholder="名前")
-				button(v-on:click="click") Check!
+				button(v-on:click="click" :disabled="!name") Check!
 			div(v-if="result != ''")
 				p.alert(v-bind:class="resultClass") {{ result }}
-				a.button(v-bind:href="twitter_url") 結果をツイートする
+				button.twitter(@click="publishToTwitter()") 結果をツイートする
+				div.form-misskey
+					input(type="text", name="misskey" v-model="misskey_host" placeholder="Misskeyインスタンスのホスト名").inline-block
+					button.misskey(@click="publishToMisskey()") Misskeyに投稿する
+
+
+
 
 block footer
 	p これはジョークアプリです．本当に薄毛を気にしている方は，ここではなく医療機関をお訪ねください．
@@ -45,25 +51,44 @@ block script
 		const app = new Vue({
 			el: "#main",
 			computed: {
-				resultClass: function () {
+				resultClass() {
 					return {
 						'success': !this.hage,
 						'danger': this.hage
 					};
+				},
+				misskey_url() {
+					return `${this.misskey_host[this.misskey_host.length - 1] === "/" ? this.misskey_host.substr(0, a.length - 1) : this.misskey_host}/share?text=${encodeURIComponent(`${this.result}\n #ハゲチェッカー https://citringo.net/product/hage.html`)}`;
 				}
 			},
 			data: {
 				name: "",
 				result: "",
 				hage: false,
-				twitter_url: ""
+				twitter_url: "",
+				misskey_host: "https://misskey.xyz"
 			},
 			methods: {
 				click: async function (e) {
 					let res = await (await fetch(`https://api.citringo.net/hage/${encodeURI(this.name)}`)).json();
 					this.result = `${this.name} はハゲて${res.is_hage ? "います" : "いません"}`;
 					this.hage = res.is_hage;
-					this.twitter_url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${this.result}\n #ハゲチェッカー https://citringo.net/hage.html`)}`;
+					this.twitter_url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${this.result}\n #ハゲチェッカー https://citringo.net/product/hage.html`)}`;
+				},
+				publishToTwitter() {
+					this.popup(this.twitter_url);
+				},
+				publishToMisskey() {
+					this.popup(this.misskey_url);
+				},
+				popup(url){
+					window.open(url, "_blank", {
+						width: 512,
+						height: 768,
+						menubar: false,
+						toolbar: false,
+						status: false
+					});
 				}
 			}
 		});

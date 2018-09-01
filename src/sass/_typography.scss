@@ -11,6 +11,10 @@ p {
 	display: inline-block;
 }
 
+.inline-block {
+	display: inline-block;
+}
+
 a {
 	&:link, &:visited {
 		color: $link;
