@@ -1,0 +1,89 @@
+extends _layout
+
+mixin article(title, img)
+	.card
+		h1= title
+		hr
+		.container
+			.row
+				.col-4
+					img.img-fluid(src=img)
+				.col-8
+					block
+
+block title
+	title ギャラリー - Xeltica
+	+og(
+		"作品 - Xeltica", 
+		"ゼルチカの作ったアプリやゲームはこちら。",
+		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
+		"assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+block body
+	header#header.root
+		h1 
+			a(href="/") Xeltica
+			|  / Product
+
+		p ここには、ゼルチカが作ったソフトウェアがあります。
+
+	main.root.align-left
+		+article("Take Up Jewel", "assets/tuj.png")
+			.card-body
+				aside
+					span.badge.dark Windows
+					span.badge.info ゲーム
+				section
+					h2 宝物を奪い返せ。
+					p Take Up Jewelは、レトロゲームライクなアクションゲームです。
+					p トランジスタ王国のレジスタ街にある孤児院「ハフマンの家」で大切にされてきた宝物を、悪の組織「スパイウェ団」に盗まれてしまいました。
+					p 立ち上がった主人公が、宝物を取り返す旅に出ます。
+					p: strong .NET Framework 4.5以降 と DirectX 9.0 が必要です。
+			.card-command
+				a(href="https://www.dropbox.com/s/m92ms22qlanxp85/take-up-jewel-1.1.0-release.zip?raw=1")
+					span.fas.fa-download.fa-fw
+					| ダウンロード
+
+		+article("Rainy Tune", "assets/rainytune.png")
+			.card-body
+				aside
+					span.badge.dark Windows
+					span.badge.info 癒やし
+					span.badge.info 音楽
+				section
+					h2 あ、音が降ってきた。
+					p あなたのパソコンに、眠っているMIDIファイルはありませんか？
+					p RainyTune は、MIDIファイルをピアノで演奏してくれます。
+					p 演奏を開始すると、雨粒が降ってきて、ピアノを叩いてくれます。癒やしにどうぞ。
+			.card-command
+				a(href="https://github.com/Citringo/rainytune/releases/download/1.1.0/rainytune110.zip")
+					span.fas.fa-download.fa-fw
+					| ダウンロード
+		+article("Music Sheet", "assets/ms.png")
+			.card-body
+				aside
+					span.badge.dark Windows
+					span.badge.info 音楽
+				section
+					p Music Sheet は、Windows 向けの MIDI プレイヤー。
+					p PCエンジンなどの往年のレトロゲームに使われた「波形メモリ音源」をここに再現。あなたのMIDIファイルがゲーム音楽になります。
+					p: strong .NET Framework 4.5以降 と DirectX 9.0 が必要です。
+			.card-command
+				a(href="https://www.dropbox.com/s/y8rkbcygvyymuf2/MusicSheetv110.zip?raw=1")
+					span.fas.fa-download.fa-fw
+					| ダウンロード
+		+article("ハゲチェッカー", "assets/no_image.png")
+			.card-body
+				aside
+					span.badge.dark ウェブアプリ
+					span.badge.info ジョーク
+				section
+					p 名前を入れると、ハゲているかどうか教えてくれるハイパーインテリジェントクソジョークアプリです。
+			.card-command
+				a(href="/product/hage.html") 使う
+
+block footer
+	p Microsoft, Windows, DirectX は Microsoft Corporation の米国およびその他の国および地域における登録商標です。
