@@ -1,0 +1,37 @@
+@import "_variables.scss";
+
+input[type="text"] {
+	background: transparent;
+	border: none;
+	border-bottom: solid 1px $shadow;
+	padding: 0.4rem;
+	margin: 0.4rem;
+
+	&:focus {
+		border-bottom: solid 2px $accent;
+	}
+	outline: none;
+
+}
+
+button {
+	background: $window-background;
+	border: 0;
+	padding: 0.4rem;
+	margin: 0.4rem;
+	
+	box-shadow: 0 0 8px $shadow;
+
+	transition: all 0.2s ease;
+	outline: none;
+
+	&:hover, &:focus {
+		box-shadow: 0 0 16px $shadow;
+	}
+
+	&:active {
+		transform: scale(.99);
+		box-shadow: 0 0 2px $shadow;
+		
+	}
+}

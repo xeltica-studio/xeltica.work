@@ -1,0 +1,24 @@
+@keyframes appear {
+	0% {
+		opacity: 0;
+		transform: translateX(2rem);
+	}
+	50% {
+		opacity: .2;
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.view {
+	margin: 3rem;
+	margin-top: 1.2rem;
+	text-align: left;
+	&.show {
+		 animation: appear ease-out 0.3s forwards;
+		 display: block;
+	}
+	display: none;
+}

@@ -1,0 +1,38 @@
+h1 h2 h3 h4 h5 h6 {
+	margin: 2.5rem 0;
+}
+
+p {
+	font-size: 14pt;
+	line-height: 2.2rem;
+}
+
+.nobr {
+	display: inline-block;
+}
+
+a {
+	&:link, &:visited {
+		color: $link;
+	}
+	&:hover {
+		color: $link-hover;
+		text-shadow: 0 0 4px $shadow-light;
+	}
+
+	&:active {
+		color: $link-active;
+	}
+	text-decoration-line: none;
+
+	transition: all 0.2s ease-in;
+
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}

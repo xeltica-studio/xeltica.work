@@ -1,0 +1,74 @@
+@import "_variables.scss";
+
+* {
+	font-feature-settings: "palt" 1;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "メイリオ", sans-serif;
+	background-color: $background;
+	background: linear-gradient($background, $background2);
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+
+	color: $foreground;
+	text-align: center;
+}
+
+#page-top {
+	cursor: pointer;
+	box-shadow: 0 0 48px $shadow;
+	border-radius: 50%;
+	background: $window-background;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+//	font-size: 
+	text-align: center;
+	opacity: 0;
+	transform: scale(0);
+	transition: all 0.3s ease-in-out;
+
+	&.show {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	position: fixed;
+
+	right: 3rem;
+	bottom: 3rem;
+	width: 3rem;
+	height: 3rem;
+	z-index: 2;
+}
+
+// styles for typography
+@import "_typography.scss";
+
+// styles for footer
+@import "_footer.scss";
+
+// index.html
+@import "_index.scss";
+
+// badge components
+@import "_badge.scss";
+
+// badge ui
+@import "_alert.scss";
+
+// form styles
+@import "_form.scss";
+
+// card components
+@import "_card.scss";
+
+// view system
+@import "_view.scss";
+
+// grid system
+@import "_simple-grid.scss";
