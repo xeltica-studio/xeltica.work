@@ -66,6 +66,14 @@ main {
 				color: $black;
 			}
 
+			&#misskey {
+				img {
+					width: 1.3rem;
+					height: 1.3rem;
+				}
+				padding: 0.72rem 0.86rem;
+			}
+
 			&#twitter a{ color: #55acee; }
 			&#github a{ color: #333; }
 			&#soundcloud a{ color: #ff3300; }
