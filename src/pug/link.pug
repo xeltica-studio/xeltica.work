@@ -1,0 +1,67 @@
+extends _layout.pug
+
+
+mixin card(title, href, desc, btn_text)
+	.col-6.align-left
+		.card
+			.card-body
+				h1= title ? title : ""
+				if block
+					block
+				else
+					p= desc ? desc : ""
+			if href
+				.card-command
+						a(href=href) 行く
+
+block title
+	title リンク集 - Xeltica
+	+og(
+		"リンク - Xeltica", 
+		"友人や知人のウェブサイトを含むリンク集。",
+		"Xeltica",
+		"assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+block body
+	header#header.root
+		h1 
+			a(href="/") Xeltica
+			|  / Links
+		.align-left
+			p 
+				span.nobr 本サイトと相互リンクである
+				span.nobr ウェブサイトや、
+				span.nobr 自分の好みで
+				span.nobr 貼っているリンクを
+				span.nobr 紹介します。
+			p: strong 
+				span.nobr このウェブサイトは
+				span.nobr リンクフリーですが、
+				span.nobr なるべく相互リンクを
+				span.nobr したいので、
+				a(href="/contact.html") 連絡先
+					| から
+				span.nobr ご連絡お願いします。
+
+			p 
+				span.nobr 本サイトをリンクする際、 
+				span.nobr 必ず
+					a(href="https://citringo.net") https://citringo.net
+					| に
+				span.nobr お願いします。
+				span.nobr トップページ以外のページは、
+				span.nobr リニューアルによって
+				span.nobr URLが変わる可能性があります
+	main.root
+		.container
+			.row
+				+card("Panzer stopp!", "http://wahahayuy.wixsite.com/panzer-stopp", "プチコナーで僕の後輩である yuyat さんのサイトです。プチコン作品やイラストなどが掲載されています。")
+				+card("おちゃめくらぶ", "http://ochameclub.web.fc2.com/", "ポケコン時代からご活躍のおちゃめさんのサイトです。プチコン向けの便利なライブラリなどが公開されています。")
+				+card("Arakawa", "//arkw.net", "荒川奏良さんのウェブサイトです。多くのアプリを公開しています。")
+				//- リンク切れ
+				//- +card("ぱにゃもひ☆PROJECT", "https://panyaa.herokuapp.com/", "ぱんにゃあさんのウェブサイトです。ブログが公開されています。")
+				+card("eimiiverse公式サイト", "http://eimiiverse.starfree.jp/", "eimiiverse さんのポートフォリオサイトです。Splatoonに興味のある方はぜひ。")
+				+card("竹輪部", "https://tkwb.otyakai.xyz", "御茶会傘下のゲーム制作サークルです。私も開発に参加したゲームが公開されています。")
