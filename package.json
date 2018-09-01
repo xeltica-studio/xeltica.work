@@ -20,7 +20,7 @@
     "webhook": "node ./bin/webhook.js"
   },
   "config": {
-    "dist": "./dist"
+    "dist": "/srv/http/citringo.net/"
   },
   "repository": {
     "type": "git",
