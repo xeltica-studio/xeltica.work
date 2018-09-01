@@ -5,8 +5,9 @@ mixin article(title, link, linkText)
 		.card-body
 			h1=title
 			block
-		.card-command
-			a(href=link)= linkText ? linkText : "詳細..."
+		if link
+			.card-command
+				a(href=link)= linkText ? linkText : "もっとみる..."
 
 block title
 	title Xeltica
@@ -53,6 +54,11 @@ block body
 							span.nobr ゲームなどを
 							span.nobr 作っています。
 						p 
+							span.nobr 東京都内の
+							span.nobr 某企業で
+							span.nobr フロントエンドエンジニアを
+							span.nobr やっています。
+						p 
 							a(href="//axella.jp") Axella 
 							| の管理人やってます。
 						
@@ -87,4 +93,10 @@ block body
 								p うちの子のページです。
 							+article("リンク集", "/link.html")
 								p 私の知人のウェブサイト紹介。
-								
+							+article("Soundcloud", "https://soundcloud.com/Xeltica")
+								<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/282762842&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+							+article("Twitter (趣味アカ)", "https://twitter.com/XelticaWorks")
+								<a class="twitter-timeline" data-height="512" data-theme="dark" href="https://twitter.com/XelticaWorks?ref_src=twsrc%5Etfw">Tweets by Xeltica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+							+article("Twitter (汎用アカ)", "https://twitter.com/Xeltica")
+								<a class="twitter-timeline" data-height="512" data-theme="dark" href="https://twitter.com/Xeltica?ref_src=twsrc%5Etfw">Tweets by Xeltica</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+							
