@@ -1,0 +1,36 @@
+@import "_variables.scss";
+
+.alert {
+	display: block;
+	border: solid 1px transparent;
+	border-radius: 0.8rem;
+	box-shadow: 0 0 8px $shadow;
+	font-size: 14pt;
+	color: $white;
+
+	&.primary {
+		border-color: #1A237E;
+		background: #3F51B5;
+	}
+
+	&.success {
+		border-color: #1B5E20;
+		background: #4CAF50;
+	}
+
+	&.danger {
+		border-color: #b71c1c;
+		background: #f44336;
+	}
+
+	&.info {
+		border-color: #0D47A1;
+		background: #2196F3;
+	}
+
+	&.warn {
+		border-color: #FF6F00;
+		background: #FFC107;
+		color: $black;
+	}
+}

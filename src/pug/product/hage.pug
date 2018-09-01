@@ -1,0 +1,69 @@
+extends ../_layout
+
+
+block title
+	title ハゲチェッカー - Xeltica
+	+og(
+		"ハゲチェッカー - Xeltica", 
+		"あなたはハゲていますか？",
+		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
+		"assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+block body
+	header#header.root
+		h1 
+			a(href="/") Xeltica
+			|  / 
+			a(href="/product.html") Product
+			|  / Hage
+		
+	main.root
+		h1 ハゲチェッカー
+		p 名前を入れるだけで，あなたがハゲているかどうか一発で当ててみせます．
+		p: strong ここで入れた名前は一切サーバーによって収集されません．ご安心ください．
+		#main
+			div
+				input(type="text", v-model="name", id="name", name="name" placeholder="名前")
+				button(v-on:click="click") Check!
+			div(v-if="result != ''")
+				p.alert(v-bind:class="resultClass") {{ result }}
+				a.button(v-bind:href="twitter_url") 結果をツイートする
+
+block footer
+	p これはジョークアプリです．本当に薄毛を気にしている方は，ここではなく医療機関をお訪ねください．
+	p 結果によって生じたトラブルについて，ゼルチカは一切責任を負いかねます．
+
+block script
+	+js("https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min")
+	script(type="text/javascript").
+		const notHage = name => `${name} はハゲていません`;
+		const hage = name => `${name} はハゲています`;
+
+		const app = new Vue({
+			el: "#main",
+			computed: {
+				resultClass: function () {
+					return {
+						'success': !this.hage,
+						'danger': this.hage
+					};
+				}
+			},
+			data: {
+				name: "",
+				result: "",
+				hage: false,
+				twitter_url: ""
+			},
+			methods: {
+				click: async function (e) {
+					let res = await (await fetch(`https://api.citringo.net/hage/${encodeURI(this.name)}`)).json();
+					this.result = `${this.name} はハゲて${res.is_hage ? "います" : "いません"}`;
+					this.hage = res.is_hage;
+					this.twitter_url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${this.result}\n #ハゲチェッカー https://citringo.net/hage.html`)}`;
+				}
+			}
+		});
