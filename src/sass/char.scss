@@ -1,0 +1,42 @@
+@import "_variables.scss";
+
+.char-selector {
+	display: block;
+	text-align: left;
+	.char {
+
+		display: none;
+		
+		&:checked {
+			& + label {
+				border-radius: 50%;
+				box-shadow: 0 0 24px $shadow;
+			}
+		}
+		
+		&#s_citrine + label {
+			background-image: url("/assets/gallery/mi4_citrine.png");
+		}
+		&#s_kaho  + label {
+			background-image: url("/assets/gallery/mi4_kaho.png");
+		}
+
+		&:not(:checked) + label:hover {
+			box-shadow: 0 0 18px $shadow;
+		}
+
+		& + label {
+			cursor: pointer;
+			border: none;
+			border-radius: 40%;
+			box-shadow: 0 0 4px $shadow;
+			width: 4rem;
+			height: 4rem;
+			margin-right: 1rem;
+			display: inline-block;
+			transition: all 0.2s ease;
+			background-size: cover;
+		}
+
+	}
+}

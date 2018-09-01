@@ -18,7 +18,25 @@ block title
 		true
 		)
 	meta(name="theme-color", content="#f44336")
-	
+
+block script
+	+js("https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min")
+	script.
+		window.onload = function () {
+			let icon = document.getElementById("xeltica_face");
+			let anm = anime({
+					targets: icon,
+					rotateZ: 360,
+					duration: 600,
+					easing: "easeInOutCubic",
+					autoplay: false
+				});
+			icon.addEventListener("click", () => {
+				anm.restart();
+			});
+		}
+
+
 block body
 	.root
 		header#header
@@ -27,7 +45,7 @@ block body
 			.container
 				.row
 					.col-4
-						img.face(src="assets/cat.jpg")
+						img#xeltica_face.face(src="assets/cat.jpg")
 					.col-8.desc
 						p 
 							span.nobr ウェブアプリ、
@@ -39,20 +57,34 @@ block body
 							| の管理人やってます。
 						
 						ul.buttons
-							li.button: a#twitter(href="https://twitter.com/XelticaWorks"): span.fab.fa-twitter.fa-fw
-							li.button: a#soundcloud(href="https://soundcloud.com/Xeltica"): span.fab.fa-soundcloud.fa-fw
-							li.button: a#github(href="https://github.com/citringo"): span.fab.fa-github.fa-fw
-							li.button: a#misskey(href="https://misskey.xyz/xeltica") Mi
-							li.button: a#youtube(href="https://www.youtube.com/channel/UCljiMx6DoPrDnsy6uqHlPTw"): span.fab.fa-youtube.fa-fw
-							li.button: a#wordpress(href="https://blog.citringo.net"): span.fab.fa-wordpress.fa-fw
-							li.button: a(href="https://musica.citringo.net"): span.fas.fa-music.fa-fw
+							li.button#twitter
+								a(href="https://twitter.com/XelticaWorks"): span.fab.fa-twitter.fa-fw
+								.tooltip Twitter
+							li.button#soundcloud
+								a(href="https://soundcloud.com/Xeltica"): span.fab.fa-soundcloud.fa-fw
+								.tooltip SoundCloud
+							li.button#github
+								a(href="https://github.com/citringo"): span.fab.fa-github.fa-fw
+								.tooltip GitHub
+							li.button#misskey
+								a(href="https://misskey.xyz/xeltica") Mi
+								.tooltip Misskey
+							li.button#youtube
+								a(href="https://www.youtube.com/channel/UCljiMx6DoPrDnsy6uqHlPTw"): span.fab.fa-youtube.fa-fw
+								.tooltip YouTube
+							li.button#wordpress
+								a(href="https://blog.citringo.net"): span.fab.fa-wordpress.fa-fw
+								.tooltip ブログ
+							li.button#musica
+								a(href="https://musica.citringo.net"): span.fas.fa-music.fa-fw
+								.tooltip オリジナル曲集
 
 							+article("プロダクト", "/product.html")
-								p 開発した作品はこちら。。
+								p 僕が制作したソフトウェアやゲームを公開しています。
 							+article("ギャラリー", "/gallery.html")
 								p 頂き物のイラスト一覧。
 							+article("キャラクター", "/char.html")
 								p うちの子のページです。
-							+article("リンク集", "/product.html")
+							+article("リンク集", "/link.html")
 								p 私の知人のウェブサイト紹介。
 								

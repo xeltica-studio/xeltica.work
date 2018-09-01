@@ -7,7 +7,7 @@ mixin article(title, img)
 		.container
 			.row
 				.col-4
-					img.img-fluid(src=img)
+					img.fluid(src=img)
 				.col-8
 					block
 
@@ -62,6 +62,9 @@ block body
 				a(href="https://github.com/Citringo/rainytune/releases/download/1.1.0/rainytune110.zip")
 					span.fas.fa-download.fa-fw
 					| ダウンロード
+				a(href="https://github.com/Citringo/rainytune/")
+					span.fab.fa-github.fa-fw
+					| ソースコード
 		+article("Music Sheet", "assets/ms.png")
 			.card-body
 				aside
