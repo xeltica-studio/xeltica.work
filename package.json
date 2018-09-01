@@ -5,17 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all -s clean build:*",
-    "build:sass": "cross-conf-env node-sass ./src/sass --output  $npm_package_config_dist/css --output-style compressed",
-    "build:pug": "cross-conf-env pug ./src/pug --out $npm_package_config_dist/ --pretty",
+    "build:sass": "cross-conf-env node-sass ./src/sass --output  npm_package_config_dist/css --output-style compressed",
+    "build:pug": "cross-conf-env pug ./src/pug --out npm_package_config_dist/ --pretty",
     "build:ts": "tsc",
-    "build:static": "cross-conf-env cpx ./src/assets/**/* $npm_package_config_dist/assets/",
+    "build:static": "cross-conf-env cpx './src/assets/**/*' npm_package_config_dist/assets/",
     "watch": "npm-run-all -p watch:*",
-    "watch:sass": "cross-conf-env node-sass ./src/sass --output  $npm_package_config_dist/css --output-style compressed -w",
-    "watch:pug": "cross-conf-env pug ./src/pug --out $npm_package_config_dist/ --pretty -w",
+    "watch:sass": "cross-conf-env node-sass ./src/sass --output  npm_package_config_dist/css --output-style compressed -w",
+    "watch:pug": "cross-conf-env pug ./src/pug --out npm_package_config_dist/ --pretty -w",
     "watch:ts": "tsc -w",
-    "clean": "cross-conf-env rimraf  $npm_package_config_dist/",
+    "clean": "cross-conf-env rimraf npm_package_config_dist/",
     "srv": "npm-run-all -s build -p watch browser",
-    "browser": "cross-conf-env browser-sync start --server --ss $npm_package_config_dist/",
+    "browser": "cross-conf-env browser-sync start --server --ss npm_package_config_dist/",
     "webhook": "node ./bin/webhook.js"
   },
   "config": {
@@ -35,10 +35,10 @@
     "cross-conf-env": "^1.1.2"
   },
   "dependencies": {
-    "github-webhook-handler": "^0.7.1",
-    "node-cmd": "^3.0.0",
     "browser-sync": "^2.24.6",
     "cpx": "^1.5.0",
+    "github-webhook-handler": "^0.7.1",
+    "node-cmd": "^3.0.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
     "pug-cli": "^1.0.0-alpha6",
