@@ -9,7 +9,7 @@
     "build:sass": "cross-conf-env node-sass ./src/sass --output  npm_package_config_dist/css --output-style compressed",
     "build:pug": "cross-conf-env pug ./src/pug --out npm_package_config_dist/ --pretty",
     "build:ts": "cross-conf-env tsc --outDir npm_package_config_dist/js/",
-    "build:static": "cross-conf-env cpx './src/assets/**/*' npm_package_config_dist/assets/",
+    "build:static": "cross-conf-env cpx \"./src/assets/**/*\" npm_package_config_dist/assets/",
     "watch": "npm-run-all -p watch:*",
     "watch:sass": "cross-conf-env node-sass ./src/sass --output  npm_package_config_dist/css --output-style compressed -w",
     "watch:pug": "cross-conf-env pug ./src/pug --out npm_package_config_dist/ --pretty -w",
