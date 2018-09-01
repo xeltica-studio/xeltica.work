@@ -63,13 +63,33 @@ main {
 			a {
 				text-decoration-line: none;
 				color: $black;
-				&#twitter{ color: #55acee; }
-				&#github{ color: #333; }
-				&#soundcloud{ color: #ff3300; }
-				&#misskey{ color: #2FA2BB; }
-				&#youtube{ color: #cd201f; }
-				&#wordpress{ color: #21759b; }
+
+			&#twitter a{ color: #55acee; }
+			&#github a{ color: #333; }
+			&#soundcloud a{ color: #ff3300; }
+			&#misskey a{ color: #2FA2BB; }
+			&#youtube a{ color: #cd201f; }
+			&#wordpress a{ color: #21759b; }
+
+			.tooltip {
+				font-size: 0.8rem;
+				color: $foreground;
+				position: absolute;
+				left: -100%;
+				right: -100%;
+				display: block;
+				text-align: center;
+				top: -1rem;
+				transition: all ease 0.2s;
+				opacity: 0;
 			}
+
+			&:hover .tooltip {
+				opacity: 1;
+				transform: translateY(-0.5rem);
+			}
+
+			position: relative;
 
 		}
 	}
