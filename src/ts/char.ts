@@ -55,14 +55,17 @@ class Char {
 			default:
 			case "citrine":
 				this.setView(this.citrine);
+				this.citrine.radioButton.checked = true;
+				this.kaho.radioButton.checked = false;
 				break;
 			case "kaho":
 				this.setView(this.kaho);
+				this.citrine.radioButton.checked = false;
+				this.kaho.radioButton.checked = true;
 				break;
 		}
-		console.log(location.search);
 	}
 
 }
 
-window.onload = _ => new Char();
+window.addEventListener("load", _ => new Char());
