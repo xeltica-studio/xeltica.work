@@ -10,6 +10,10 @@ input[type="text"] {
 	&:focus {
 		border-bottom: solid 2px $accent;
 	}
+
+	&:disabled {
+		border-bottom: solid 1px $shadow-light;
+	}
 	outline: none;
 
 }
@@ -20,19 +24,23 @@ button {
 	padding: 0.4rem;
 	margin: 0.4rem;
 	
-	box-shadow: 0 0 8px $shadow;
+	box-shadow: 0 0 $shadow-depth $shadow;
 
-	transition: all 0.2s ease;
+	transition: all 0.05s ease-out;
 	outline: none;
 
 	&:hover, &:focus {
-		box-shadow: 0 0 16px $shadow;
+		box-shadow: 0 0 $shadow-depth-hover $shadow;
 	}
 
 	&:active {
 		transform: scale(.99);
-		box-shadow: 0 0 2px $shadow;
-		
+		box-shadow: 0 0 $shadow-depth-push $shadow;
+	}
+
+	&:disabled {
+		box-shadow: 0 0 $shadow-depth $shadow-light;
+		color: $window-disabled-background;
 	}
 }
 

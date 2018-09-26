@@ -27,9 +27,18 @@ main {
 		height: 12rem;
 
 		border-radius: 100%;
-		filter: drop-shadow(0 0 8px $shadow);
+		//filter: drop-shadow(0 0 8px $shadow);
+		box-shadow: 0 0 $shadow-depth $shadow;
 		cursor: pointer;
 
+		&:hover {
+			box-shadow: 0 0 $shadow-depth-hover $shadow;
+		}
+
+		&:active {
+			box-shadow: 0 0 $shadow-depth-push $shadow;
+		}
+		transition: all 0.05s ease-out;
 	}
 
 	.desc {
@@ -51,19 +60,27 @@ main {
 			padding: 0.7rem;
 			padding-top: 0.79rem;
 			padding-bottom: 0.79rem;
+			box-shadow: 0 0 $shadow-depth $shadow;
 		
-			&:hover, &:active {
-				box-shadow: 0 0 1.2rem $shadow;
+			&:hover {
+				box-shadow: 0 0 $shadow-depth-hover $shadow;
+			}
+
+			&:active {
+				box-shadow: 0 0 $shadow-depth-push $shadow;
 			}
 		
-			transition: all 0.2s ease;
+			transition: all 0.05s ease-out;
 			
 			font-size: 1.3rem;
 			color: $black;
 
+			cursor: pointer;
+
 			a {
 				text-decoration-line: none;
 				color: $black;
+				text-shadow: none;
 			}
 
 			&#misskey {
@@ -90,7 +107,7 @@ main {
 				display: block;
 				text-align: center;
 				top: -1rem;
-				transition: all ease 0.2s;
+				transition: all 0.05s ease-out;
 				opacity: 0;
 			}
 

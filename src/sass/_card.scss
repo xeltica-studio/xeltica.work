@@ -1,6 +1,7 @@
 .card {
 	background: $window-background;
-	box-shadow: 0 0 1rem $shadow;
+	border: 1px solid $shadow-light;
+	// box-shadow: 0 0 1rem $shadow;
 	padding: 1rem;
 	margin: 2rem 0;
 

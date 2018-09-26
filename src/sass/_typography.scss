@@ -18,19 +18,19 @@ p {
 a {
 	&:link, &:visited {
 		color: $link;
+		text-shadow: 0 0 $shadow-depth $shadow-light;
 	}
 	&:hover {
 		color: $link-hover;
-		text-shadow: 0 0 4px $shadow-light;
+		text-shadow: 0 0 $shadow-depth-hover $shadow-light;
 	}
 
 	&:active {
 		color: $link-active;
+		text-shadow: 0 0 $shadow-depth-push $shadow-light;
 	}
 	text-decoration-line: none;
-
-	transition: all 0.2s ease-in;
-
+	transition: all 0.05s ease-out;
 }
 
 .align-left {

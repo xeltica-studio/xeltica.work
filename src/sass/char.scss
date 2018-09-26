@@ -10,7 +10,7 @@
 		&:checked {
 			& + label {
 				border-radius: 50%;
-				box-shadow: 0 0 24px $shadow;
+				box-shadow: 0 0 $shadow-depth-push $shadow;
 			}
 		}
 		
@@ -22,14 +22,14 @@
 		}
 
 		&:not(:checked) + label:hover {
-			box-shadow: 0 0 18px $shadow;
+			box-shadow: 0 0 $shadow-depth-hover $shadow;
 		}
 
 		& + label {
 			cursor: pointer;
 			border: none;
 			border-radius: 40%;
-			box-shadow: 0 0 4px $shadow;
+			box-shadow: 0 0 $shadow-depth $shadow;
 			width: 4rem;
 			height: 4rem;
 			margin-right: 1rem;
