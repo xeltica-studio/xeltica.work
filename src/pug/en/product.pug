@@ -1,0 +1,96 @@
+extends _layout
+
+mixin article(title, img)
+	.card
+		h1= title
+		hr
+		.container
+			.row
+				.col-4
+					img.fluid(src=img)
+				.col-8
+					block
+
+block title
+	title Products - Xeltica
+	+og(
+		"Products - Xeltica", 
+		"Xeltica's products.",
+		"Creation, Game, Apps, Engineering, Xeltica",
+		"/assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+block body
+	header#header.root
+		h1 
+			a(href="/") Xeltica
+			|  / Product
+
+		p There are several apps I created.
+
+	main.root.align-left
+		+article("Take Up Jewel", "/assets/tuj.png")
+			.card-body
+				aside
+					span.badge.dark Windows
+					span.badge.info Game
+				section
+					h2 Take up all treasures!!!
+					p Take Up Jewel is a 8bit-like action game.
+					p: strong I'm sorry, but this game is not localized for English, so supports only Japanese.
+					p: strong .NET Framework 4.5+ and DirectX 9.0 are required to run this game.
+			.card-command
+				a(href="https://www.dropbox.com/s/m92ms22qlanxp85/take-up-jewel-1.1.0-release.zip?raw=1")
+					span.fas.fa-download.fa-fw
+					| Download it
+
+		+article("Rainy Tune", "/assets/rainytune.png")
+			.card-body
+				aside
+					span.badge.dark Windows
+					span.badge.info Healing
+					span.badge.info Music
+				section
+					h2 Oh, Sounds came down!
+					p Don't you have unused MIDI files?
+					p RainyTune plays them with so awesome animations.
+			.card-command
+				a(href="https://github.com/xeltica/rainytune/releases/download/1.1.0/rainytune110.zip")
+					span.fas.fa-download.fa-fw
+					| Download it
+				a(href="https://github.com/xeltica/rainytune/")
+					span.fab.fa-github.fa-fw
+					| See source codes
+		+article("Music Sheet", "/assets/ms.png")
+			.card-body
+				aside
+					span.badge.dark Windows
+					span.badge.info Music
+				section
+					p Music Sheet is a MIDI player for Windows.
+					p It has a emulated wavetable synthesizer. You can listen to your MIDI files like a game music.
+					p: strong .NET Framework 4.5+ and DirectX 9.0 are required to run this app.
+			.card-command
+				a(href="https://www.dropbox.com/s/y8rkbcygvyymuf2/MusicSheetv110.zip?raw=1")
+					span.fas.fa-download.fa-fw
+					| Download it!
+		.card
+			h1 AD
+			hr
+			.container
+				.row
+					.col-6
+						script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+						ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-4398381659121550', data-ad-slot='7519451816', data-ad-format='auto', data-full-width-responsive='true')
+						script.
+							(adsbygoogle = window.adsbygoogle || []).push({});
+					.col-6
+						script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+						ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-4398381659121550', data-ad-slot='7519451816', data-ad-format='auto', data-full-width-responsive='true')
+						script.
+							(adsbygoogle = window.adsbygoogle || []).push({});
+
+block footer
+	p Microsoft, Windows and DirectX are all registered trademark of Microsoft Corporation.

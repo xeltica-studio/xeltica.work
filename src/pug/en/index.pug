@@ -7,15 +7,15 @@ mixin article(title, link, linkText)
 			block
 		if link
 			.card-command
-				a(href=link)= linkText ? linkText : "もっとみる..."
+				a(href=link)= linkText ? linkText : "More..."
 
 block title
 	title Xeltica
 	+og(
 		"Xeltica", 
-		"Webとネイティブのアプリと、ゲームを作る人",
-		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
-		"assets/cat.jpg",
+		"A man developing web, native apps and games.",
+		"Creation, Game, App, Engineering, Xeltica",
+		"/assets/cat.jpg",
 		true
 		)
 	meta(name="theme-color", content="#f44336")
@@ -46,27 +46,15 @@ block body
 			.container
 				.row
 					.col-4
-						img#xeltica_face.face(src="assets/cat.jpg")
+						img#xeltica_face.face(src="/assets/cat.jpg")
 					.col-8.desc
-						p 
-							span.nobr ウェブアプリ、
-							span.nobr ネイティブアプリ、
-							span.nobr ゲームなどを
-							span.nobr 作っています。
-						p 
-							span.nobr 東京都内の
-							span.nobr 某企業で
-							span.nobr フロントエンドエンジニアを
-							span.nobr やっています。
-						p 
-							a(href="//axella.jp") Axella 
-							| の管理人やってます。
-						
+						p I'm creating games, web apps and native apps.
+						p I'm a front-end web enginner in Tokyo.
 						p
-							| 日本語
+							a(href="/") 日本語
 							|  ・ 
-							a(href="/en") English
-
+							| English
+						
 						ul.buttons
 							li.button#twitter
 								a(href="https://twitter.com/XelticaWorks"): span.fab.fa-twitter.fa-fw
@@ -85,28 +73,23 @@ block body
 								.tooltip YouTube
 							li.button#wordpress
 								a(href="https://blog.citringo.net"): span.fab.fa-wordpress.fa-fw
-								.tooltip ブログ
+								.tooltip Blog
 							li.button#musica
 								a(href="https://musica.citringo.net"): span.fas.fa-music.fa-fw
-								.tooltip オリジナル曲集
+								.tooltip Original Songs
 
-							+article("プロダクト", "/product.html")
-								p 僕が制作したソフトウェアやゲームを公開しています。
-							+article("ギャラリー", "/gallery.html")
-								p 頂き物のイラスト一覧。
-							+article("キャラクター", "/char.html")
-								p うちの子のページです。
-							+article("リンク集", "/link.html")
-								p 私の知人のウェブサイト紹介。
-							+article("Soundcloud", "https://soundcloud.com/Xeltica")
+							+article("PRODUCTS", "/en/product.html")
+								p Games and apps I created.
+							+article("GUIDELINE", "/en/char/guideline.html")
+								p A guideline about my owned characters.
+							+article("LINKS", "/en/link.html")
+								p My friends' website.
+							+article("SOUNDCLOUD", "https://soundcloud.com/Xeltica")
 								<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/282762842&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-							+article("Twitter (趣味アカ)", "https://twitter.com/XelticaWorks")
+							+article("TWITTER", "https://twitter.com/XelticaWorks")
 								a.twitter-timeline(data-height='512', data-theme='dark', href='https://twitter.com/XelticaWorks?ref_src=twsrc%5Etfw') Tweets by Xeltica
 								script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
-							+article("Twitter (汎用アカ)", "https://twitter.com/Xeltica")
-								a.twitter-timeline(data-height='512', data-theme='dark', href='https://twitter.com/Xeltica?ref_src=twsrc%5Etfw') Tweets by Xeltica
-								script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
-							+article("広告")
+							+article("AD")
 								script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 								ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-4398381659121550', data-ad-slot='7519451816', data-ad-format='auto', data-full-width-responsive='true')
 								script.
