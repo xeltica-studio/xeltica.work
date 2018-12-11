@@ -1,0 +1,32 @@
+extends _layout
+
+
+block title
+	title 寄付 - Xeltica
+	+og(
+		"寄付 - Xeltica", 
+		"寄付はこちらから",
+		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
+		"assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+	
+block body
+	header#header.root
+		h1 
+			a(href="/") Xeltica
+			|  / 
+			a(href="/char.html") Donation
+			|  / Guideline
+	
+	main.root.align-left
+		.card.container
+            p ゼルチカはあらゆる活動を趣味の範囲で続けています。趣味であれ、ゲーム開発や作曲、サーバーの運用などにはそれなりの金額が発生します。
+            p 私の活動に感銘を受けたり、寄付をしたい！という方のために、寄付の手段を用意しました。
+            h2 Kyash
+            p Kyash はスマートフォンから簡単に送金ができる便利なサービスです。Kyash 上にウォレットを持っている方は、こちらの方法で寄付することをおすすめします。
+            img(src="assets/kyash.png", alt="Kyash QR", width="256")
+            h2 Amazon
+            p モノでも嬉しいです。欲しいものリストを公開しているので、送っていただけると喜びます。
+            a(href="http://amzn.asia/jknfT4S")　欲しいものリスト
