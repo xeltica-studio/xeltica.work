@@ -1,0 +1,46 @@
+extends _layout
+
+
+block title
+	title ギャラリー - Xeltica
+	+og(
+		"ギャラリー - Xeltica", 
+		"戴き物の絵を掲載しています",
+		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
+		"assets/cat.jpg",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+block body
+	header#header.root
+		h1 
+			a(href="/") Xeltica
+			|  / Gallery
+		p 多くのファンアートを頂いております。 頂いたイラストを、ここに掲載しております。
+
+		p うちの子のファンアート、随時募集中です。送っていただければもれなく掲載いたします。
+
+		p 二次創作については
+			a(href="/char/guideline.html") ガイドライン
+			| をご確認ください。
+	.container
+		.row
+			article#gallery.col-12
+				section#citrine.section
+					.container
+						h2 シトリン
+						.gallery
+							img(src="/assets/gallery/micra_citrine.jpg" alt="citrine")
+							img(src="/assets/gallery/moh_citrine.jpg" alt="citrine")
+							img(src="/assets/gallery/mi4_citrine.png" alt="citrine")
+							img(src="/assets/gallery/mi3_citrine.jpg" alt="citrine")
+							img(src="/assets/gallery/mi16_citrine.png" alt="citrine")
+							img(src="/assets/gallery/mi15_citrine.png" alt="citrine")
+				section#kaho.section
+					.container
+						h2 カホ
+						.gallery
+							img(src="/assets/gallery/lv100_kaho.png" alt="kaho")
+							img(src="/assets/gallery/mi4_kaho.png" alt="kaho")
+							img(src="/assets/gallery/sis_kaho.jpg" alt="kaho")

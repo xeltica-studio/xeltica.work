@@ -54,6 +54,21 @@ body {
 	z-index: 2;
 }
 
+.gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: center;
+	img {
+		width: auto;
+		max-height: 192px;
+		border: solid 0.2rem white;
+		box-shadow: 0 0 1rem black;
+		margin: 0.5rem;
+	}
+}
+
 // styles for typography
 @import "_typography.scss";
 
