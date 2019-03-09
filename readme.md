@@ -17,12 +17,12 @@ git clone https://github.com/citringo/xeltica-garage
 cd xeltica-garage
 npm install
 
-# ここで、package.json を開いて config.dist を適切な値にすること
+# 出力ディレクトリを変更するには、 webpack.config.ts の 9 行目を各自弄ること
 
 # 静的サイトのビルド
 npm run build
 # デバッグサーバーの起動
-npm run srv
+npm run serve
 ```
 
 ## LICENSE

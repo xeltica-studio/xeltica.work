@@ -1,18 +1,26 @@
 {
-	"compilerOptions": {
-		"module": "system",
-		"target":"es5",
-		"noImplicitAny": false,
-		"removeComments": true,
-		"preserveConstEnums": true,
-		"sourceMap": false,
-		"allowJs": true,
-	},
-	"include": [
-		"src/ts/**/*"
-	],
-	"exclude": [
-		"node_modules",
-		"**/*.spec.ts"
-	]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "noImplicitAny": false,
+        "removeComments": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "typeRoots": [
+            "node_modules/@types",
+            "src/@types"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
 }

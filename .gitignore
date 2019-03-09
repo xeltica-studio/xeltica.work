@@ -1,12 +1,10 @@
 # macOS Filesystem Metadata
 .DS_Store
 
+.vscode
+
 # Project Settings
 /node_modules
 /dist
-
-# Secret
-conf.json
-
 
 *.log
