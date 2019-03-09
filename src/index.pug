@@ -57,7 +57,7 @@ block body
 							span.nobr 東京都内の
 							span.nobr 某企業で
 							span.nobr フロントエンドエンジニアを
-							span.nobr やっています。
+							span.nobr やっています。						
 						p
 							| 日本語
 							|  ・ 
@@ -74,17 +74,14 @@ block body
 								a(href="https://github.com/xeltica"): span.fab.fa-github.fa-fw
 								.tooltip GitHub
 							li.button#misskey
-								a(href="https://mi.citringo.net/@xeltica"): img(src="/assets/mi.svg")
+								a(href="https://mi.xeltica.work/@xeltica"): img(src="/assets/mi.svg")
 								.tooltip Misskey
 							li.button#youtube
 								a(href="https://www.youtube.com/channel/UCljiMx6DoPrDnsy6uqHlPTw"): span.fab.fa-youtube.fa-fw
 								.tooltip YouTube
 							li.button#wordpress
-								a(href="https://blog.citringo.net"): span.fab.fa-wordpress.fa-fw
+								a(href="https://blog.xeltica.work"): span.far.fa-newspaper.fa-fw
 								.tooltip ブログ
-							li.button#musica
-								a(href="https://musica.citringo.net"): span.fas.fa-music.fa-fw
-								.tooltip オリジナル曲集
 
 							+article("プロダクト", "/product.html")
 								p 僕が制作したソフトウェアやゲームを公開しています。
@@ -92,19 +89,12 @@ block body
 								p 頂き物のイラスト一覧。
 							+article("キャラクター", "/char.html")
 								p うちの子のページです。
-							+article("Misskey", "//mi.citringo.net")
+							+article("Misskey", "//mi.xeltica.work")
 								p ゼルチカ運営のMisskeyインスタンスはこちら。
-							+article("リンク集", "/link.html")
-								p 私の知人のウェブサイト紹介。
 							+article("その他")
-								ul
-									li
-										a(href="/donation.html") 寄付
+								a(href="/donation.html") 寄付
 							+article("Soundcloud", "https://soundcloud.com/Xeltica")
 								<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/282762842&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-							+article("Twitter (趣味アカ)", "https://twitter.com/XelticaWorks")
-								a.twitter-timeline(data-height='512', data-theme='dark', href='https://twitter.com/XelticaWorks?ref_src=twsrc%5Etfw') Tweets by Xeltica
-								script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
-							+article("Twitter (汎用アカ)", "https://twitter.com/Xeltica")
-								a.twitter-timeline(data-height='512', data-theme='dark', href='https://twitter.com/Xeltica?ref_src=twsrc%5Etfw') Tweets by Xeltica
+							+article("Twitter", "https://twitter.com/XelticaWorks")
+								a.twitter-timeline(data-height='512', data-theme='dark', href='https://twitter.com/XelticaWorks?ref_src=twsrc%5Etfw') Tweets by XelticaWorks
 								script(async='', src='https://platform.twitter.com/widgets.js', charset='utf-8')
