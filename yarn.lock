@@ -7,6 +7,13 @@
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
   integrity sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA==
 
+"@types/axios@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
+  integrity sha1-7CMA++fX3d1+udOr+HmZlkyvzkY=
+  dependencies:
+    axios "*"
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-7.0.6.tgz#a7cfaaeee96e90c4c54da0e580aaff3f4cffacac"
@@ -77,6 +84,13 @@
   integrity sha512-SudIN9TRJ+v8g5pTG8RRCqfqTMNqgWCKKd3vtynhGzkIIjxaicNAMuY5TRadJ6tzDu3Dotf3ngaMILtmOdmWEQ==
   dependencies:
     source-map "^0.6.1"
+
+"@types/vue@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/vue/-/vue-2.0.0.tgz#ec77b3d89591deb9ca5cb052368aa9c32be088e7"
+  integrity sha1-7Hez2JWR3rnKXLBSNoqpwyvgiOc=
+  dependencies:
+    vue "*"
 
 "@types/webpack@*", "@types/webpack@^4.4.25":
   version "4.4.25"
@@ -522,6 +536,14 @@ aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha512-ReZxvNHIOv88FlT7rxcXIIC0fPt4KZqZbOlivyWtXLt8ESx84zd3kMC6iK5jVeS2qt+g7ftS7ye4fi06X5rtRQ==
+
+axios@*, axios@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
 
 babel-code-frame@^6.20.0:
   version "6.26.0"
@@ -1831,7 +1853,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.3.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
   integrity sha512-m/pZQy4Gj287eNy94nivy5wchN3Kp+Q5WgUPNy5lJSZ3sgkVKSYV/ZChMAQVIgx1SqfZ2zBZtPA2YlXIWxxJOQ==
@@ -5095,6 +5117,11 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
+
+vue@*, vue@^2.6.8:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.8.tgz#f21cbc536bfc14f7d1d792a137bb12f69e60ea91"
+  integrity sha512-+vp9lEC2Kt3yom673pzg1J7T1NVGuGzO9j8Wxno+rQN2WYVBX2pyo/RGQ3fXCLh2Pk76Skw/laAPCuBuEQ4diw==
 
 watchpack@^1.5.0:
   version "1.6.0"

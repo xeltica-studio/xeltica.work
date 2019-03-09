@@ -24,23 +24,35 @@ block body
 		p 二次創作については
 			a(href="/char/guideline.html") ガイドライン
 			| をご確認ください。
-	.container
+	.container#app
 		.row
 			article#gallery.col-12
 				section#citrine.section
 					.container
 						h2 シトリン
 						.gallery
-							img(src="/assets/gallery/micra_citrine.jpg" alt="citrine")
-							img(src="/assets/gallery/moh_citrine.jpg" alt="citrine")
-							img(src="/assets/gallery/mi4_citrine.png" alt="citrine")
-							img(src="/assets/gallery/mi3_citrine.jpg" alt="citrine")
-							img(src="/assets/gallery/mi16_citrine.png" alt="citrine")
-							img(src="/assets/gallery/mi15_citrine.png" alt="citrine")
+							img(v-for="image in images.citrine",
+								:src="'/assets/gallery/' + image.file"
+								@click="clicked(image)")
+						
 				section#kaho.section
 					.container
 						h2 カホ
 						.gallery
-							img(src="/assets/gallery/lv100_kaho.png" alt="kaho")
-							img(src="/assets/gallery/mi4_kaho.png" alt="kaho")
-							img(src="/assets/gallery/sis_kaho.jpg" alt="kaho")
+							img(v-for="image in images.kaho",
+								:src="'/assets/gallery/' + image.file"
+								@click="clicked(image)")
+		transition(name="fade")
+			.overlay(v-if="isModalVisible", v-cloak, @click="close()")
+				.window
+					a(:href="'/assets/gallery/' + selectedImage.file"): img(:src="'/assets/gallery/' + selectedImage.file")
+					.description
+						h1(v-if="selectedImage.authorUrl" )
+							a(:href="selectedImage.authorUrl")
+								| 提供: {{ selectedImage.author }}
+						h1(v-else) 提供: {{ selectedImage.author }}
+						p(v-if="selectedImage.description") {{ selectedImage.description }}
+					.close(@click="close()")
+						i.fas.fa-times
+block script
+	+js("js/gallery")
