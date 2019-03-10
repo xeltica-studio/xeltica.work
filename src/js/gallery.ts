@@ -11,24 +11,30 @@ import axios from "axios";
 		data: {
 			images: data,
 			isModalVisible: false,
-			selectedImage: null,
+			selectedIndex: 0,
 		},
 		methods: {
-			clicked(image: ImageDefinition) {
-				this.selectedImage = image;
+			clicked(index: number, image: ImageDefinition) {
+				this.selectedIndex = index;
 				this.isModalVisible = true;
 			},
 			close() {
 				this.isModalVisible = false;
-			}
+			},
+			goPrevious() {
+				this.selectedIndex--;
+				if (this.selectedIndex < 0)
+					this.selectedIndex = this.images.length - 1;
+			},
+			goNext() {
+				this.selectedIndex++;
+				if (this.selectedIndex > this.images.length - 1)
+					this.selectedIndex = 0;
+			},
+			selectedImage: function () { return this.images[this.selectedIndex]; },
 		}
 	});
 })();
-
-interface Images {
-	citrine: ImageDefinition[];
-	kaho: ImageDefinition[];
-}
 
 interface ImageDefinition {
 	file: string;

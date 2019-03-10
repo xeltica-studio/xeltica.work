@@ -27,22 +27,26 @@ block body
 	.container#app
 		.row
 			article#gallery.col-12
-					.container
+				.container
 					#gallery
 						img(v-for="(image, index) in images",
-								:src="'/assets/gallery/' + image.file"
+							:src="'/assets/gallery/' + image.file"
 							@click="clicked(index, image)")
 		transition(name="fade")
 			.overlay(v-if="isModalVisible", v-cloak, @click="close()")
 				.window
-					a(:href="'/assets/gallery/' + selectedImage.file"): img(:src="'/assets/gallery/' + selectedImage.file")
+					a(:href="'/assets/gallery/' + selectedImage().file"): img(:src="'/assets/gallery/' + selectedImage().file")
 					.description
-						h1(v-if="selectedImage.authorUrl" )
-							a(:href="selectedImage.authorUrl")
-								| 提供: {{ selectedImage.author }}
-						h1(v-else) 提供: {{ selectedImage.author }}
-						p(v-if="selectedImage.description") {{ selectedImage.description }}
+						h1(v-if="selectedImage().authorUrl" )
+							a(:href="selectedImage().authorUrl")
+								| 提供: {{ selectedImage().author }}
+						h1(v-else) 提供: {{ selectedImage().author }}
+						p(v-if="selectedImage().description") {{ selectedImage().description }}
 					.close(@click="close()")
 						i.fas.fa-times
+					.goPrevious(@click.stop="goPrevious()")
+						i.fas.fa-chevron-left
+					.goNext(@click.stop="goNext()")
+						i.fas.fa-chevron-right
 block script
 	+js("js/gallery")
