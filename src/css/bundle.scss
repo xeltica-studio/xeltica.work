@@ -185,6 +185,23 @@ body {
 			transition: all 0.2s ease;
 			transform-origin: 50% 100%;
 
+			.title {
+				display: flex;
+				overflow: scroll;
+				align-items: center;
+				justify-content: center;
+
+				.tags {
+					margin-left: 1rem;
+					font-size: 0.8rem;
+				}
+
+				.tag {
+					margin-left: 0.4rem;
+					font-size: 0.7rem;
+				}
+			}
+
 			h1 {
 				font-size: 1.2rem;
 			}

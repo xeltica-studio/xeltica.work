@@ -37,10 +37,16 @@ block body
 				.window
 					a(:href="'/assets/gallery/' + selectedImage().file"): img(:src="'/assets/gallery/' + selectedImage().file")
 					.description
+						.title
 						h1(v-if="selectedImage().authorUrl" )
 							a(:href="selectedImage().authorUrl")
 								| 提供: {{ selectedImage().author }}
 						h1(v-else) 提供: {{ selectedImage().author }}
+							span.tags: i.fas.fa-tags
+								| &emsp;
+							spaa.tag(v-if="selectedImage().tags", v-for="tag in selectedImage().tags")
+								a(href="#" onclick="search(tag)") {{ tag }}
+								| &ensp;
 						p(v-if="selectedImage().description") {{ selectedImage().description }}
 					.close(@click="close()")
 						i.fas.fa-times

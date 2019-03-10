@@ -3,77 +3,121 @@
         "file": "fukap_citrine.png",
         "author": "FukaP",
         "authorUrl": "https://mi.xeltica.work/@fukap",
-        "description": "マフラーを付けたシトリン。"
+        "description": "マフラーを付けたシトリン。",
+        "tags": [
+            "シトリン"
+        ]
     },
     {
         "file": "fukap2_citrine.jpg",
         "author": "FukaP",
         "authorUrl": "https://mi.xeltica.work/@fukap",
-        "description": "ドット絵風シトリン。"
+        "description": "ドット絵風シトリン。",
+        "tags": [
+            "シトリン"
+        ]
     },
     {
         "file": "xeltica_citrine.jpg",
         "author": "Xeltica",
         "authorUrl": "https://xeltica.work",
-        "description": "カスタムキャストでデザインしたもののトレース。"
+        "description": "カスタムキャストでデザインしたもののトレース。",
+        "tags": [
+            "シトリン"
+        ]
     },
     {
         "file": "mayu_citrine.webp",
         "author": "Mayu",
         "description": "@Citrine@misskey.xyz のアイコンとして使わせていただいています",
-        "authorUrl": "https://xeltica.work"
+        "authorUrl": "https://xeltica.work",
+        "tags": [
+            "シトリン"
+        ]
     },
     {
         "file": "micra_citrine.jpg",
         "author": "micra",
         "authorUrl": "https://twitter.com/_micra_",
-        "description": "手書きシトリン。"
+        "description": "手書きシトリン。",
+        "tags": [
+            "シトリン"
+        ]
     },
     {
         "file": "moh_citrine.jpg",
         "author": "moh",
         "authorUrl": "https://twitter.com/V_Melville",
-        "description": "温泉に入浴しているシトリン。"
+        "description": "温泉に入浴しているシトリン。",
+        "tags": [
+            "シトリン"
+        ]
     },
     {
         "file": "mi4_citrine.png",
         "author": "Melville",
         "authorUrl": "https://twitter.com/V_Melville",
-        "description": "めるアイコンv4。このデザインが現行。"
+        "description": "めるアイコンv4。このデザインが現行。",
+        "tags": [
+            "シトリン",
+            "めるアイコン"
+        ]
     },
     {
         "file": "mi3_citrine.jpg",
         "author": "Melville",
         "authorUrl": "https://twitter.com/V_Melville",
-        "description": "めるアイコンv3。今の黒髪ロングデザインに落ち着いたのはこの頃から。"
+        "description": "めるアイコンv3。今の黒髪ロングデザインに落ち着いたのはこの頃から。",
+        "tags": [
+            "シトリン",
+            "めるアイコン"
+        ]
     },
     {
         "file": "mi16_citrine.png",
         "author": "Melville",
         "authorUrl": "https://twitter.com/V_Melville",
-        "description": "めるアイコン2016。"
+        "description": "めるアイコン2016。",
+        "tags": [
+            "シトリン",
+            "めるアイコン"
+        ]
     },
     {
         "file": "mi15_citrine.png",
         "author": "Melville",
         "authorUrl": "https://twitter.com/V_Melville",
-        "description": "初代めるアイコン。"
+        "description": "初代めるアイコン。",
+        "tags": [
+            "シトリン",
+            "めるアイコン"
+        ]
     },
     {
         "file": "sis_kaho.jpg",
         "author": "Merci",
-        "description": "カホのデザイン公開後数時間でこのクオリティの絵が投下されたときは驚いた。"
+        "description": "カホのデザイン公開後数時間でこのクオリティの絵が投下されたときは驚いた。",
+        "tags": [
+            "カホ"
+        ]
     },
     {
         "file": "lv100_kaho.png",
         "author": "Lv100",
         "authorUrl": "https://twitter.com/lv100_official",
-        "description": "カホのデザイン（それも僕の作った粗悪なモノ）を投下してすぐに描いてくれたモノ。"
+        "description": "カホのデザイン（それも僕の作った粗悪なモノ）を投下してすぐに描いてくれたモノ。",
+        "tags": [
+            "カホ"
+        ]
     },
     {
         "file": "mi4_kaho.png",
         "author": "Melville",
         "authorUrl": "https://twitter.com/V_Melville",
-        "description": "めるアイコンv4のカホ。"
+        "description": "めるアイコンv4のカホ。",
+        "tags": [
+            "カホ",
+            "めるアイコン"
+        ]
     }
 ]

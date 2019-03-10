@@ -41,5 +41,6 @@ interface ImageDefinition {
 	author: string;
 	authorUrl?: string;
 	description?: string;
-	isToggled: boolean
+	isToggled: boolean,
+	tags?: string[]
 }
