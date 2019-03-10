@@ -47,7 +47,7 @@ block body
 							span.tags: i.fas.fa-tags
 								| &emsp;
 							spaa.tag(v-if="selectedImage().tags", v-for="tag in selectedImage().tags")
-								a(href="#" onclick="search(tag)") {{ tag }}
+								a(href="#app" @click="query = tag") {{ tag }}
 								| &ensp;
 						p(v-if="selectedImage().description") {{ selectedImage().description }}
 					.close(@click="close()")
