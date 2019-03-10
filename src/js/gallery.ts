@@ -1,15 +1,10 @@
 import Vue from "vue";
 import axios from "axios";
 
-const citrine = document.getElementById("citrine");
-const kaho = document.getElementById("kaho");
-
-
 (async () => {
-	const data = (await axios.get<Images>("/assets/gallery/images.json")).data;
+	const data = (await axios.get<ImageDefinition[]>("/assets/gallery/images.json")).data;
 
-	data.citrine.forEach((def) => def.isToggled = false);
-	data.kaho.forEach((def) => def.isToggled = false);
+	data.forEach((def) => def.isToggled = false);
 
 	new Vue({
 		el: "#app",

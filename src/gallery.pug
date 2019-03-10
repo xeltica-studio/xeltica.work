@@ -27,21 +27,11 @@ block body
 	.container#app
 		.row
 			article#gallery.col-12
-				section#citrine.section
 					.container
-						h2 シトリン
-						.gallery
-							img(v-for="image in images.citrine",
+					#gallery
+						img(v-for="(image, index) in images",
 								:src="'/assets/gallery/' + image.file"
-								@click="clicked(image)")
-						
-				section#kaho.section
-					.container
-						h2 カホ
-						.gallery
-							img(v-for="image in images.kaho",
-								:src="'/assets/gallery/' + image.file"
-								@click="clicked(image)")
+							@click="clicked(index, image)")
 		transition(name="fade")
 			.overlay(v-if="isModalVisible", v-cloak, @click="close()")
 				.window
