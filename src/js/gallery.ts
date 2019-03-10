@@ -12,6 +12,7 @@ import axios from "axios";
 			images: data,
 			isModalVisible: false,
 			selectedIndex: 0,
+			query: ""
 		},
 		methods: {
 			clicked(index: number, image: ImageDefinition) {
@@ -24,17 +25,32 @@ import axios from "axios";
 			goPrevious() {
 				this.selectedIndex--;
 				if (this.selectedIndex < 0)
-					this.selectedIndex = this.images.length - 1;
+					this.selectedIndex = this.currentImages.length - 1;
 			},
 			goNext() {
 				this.selectedIndex++;
-				if (this.selectedIndex > this.images.length - 1)
+				if (this.selectedIndex > this.currentImages.length - 1)
 					this.selectedIndex = 0;
 			},
-			selectedImage: function () { return this.images[this.selectedIndex]; },
+			selectedImage: function () { return this.currentImages[this.selectedIndex]; },
+		},
+		computed: {
+			currentImages: function() {
+				return this.images.filter(img => isMatch(this.query, img));
+			}
 		}
 	});
 })();
+
+function isMatch(query: string, image: ImageDefinition) {
+	if (!query)
+		return true;
+	return query.toLowerCase().split(/\s/g).every(s => 
+		image.tags.some(tag => tag.toLowerCase().includes(s)) ||
+		image.author.toLowerCase().includes(s) ||
+		(image.description && image.description.toLowerCase().includes(s))
+	);
+}
 
 interface ImageDefinition {
 	file: string;
