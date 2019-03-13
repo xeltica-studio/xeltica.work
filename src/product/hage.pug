@@ -69,7 +69,7 @@ block script
 				click: async function (e) {
 					try
 					{
-						let res = await (await fetch(`https://api.citringo.net/hage/${encodeURI(this.name)}`)).json();
+						let res = await (await fetch(`https://api.xeltica.work/hage/${encodeURI(this.name)}`)).json();
 						this.result = `${this.name} はハゲて${res.is_hage ? "います" : "いません"}`;
 						this.hage = res.is_hage;
 						this.twitter_url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${this.result}\n #ハゲチェッカー https://citringo.net/product/hage.html`)}`;
