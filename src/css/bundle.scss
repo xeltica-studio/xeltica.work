@@ -199,6 +199,9 @@ body {
 				.tag {
 					margin-left: 0.4rem;
 					font-size: 0.7rem;
+					&:before {
+						content: '#';
+					}
 				}
 			}
 
