@@ -1,5 +1,6 @@
 import Vue from "vue";
 import axios from "axios";
+import { ImageDefinition } from "./ImageDefinition";
 
 (async () => {
 	const data = (await axios.get<ImageDefinition[]>("/assets/gallery/images.json")).data;
@@ -52,11 +53,3 @@ function isMatch(query: string, image: ImageDefinition) {
 	);
 }
 
-interface ImageDefinition {
-	file: string;
-	author: string;
-	authorUrl?: string;
-	description?: string;
-	isToggled: boolean,
-	tags?: string[]
-}
