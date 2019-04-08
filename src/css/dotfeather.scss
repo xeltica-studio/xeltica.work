@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    margin-top: 5rem;
+	background: #c8da88;
+	height: 100%;
+
+    color: #3f4b16;
+    text-shadow: 2px 2px 0 #a8b671;
+}
+
+header img {
+    filter: drop-shadow(2px 2px 0 #a8b671)
+}
+
+#header h1:before {
+    content: none;
+}
+
+footer {
+    border: none;
+}
+
+pre>code {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.5rem;
+    display: block;
+    background: #3f4b16;
+    color: #c8da88;
+    text-shadow: none;
+}
