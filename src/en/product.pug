@@ -26,11 +26,19 @@ block body
 	header#header.root
 		h1 
 			a(href="/en") Xeltica
-			|  / Product
-
+			|  / Product                                                                    
 		p There are several apps I created.
 
 	main.root.align-left
+		+article("DotFeather", "/assets/no_image.png")
+			.card-body
+				aside
+					span.badge.dark Cross Platform
+					span.badge.info Game Engine
+				section
+					p 2D-specific game engine. It's now Beta!
+			.card-command
+				a(href="product/dotfeather.html") See more...
 		+article("Osakana Rescue", "/assets/osakana1.png")
 			.card-body
 				aside
@@ -43,14 +51,13 @@ block body
 			.card-command
 				a(href="https://github.com/WyteEngine/OsakanaRescue/releases/download/1.0.0/osakana100-windows.zip")
 					span.fas.fa-download.fa-fw
-					| Windows版
+					| For Windows
 				a(href="https://github.com/WyteEngine/OsakanaRescue/releases/download/1.0.0/osakana100-macos.zip")
 					span.fas.fa-download.fa-fw
-					| macOS版
+					| For macOS
 				a(href="https://github.com/WyteEngine/OsakanaRescue/releases/download/1.0.0/osakana100-linux.zip")
 					span.fas.fa-download.fa-fw
-					| Linux版
-
+					| For Linux
 		+article("Rainy Tune", "/assets/rainytune.png")
 			.card-body
 				aside
@@ -64,10 +71,10 @@ block body
 			.card-command
 				a(href="https://github.com/xeltica/rainytune/releases/download/1.1.0/rainytune110.zip")
 					span.fas.fa-download.fa-fw
-					| Download it
+					| Download it!
 				a(href="https://github.com/xeltica/rainytune/")
 					span.fab.fa-github.fa-fw
-					| See source codes
+					| See source code
 		+article("Music Sheet", "/assets/ms.png")
 			.card-body
 				aside

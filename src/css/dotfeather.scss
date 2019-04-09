@@ -1,30 +1,59 @@
-body {
-    margin: 0;
-    margin-top: 5rem;
-	background: #c8da88;
-	height: 100%;
-
-    color: #3f4b16;
-    text-shadow: 2px 2px 0 #a8b671;
+@font-face {
+  font-family: "PixelMplus12";
+  src: url("/assets/PixelMplus12-Regular.ttf") format("ttf");
 }
 
-header img {
-    filter: drop-shadow(2px 2px 0 #a8b671)
+body {
+    margin: 1rem 2rem 0 2rem;
+	background: #222;
+	height: 100%;
+
+    color: #0f0;
+    text-shadow: 2px 2px 0 #040;
+    font-feature-settings: normal;
+    font-variant-ligatures: none;
+    font-family: "PixelMplus12", monospace;
 }
 
 #header h1:before {
     content: none;
 }
 
+h1>img {
+    max-width: 60%;
+    min-width: 256px;
+    height: auto;
+}
+
 footer {
     border: none;
 }
 
+a {
+	&:link, &:visited {
+		color: #ff0;
+		text-shadow: none;
+        text-decoration-line: underline;
+	}
+	&:hover {
+		color: #fff;
+        text-shadow: none;
+	}
+
+	&:active {
+		color: #770;
+		text-shadow: none;
+	}
+	text-decoration-line: none;
+	transition: all 0.05s ease-out;
+}
+
 pre>code {
-    font-family: 'Courier New', Courier, monospace;
     padding: 0.5rem;
     display: block;
-    background: #3f4b16;
-    color: #c8da88;
+    background: #444;
+    color: #fff;
     text-shadow: none;
+    font-family: "PixelMplus12", monospace;
+    overflow: scroll;
 }

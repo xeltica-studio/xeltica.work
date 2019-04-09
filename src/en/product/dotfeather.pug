@@ -1,0 +1,52 @@
+extends ../_layout
+
+
+block title
+	title DotFeather - Xeltica
+	+og(
+		"DotFeather - Xeltica", 
+		"DotFeather, a lightweight game engine for 2D games",
+		"GameEngine, DotFeather, C#",
+		"https://raw.githubusercontent.com/Xeltica/DotFeather/master/docs/logo.png",
+		false
+		)
+	meta(name="theme-color", content="#f44336")
+
+
+block css
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	+css("/css/dotfeather")
+	style.
+		body {
+			font-family: 'Press Start 2P', cursive;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 32px;
+		}
+
+		pre>code {
+			font-family: 'Press Start 2P', cursive;
+			font-size: 8px;
+		}
+
+block body
+	p(style="text-align: left"): a(href="../product.html") &lt; Back
+	header#header.root
+		h1 
+			img(src="https://raw.githubusercontent.com/Xeltica/DotFeather/master/docs/logo.png", alt="DotFeather", height="192")
+		p DotFeather is a 2D specific game engine for C# and .NET Standard 2.0.
+		p It's now BETA! Most of features are already implemented! Please try and review!
+		
+		p 
+			a(href="https://github.com/xeltica/dotfeather") GitHub
+			|  : 
+			a(href="https://www.nuget.org/packages/DotFeather/0.7.1-beta") Nuget
+
+		p How to install: 
+		pre
+			code
+				| dotnet add package DotFeather --version 0.7.1-beta
+		p
+			a(href="https://github.com/Xeltica/DotFeather/blob/master/docs/index.md") Documents
