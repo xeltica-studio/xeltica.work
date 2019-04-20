@@ -1,3 +1,5 @@
+import { Particles } from "particles.ts";
+
 // Reference: https://www.tomotanuki.com/entry/web-top-of-page
 // Thank you!
 

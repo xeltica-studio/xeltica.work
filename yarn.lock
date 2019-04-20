@@ -4000,6 +4000,11 @@ parseurl@~1.3.2:
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
   integrity sha1-/CidTtiZMRlGDBViUyYs3I3mW/M=
 
+particles.ts@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/particles.ts/-/particles.ts-0.0.1.tgz#646d1e5dbb22e7ff025b8353380e868043c58d0a"
+  integrity sha512-R6kPYG6pSW2f0KZrJjFmXDchzU0NdZFLEUZnUtsSIu6x4XvLBMX99cDF1vUMCFZolJDMDeCLdrdrSuNCOp1Kiw==
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"

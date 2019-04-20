@@ -1,10 +1,13 @@
 @import "_variables.scss";
 
 .alert {
-	display: block;
+	display: flex;
 	border: solid 1px transparent;
+	justify-content: center;
+	align-items: center;
 	border-radius: 0.8rem;
-	font-size: 14pt;
+	font-size: 1.4rem;
+	min-height: 48px;
 	color: $white;
 
 	&.primary {

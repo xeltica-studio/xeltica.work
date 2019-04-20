@@ -7,23 +7,18 @@ block title
 		"ハゲチェッカー - Xeltica", 
 		"あなたはハゲていますか？",
 		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
-		"assets/cat.jpg",
 		false
 		)
-	meta(name="theme-color", content="#f44336")
 
 block body
 	header#header.root
 		h1 
 			a(href="/") Xeltica
-			|  / 
-			a(href="/product.html") Product
-			|  / Hage
 		
 	main.root
 		h1 ハゲチェッカー
-		p 名前を入れるだけで，あなたがハゲているかどうか一発で当ててみせます．
-		p: strong ここで入れた名前は一切サーバーによって収集されません．ご安心ください．
+		p 名前を入れるだけで、あなたがハゲているかどうか一発で当ててみせます。
+		p: strong ここで入れた名前は一切サーバーによって収集されません。ご安心ください。
 		#main
 			div
 				input(type="text", v-model="name", id="name", name="name" placeholder="名前")
@@ -36,8 +31,8 @@ block body
 					button.misskey(@click="publishToMisskey()") Misskeyに投稿する
 
 block footer
-	p これはジョークアプリです．本当に薄毛を気にしている方は，ここではなく医療機関をお訪ねください．
-	p 結果によって生じたトラブルについて，ゼルチカは一切責任を負いかねます．
+	p これはジョークアプリです。本当に薄毛を気にしている方は、ここではなく医療機関をお訪ねください。
+	p 結果によって生じたトラブルについて、ゼルチカは一切責任を負いかねます。
 
 block script
 	+js("https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min")

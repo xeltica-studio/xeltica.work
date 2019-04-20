@@ -1,149 +1,234 @@
-.root {
-	max-width: 920px;
-	margin: auto;
+@import "./variables";
+
+body {
+    background-color: $back;
+    color: $fore;
+    text-align: center;
+    font-size: 18px;
+    margin: 4rem;
+    font-feature-settings: "pkna";
 }
 
-#header {
-	h1 {
-		font-weight: normal;
-		font-size: 3rem;
-		margin-bottom: 3rem;
-		font-family: 'Courier New', Courier, monospace;
-		&:before {
-			content: "> ";
-			margin-right: 1rem;
-		}
-	}
-}
 
-main {
-
-	h1, h2, h3, h4, h5, h6 {
-		font-weight: 600;
-	}
-
-	img.face {
-		width: 12rem;
-		height: 12rem;
-
-		border-radius: 100%;
-		//filter: drop-shadow(0 0 8px $shadow);
-		box-shadow: 0 0 $shadow-depth $shadow;
-		cursor: pointer;
-
-		&:hover {
-			box-shadow: 0 0 $shadow-depth-hover $shadow;
-		}
-
-		&:active {
-			box-shadow: 0 0 $shadow-depth-push $shadow;
-		}
-		transition: all 0.05s ease-out;
-	}
-
-	.desc {
-		text-align: left;
-	}
-
-	ul.buttons {
-		padding: 0;
-		padding-top: 1.2rem;
-		padding-bottom: 1.2rem;
-		display: block;
-		list-style: none;
-		li.button {
-			display: inline-block;
-			background: $form-background;
-			box-shadow: 0 0 0.1rem $shadow;
-			margin: 0.5rem;
-			border-radius: 100%;
-			padding: 0.7rem;
-			padding-top: 0.79rem;
-			padding-bottom: 0.79rem;
-			box-shadow: 0 0 $shadow-depth $shadow;
-		
-			&:hover {
-				box-shadow: 0 0 $shadow-depth-hover $shadow;
-			}
-
-			&:active {
-				box-shadow: 0 0 $shadow-depth-push $shadow;
-			}
-		
-			transition: all 0.05s ease-out;
-			
-			font-size: 1.3rem;
-			color: $black;
-
-			cursor: pointer;
-
-			a {
-				text-decoration-line: none;
-				color: $black;
-				text-shadow: none;
-			}
-
-			&#misskey {
-				img {
-					width: 1.3rem;
-					height: 1.3rem;
-				}
-				padding: 0.72rem 0.86rem;
-			}
-
-			&#twitter a{ color: #55acee; }
-			&#github a{ color: #333; }
-			&#soundcloud a{ color: #ff3300; }
-			&#misskey a{ color: #2FA2BB; }
-			&#youtube a{ color: #cd201f; }
-			&#wordpress a{ color: #21759b; }
-
-			.tooltip {
-				font-size: 0.8rem;
-				color: $foreground;
-				position: absolute;
-				left: -100%;
-				right: -100%;
-				display: block;
-				text-align: center;
-				top: -1rem;
-				transition: all 0.05s ease-out;
-				opacity: 0;
-			}
-
-			&:hover .tooltip {
-				opacity: 1;
-				transform: translateY(-0.5rem);
-			}
-
-			position: relative;
-
-		}
-	}
-}
-
-.fluid {
-	width: 100%;
-	height: auto;
-}
-
-.rounded {
+#page-top {
+	cursor: pointer;
+	box-shadow: 0 0 $shadow-depth-floating $shadow;
 	border-radius: 50%;
-}
+	background: $window-background;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	opacity: 0;
+	transform: scale(0);
+	transition: all 0.05s ease-out;
 
-hr {
-	border-width: 0.5px;
-	border-style: solid;
-}
-
-@media only screen and (max-width: 800px) {
-	.root {
-		margin: 1rem;
+	&.show {
+		opacity: 1;
+		transform: scale(1);
 	}
 
-	main {
-		.desc {
-			text-align: center;
-		}
+	&:hover {
+		box-shadow: 0 0 $shadow-depth-floating-hover $shadow;
 	}
+
+	&:active {
+		box-shadow: 0 0 $shadow-depth-floating-push $shadow;
+	}
+
+	position: fixed;
+
+	right: 3rem;
+	bottom: 3rem;
+	width: 3rem;
+	height: 3rem;
+	z-index: 2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    font-weight: normal;
+    margin: 2rem 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    &#avatar {
+        width: 128px;
+        height: 128px;
+        border-radius: 96px;
+        cursor: pointer;
+    }
+    margin: 1rem;
+}
+
+.shadowed {
+    box-shadow: 0 0 16px #111;
+    &:hover {
+        color: $back-light;
+    }
+}
+
+
+p {
+    margin-top: 1rem 0 0 1rem;
+}
+
+a {
+    text-shadow: 0 0 16px #111;
+    color: $fore;
+
+    &:hover {
+        color: $fore-light;
+    }
+
+    &:active {
+        color: $fore-dark;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: justify;
+    list-style-type: none;
+    .button a {
+        display: block;
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
+        margin: 1rem;
+    }
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    width: 140px;
+    .img-wrapper {
+        width: 128px;
+        height: 128px;
+        background: $fore;
+        border-radius: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+.product {
+    width: 300px;
+    min-height: 360px;
+    margin: 16px 16px 0 0;
+    box-shadow: 0 0 16px #111;
+    background-size: cover !important;
+    a {
+        color: $back;
+        text-decoration: none;
+        text-shadow: none;
+    }
+    .description {
+        padding: 16px;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background: $fore;
+        color: $back;
+        transition: opacity 0.2s ease;
+        h1 {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0.7rem 0;
+        }
+        .tag {
+            font-size: 0.8rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+
+
+article {
+    padding-top: 2rem;
+}
+
+footer {
+    padding-top: 3rem;
+}
+
+.cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 128px;
+    margin-right: 128px;
+}
+
+.card {
+    position: relative;
+    width: 256px;
+    background: $fore-light;
+    text-decoration: none;
+    color: $back-dark;
+    padding: 3rem;
+    margin: 1rem;
+    border-radius: 16px;
+    text-shadow: none;
+    a {
+        color: $back-dark;
+        text-decoration: none;
+        &:hover {
+            color: $back-light;
+        }
+    }
+    h1 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.3rem;
+    }
+    * {
+        position: relative;
+        z-index: 10;
+        font-size: 1rem;
+    }
+    i {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        font-size: 128px;
+        color: #ECEFF1;
+    }
+}
+
+.left {
+    text-align: left;
+    margin-left: 128px ;
+}
+
+@media screen and (max-width: 768px) {
+    .cards {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .left {
+        margin-left: 0;
+    }
 }

@@ -7,31 +7,26 @@ block title
 		"ギャラリー - Xeltica", 
 		"戴き物の絵を掲載しています",
 		"創作, ゲーム, アプリ開発, エンジニアリング, Xeltica",
-		"assets/cat.jpg",
 		false
 		)
-	meta(name="theme-color", content="#f44336")
+	+css("css/gallery")
 
 block body
-	header#header.root
-		h1 
-			a(href="/") Xeltica
-			|  / Gallery
-		p 多くのファンアートを頂いております。 頂いたイラストを、ここに掲載しております。
-
-		p うちの子のファンアート、随時募集中です。送っていただければもれなく掲載いたします。
-
-		p 二次創作については
-			a(href="/char/guideline.html") ガイドライン
-			| をご確認ください。
-	.container#app
-		hr
+	h1
+		a(href="/") Xeltica
+	p 多くのファンアートを頂いております。 頂いたイラストを、ここに掲載しております。
+	p うちの子のファンアート、随時募集中です。送っていただければもれなく掲載いたします。
+	p 二次創作については
+		a(href="/char/guideline.html") ガイドライン
+		| をご確認ください。
+	article#app
 		input(type="text", placeholder="検索" v-model="query")
 		.row
 			article#gallery.col-12
 				.container
-					#gallery
+					transition-group(name="fade", tag="div", id="gallery", appear)
 						img(v-for="(image, index) in currentImages",
+							key="index",
 							:src="'/assets/gallery/' + image.file"
 							@click="clicked(index, image)")
 		transition(name="fade")

@@ -2,7 +2,7 @@
 
 input[type="text"] {
 	background: transparent;
-	color: $foreground;
+	color: $fore;
 	border: none;
 	border-bottom: solid 1px $form-disabled-background;
 	padding: 0.4rem;
@@ -14,7 +14,7 @@ input[type="text"] {
 
 	&:disabled {
 		border-bottom: solid 1px $shadow-light;
-		color: disabled-foreground;
+		color: fore-light;
 	}
 	outline: none;
 
@@ -43,7 +43,7 @@ button {
 
 	&:disabled {
 		box-shadow: 0 0 $shadow-depth $shadow-light;
-		color: $disabled-foreground;
+		color: $fore-light;
 		background: $form-disabled-background;
 	}
 }

@@ -2,28 +2,41 @@
     {
         "file": "fukap_citrine.png",
         "author": "FukaP",
-        "authorUrl": "https://www.pixiv.net/member.php?id=31082469",
+        "authorUrl": "https://twitter.com/fukap_",
         "description": "マフラーを付けたシトリン。",
         "tags": [
-            "シトリン"
+            "シトリン",
+            "アイコン"
         ]
     },
     {
         "file": "fukap2_citrine.jpg",
         "author": "FukaP",
-        "authorUrl": "https://www.pixiv.net/member.php?id=31082469",
+        "authorUrl": "https://twitter.com/fukap_",
         "description": "ドット絵風シトリン。",
         "tags": [
-            "シトリン"
+            "シトリン",
+            "アイコン"
         ]
     },
     {
         "file": "fukap3_citrine.jpg",
         "author": "FukaP",
-        "authorUrl": "https://www.pixiv.net/member.php?id=31082469",
+        "authorUrl": "https://twitter.com/fukap_",
+        "description": "以前のメインアイコン。",
+        "tags": [
+            "シトリン",
+            "アイコン"
+        ]
+    },
+    {
+        "file": "fukap4_citrine.jpg",
+        "author": "FukaP",
+        "authorUrl": "https://twitter.com/fukap_",
         "description": "メインアイコン。",
         "tags": [
-            "シトリン"
+            "シトリン",
+            "アイコン"
         ]
     },
     {
@@ -32,16 +45,18 @@
         "authorUrl": "https://xeltica.work",
         "description": "カスタムキャストでデザインしたもののトレース。",
         "tags": [
-            "シトリン"
+            "シトリン",
+            "アイコン"
         ]
     },
     {
         "file": "mayu_citrine.webp",
         "author": "Mayu",
-        "description": "@Citrine@misskey.xyz のアイコンとして使わせていただいています",
+        "description": "@Citrine@misskey.xyz のアイコンとして使わせていただいていました。",
         "authorUrl": "https://xeltica.work",
         "tags": [
-            "シトリン"
+            "シトリン",
+            "アイコン"
         ]
     },
     {
@@ -58,7 +73,8 @@
         "authorUrl": "https://twitter.com/_micra_",
         "description": "手書きシトリン。",
         "tags": [
-            "シトリン"
+            "シトリン",
+            "アナログ"
         ]
     },
     {
@@ -77,7 +93,8 @@
         "description": "めるアイコンv4。このデザインが現行。",
         "tags": [
             "シトリン",
-            "めるアイコン"
+            "めるアイコン",
+            "アイコン"
         ]
     },
     {
@@ -87,7 +104,8 @@
         "description": "めるアイコンv3。今の黒髪ロングデザインに落ち着いたのはこの頃から。",
         "tags": [
             "シトリン",
-            "めるアイコン"
+            "めるアイコン",
+            "アイコン"
         ]
     },
     {
@@ -97,7 +115,8 @@
         "description": "めるアイコン2016。",
         "tags": [
             "シトリン",
-            "めるアイコン"
+            "めるアイコン",
+            "アイコン"
         ]
     },
     {
@@ -107,7 +126,8 @@
         "description": "初代めるアイコン。",
         "tags": [
             "シトリン",
-            "めるアイコン"
+            "めるアイコン",
+            "アイコン"
         ]
     },
     {
@@ -123,7 +143,8 @@
         "author": "Merci",
         "description": "カホのデザイン公開後数時間でこのクオリティの絵が投下されたときは驚いた。",
         "tags": [
-            "カホ"
+            "カホ",
+            "アナログ"
         ]
     },
     {
