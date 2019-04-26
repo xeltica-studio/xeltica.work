@@ -6,7 +6,9 @@
 body {
     margin: 1rem 2rem 0 2rem;
 	background: #222;
-	height: 100%;
+    height: 100%;
+    text-align: left;
+    margin-left: 10rem;
 
     color: #0f0;
     text-shadow: 2px 2px 0 #040;
@@ -56,4 +58,11 @@ pre>code {
     text-shadow: none;
     font-family: "PixelMplus12", monospace;
     overflow: scroll;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin-left: 0;
+        text-align: center;
+    }
 }

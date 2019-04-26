@@ -223,6 +223,10 @@ footer {
     margin-left: 128px ;
 }
 
+.click-to-copy {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .cards {
         margin-left: 0;

@@ -16,21 +16,25 @@ block css
 	+css("/css/dotfeather")
 
 block body
-	p(style="text-align: left"): a(href="/") &lt; 戻る
+	p(style="text-align: left"): a(href="/") &lt; もどる
 	header#header.root
 		h1 
 			img(src="https://raw.githubusercontent.com/Xeltica/DotFeather/master/docs/logo.png", alt="DotFeather", height="192")
-		p DotFeather は、 2Dに特化したゲームエンジンです。C# と .NET Standard 2.0 で利用できます。
-		p 現在、ベータ版をリリースしています！ベータ版は一部を除いて殆どの機能が実装されているバージョンです。使ってみて、レビューをお願いします！
-		
-		p 
-			a(href="https://github.com/xeltica/dotfeather") GitHub
-			|  ・ 
-			a(href="https://www.nuget.org/packages/DotFeather") Nuget
+		p: a(href="https://github.com/xeltica/dotfeather") Fork me on GitHub!
+		hr
+		p DotFeatherは　2Dに　とっかした　ゲームエンジンです。
+		p C#と .NET Standard 2.0で　りようできます。
+		p NuGetを　つかうと　かんたんに　インストール　できます！
 
-		p インストール方法: 
-		pre
-			code
-				| dotnet add package DotFeather --version 0.9.0-beta
-		p
-			a(href="https://github.com/Xeltica/DotFeather/blob/master/docs/ja/index.md") ドキュメント
+		h2 インストール　ほうほう
+		h3 NuGetから
+		h4 さいしんばん
+		pre: code.click-to-copy dotnet add package DotFeather
+		h4 あんていばん (1.0.1)
+		pre: code.click-to-copy dotnet add package DotFeather --version 1.0.1
+		h3 ちょくせつ　ダウンロード
+		p: a(href="https://www.nuget.org/packages/DotFeather") NuGetから
+		p: a(href="https://github.com/Xeltica/DotFeather/releases") GitHub Releasesから
+		h2 ドキュメント
+		p: a(href="https://github.com/Xeltica/DotFeather/blob/master/docs/ja/index.md") つかいかた
+		p: a(href="https://dotfeather.netlify.com/api") API ドキュメント

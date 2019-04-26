@@ -29,3 +29,14 @@ function scrollToTop() {
 topButton.onclick = function() {
 	scrollToTop();
 };
+
+document
+	.querySelectorAll(".click-to-copy")
+	.forEach((v, k, p) => {
+		const obj = v as HTMLElement;
+		obj.addEventListener("click", () => {
+			const text = v.textContent;
+			document.execCommand("copy", false, text);
+			alert(`クリップボードにコピーしました！\n${text}`);
+		});
+	});
