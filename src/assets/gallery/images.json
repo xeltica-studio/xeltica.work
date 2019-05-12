@@ -1,19 +1,19 @@
 [
     {
-        "file": "fukap_citrine.png",
+        "file": "fukap5_citrine.jpg",
         "author": "FukaP",
         "authorUrl": "https://twitter.com/fukap_",
-        "description": "マフラーを付けたシトリン。",
+        "description": "メインアイコン。",
         "tags": [
             "シトリン",
             "アイコン"
         ]
     },
     {
-        "file": "fukap2_citrine.jpg",
+        "file": "fukap4_citrine.jpg",
         "author": "FukaP",
         "authorUrl": "https://twitter.com/fukap_",
-        "description": "ドット絵風シトリン。",
+        "description": "",
         "tags": [
             "シトリン",
             "アイコン"
@@ -30,10 +30,40 @@
         ]
     },
     {
-        "file": "fukap4_citrine.jpg",
+        "file": "fukap2_citrine.jpg",
         "author": "FukaP",
         "authorUrl": "https://twitter.com/fukap_",
-        "description": "メインアイコン。",
+        "description": "ドット絵風シトリン。",
+        "tags": [
+            "シトリン",
+            "アイコン"
+        ]
+    },
+    {
+        "file": "yuut_citrine.jpg",
+        "author": "ゆーうつ",
+        "authorUrl": "https://mobile.twitter.com/_ikiruiminasi_",
+        "description": "",
+        "tags": [
+            "シトリン",
+            "イラスト"
+        ]
+    },
+    {
+        "file": "yuut2_citrine.jpg",
+        "author": "ゆーうつ",
+        "authorUrl": "https://mobile.twitter.com/_ikiruiminasi_",
+        "description": "ドット絵",
+        "tags": [
+            "シトリン",
+            "ドット絵"
+        ]
+    },
+    {
+        "file": "fukap_citrine.png",
+        "author": "FukaP",
+        "authorUrl": "https://twitter.com/fukap_",
+        "description": "マフラーを付けたシトリン。",
         "tags": [
             "シトリン",
             "アイコン"
@@ -46,7 +76,8 @@
         "description": "カスタムキャストでデザインしたもののトレース。",
         "tags": [
             "シトリン",
-            "アイコン"
+            "アイコン",
+            "トレース"
         ]
     },
     {
@@ -82,6 +113,14 @@
         "author": "moh",
         "authorUrl": "https://twitter.com/V_Melville",
         "description": "温泉に入浴しているシトリン。",
+        "tags": [
+            "シトリン"
+        ]
+    },
+    {
+        "file": "silverdish_citrine.jpg",
+        "author": "銀の皿",
+        "description": "",
         "tags": [
             "シトリン"
         ]
