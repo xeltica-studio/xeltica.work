@@ -1,9 +1,32 @@
 [
     {
+        "file": "koringopt_citrine.jpg",
+        "author": "こりんご",
+        "authorUrl": "https://twitter.com/koringopt",
+        "description": "水着シトリン。",
+        "tags": [
+            "シトリン",
+            "アナログ",
+            "夏",
+            "水着"
+        ]
+    },
+    {
+        "file": "fukap6_citrine.jpeg",
+        "author": "FukaP",
+        "authorUrl": "https://twitter.com/4nena_",
+        "description": "セーラー服を着たシトリン。（多分過去のシトリン）",
+        "tags": [
+            "シトリン",
+            "アイコン",
+            "セーラー服"
+        ]
+    },
+    {
         "file": "fukap5_citrine.jpg",
         "author": "FukaP",
-        "authorUrl": "https://twitter.com/fukap_",
-        "description": "メインアイコン。",
+        "authorUrl": "https://twitter.com/4nena_",
+        "description": "",
         "tags": [
             "シトリン",
             "アイコン"
@@ -12,7 +35,7 @@
     {
         "file": "fukap4_citrine.jpg",
         "author": "FukaP",
-        "authorUrl": "https://twitter.com/fukap_",
+        "authorUrl": "https://twitter.com/4nena_",
         "description": "",
         "tags": [
             "シトリン",
@@ -22,7 +45,7 @@
     {
         "file": "fukap3_citrine.jpg",
         "author": "FukaP",
-        "authorUrl": "https://twitter.com/fukap_",
+        "authorUrl": "https://twitter.com/4nena_",
         "description": "以前のメインアイコン。",
         "tags": [
             "シトリン",
@@ -32,7 +55,7 @@
     {
         "file": "fukap2_citrine.jpg",
         "author": "FukaP",
-        "authorUrl": "https://twitter.com/fukap_",
+        "authorUrl": "https://twitter.com/4nena_",
         "description": "ドット絵風シトリン。",
         "tags": [
             "シトリン",
@@ -62,7 +85,7 @@
     {
         "file": "fukap_citrine.png",
         "author": "FukaP",
-        "authorUrl": "https://twitter.com/fukap_",
+        "authorUrl": "https://twitter.com/4nena_",
         "description": "マフラーを付けたシトリン。",
         "tags": [
             "シトリン",
