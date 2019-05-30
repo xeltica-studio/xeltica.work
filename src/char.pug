@@ -1,6 +1,5 @@
 extends _layout
 
-
 block title
 	title キャラクター - Xeltica
 	+og(
@@ -16,80 +15,53 @@ block script
 	+js("/js/char")
 
 block body
-	header#header.root
-		h1 
-			a(href="/") Xeltica
-			|  / Char
 
-	nav.root
-		.char-selector
-			input.char#s_citrine(type="radio", name="char", checked="")
-			label(for="s_citrine")
-			input.char#s_kaho(type="radio", name="char")
-			label(for="s_kaho")
-		hr
-	main#views.root
-		p 二次創作については
-			a(href="/char/guideline.html") ガイドライン
-			| をご確認ください。
-		#v_citrine.view
+	mixin specification
+		h1 スペック
+		table
+			tr
+				th 身長
+				td {{ profile.height ? profile.height + "cm" : "秘密" }}
+			tr
+				th 体重
+				td {{ profile.weight ? profile.weight + "kg" : "秘密" }}
+			tr(v-if="profile.bust")
+				th バスト
+				td {{ profile.bust }}
+		h1 衣装など
+		p {{ profile.cross }}
+		ul(v-if="profile.reference", v-for="ref in profile.reference")
+			li: a(:href="ref") 参考資料
+		h1 その他の特徴
+		ul
+			li(v-for="point in profile.points") {{ point }}
+
+	#app(v-cloak)
+		header#header.root
+			h1 
+				a(href="/") Xeltica
+			h2 うちの子
+
+		aside
+			p ここでは、私のうちの子を紹介しています。二次創作については
+				a(href="/char/guideline.html") ガイドライン
+				| をご確認ください。
+		nav.root
+			.char-selector
+				.char-wrapper(v-for="(data, name) in chars")
+					input.char(:id="name", type="radio", name="char", checked="", :value="name", v-model="selected")
+					label(:for="name", :style="`background-image: url(${data.avatarUrl})`")
+					.title {{ data.name }}
+			hr
+		main#views.root
 			.char-card
-				img(src="/assets/gallery/mi4_citrine.png", alt="Citrine")
+				.char-side
+					img(:src="profile.avatarUrl", :alt="profile.name")
+					div(v-if="!isMobile")
+						+specification()
 				.char-body
-					h1 シトリン
-					p 本名不詳。4月10日生まれの20歳。
-					p 
-						span.nobr フリーゲームの改造を通して、
-						span.nobr プログラミングについて知る。
-						span.nobr C#を得意言語とする。
-					p 
-						span.nobr 技術の流行への追従は早いが、
-						span.nobr ファッションなどには無頓着。
-						span.nobr 圧倒的インドア派、
-						span.nobr 陰キャラ、
-						span.nobr 猫好き。
-						span.nobr 虫が大の苦手
-					p 
-						span.nobr 高校生のときは読書が趣味と
-						span.nobr 自称していたらしいが、
-						span.nobr 読んでいるのは昔も今も
-						span.nobr 技術書ばかり。
-						span.nobr 本人曰く「ブックカバーしてれば
-						span.nobr 問題ない」。
-					p 
-						span.nobr 普段は冷静だが、
-						span.nobr 好きな分野の話題になると
-						span.nobr 早口になる典型的オタク。
-					p
-						span.nobr 運動はあまりしないため、
-						span.nobr 身体能力が著しく低い。
-					p
-						span.nobr 休日は大抵ゲームに明け暮れる。
-						span.nobr カホに誘われて音楽ゲームも始めたが、
-						span.nobr 苦手らしい。
-		#v_kaho.view
-			.char-card
-				img(src="/assets/gallery/mi4_kaho.png", alt="Kaho")
-				.char-body
-					h1 カホ
-					p 本名「幸田 歌帆」。7月10日生まれの18歳。
-					p 
-						span.nobr 作曲が得意。
-						span.nobr シトリンの作るゲームに
-						span.nobr 曲提供したこともある。
-					p
-						span.nobr ヘッドホンに拘りがあり、
-						span.nobr 使わない時も付けている。
-						span.nobr 本人曰く、つけていないと
-						span.nobr 気が済まないらしい。
-					p
-						span.nobr 音楽ゲームも趣味の一つで、
-						span.nobr 腕前は県内ランキングに載るほど。
-					p 
-						strong 虫も含めて
-						| 動物全般が好き。カブトムシを採って帰宅したときにシトリンに激怒されたことがある。
-					p
-						span.nobr 鍵盤楽器の練習をしているが、
-						span.nobr 苦手なので作曲時は手打ち。
-					p
-						span.nobr 比較的外向的で、友達も多い。
+					h1 {{ profile.name }}
+					p {{ description }}
+					p(v-for="desc in profile.descriptions") {{ desc }}
+					div(v-if="isMobile")
+						+specification()

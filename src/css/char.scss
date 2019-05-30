@@ -3,6 +3,17 @@
 .char-selector {
 	display: block;
 	text-align: left;
+	.char-wrapper {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 8px;
+
+		.title {
+			font-size: 1rem;
+			margin-top: 0.5rem;
+		}
+	}
 	.char {
 
 		display: none;
@@ -11,33 +22,28 @@
 			& + label {
 				border-radius: 50%;
 				box-shadow: 0 0 $shadow-depth-push $shadow;
+				filter: brightness(50%);
+				transform: scale(0.8, 0.8);
+				cursor: default;
 			}
 		}
 		
-		&#s_citrine + label {
-			background-image: url("/assets/gallery/mi4_citrine.png");
-		}
-		&#s_kaho  + label {
-			background-image: url("/assets/gallery/mi4_kaho.png");
-		}
-
 		&:not(:checked) + label:hover {
 			box-shadow: 0 0 $shadow-depth-hover $shadow;
 		}
 
 		& + label {
 			cursor: pointer;
+			transform-origin: 50% 50%;
 			border: none;
-			border-radius: 40%;
+			border-radius: 16px;
 			box-shadow: 0 0 $shadow-depth $shadow;
 			width: 4rem;
 			height: 4rem;
-			margin-right: 1rem;
 			display: inline-block;
 			transition: all 0.2s ease;
 			background-size: cover;
 		}
-
 	}
 }
 
@@ -47,18 +53,55 @@
 	// box-shadow: 0 0 1rem $shadow;
 	padding: 1rem;
 	margin: 2rem 0;
-	display: flex;
-	align-items: flex-start;
+	display: grid;
+	grid-template-columns: 300px auto;
+	gap: 32px;
 
 	img {
-		width: 256px;
-		border-radius: 128px;
+		width: 100%;
+		border-radius: 50%;
 	}
 
 	.char-body {
 		display: block;
-		margin-top: 0.3rem;
-		margin-bottom: 0.3rem;
-		padding-left: 1rem;
+		text-align: left;
+		line-height: 2rem;
+	}
+}
+
+.char-side {
+	text-align: left;
+	padding-left: 8px;
+	font-size: 1rem;
+	img {
+		margin: 0;
+	}
+	h1 {
+		font-weight: bold;
+		font-size: 1.8rem;
+		margin: 0.5rem;
+	}
+
+	* {
+		margin: 1rem;
+	}
+
+	ul {
+		padding-inline-start: 8px;
+	}
+
+	a {
+		margin: 0;
+	}
+	td {
+		padding: 0.5rem;
+	}
+}
+
+
+@media(max-width: 400px){
+	.char-card  {
+	  grid-template-columns: 1fr;
+	  margin: 8px 0;
 	}
 }
