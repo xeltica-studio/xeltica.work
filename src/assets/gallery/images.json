@@ -76,10 +76,20 @@
         "file": "yuut2_citrine.jpg",
         "author": "ゆーうつ",
         "authorUrl": "https://mobile.twitter.com/_ikiruiminasi_",
-        "description": "ドット絵",
+        "description": "ドット絵シトリン。",
         "tags": [
             "シトリン",
             "ドット絵"
+        ]
+    },
+    {
+        "file": "yuut3_citrine.jpg",
+        "author": "ゆーうつ",
+        "authorUrl": "https://mobile.twitter.com/_ikiruiminasi_",
+        "description": "",
+        "tags": [
+            "シトリン",
+            "イラスト"
         ]
     },
     {
@@ -107,7 +117,6 @@
         "file": "mayu_citrine.webp",
         "author": "Mayu",
         "description": "@Citrine@misskey.xyz のアイコンとして使わせていただいていました。",
-        "authorUrl": "https://xeltica.work",
         "tags": [
             "シトリン",
             "アイコン"
@@ -195,7 +204,7 @@
     {
         "file": "nana_citrine.png",
         "author": "Nana",
-        "description": "某所にて絵文字化されています😄",
+        "description": "",
         "tags": [
             "シトリン"
         ]
