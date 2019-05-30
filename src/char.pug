@@ -62,6 +62,7 @@ block body
 				.char-body
 					h1 {{ profile.name }}
 					p {{ description }}
+					p {{ realName }}
 					p(v-for="desc in profile.descriptions") {{ desc }}
 					div(v-if="isMobile")
 						+specification()

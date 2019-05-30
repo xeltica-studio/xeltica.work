@@ -36,6 +36,9 @@ import Axios from "axios";
 				let r = (this.profile.birthday ? this.profile.birthday + "生まれ" : "生年月日不詳") + "の" + (this.profile.age ? this.profile.age + "歳" : "年齢不詳") + "。";
 				return r;
 			},
+			realName() {
+				return `本名は${this.profile.realName ? `「${this.profile.realName}」` : "不明"}。`;
+			},
 		}
 	});
 })();
