@@ -68,7 +68,6 @@ img {
         border-radius: 96px;
         cursor: pointer;
     }
-    margin: 1rem;
 }
 
 .shadowed {
@@ -136,7 +135,7 @@ a {
 .product {
     width: 300px;
     min-height: 360px;
-    margin: 16px 16px 0 0;
+    margin: 8px;
     box-shadow: 0 0 16px #111;
     background-size: cover !important;
     a {
@@ -240,5 +239,9 @@ footer {
     }
     .left {
         margin-left: 0;
+    }
+
+    body {
+        margin: 16px;
     }
 }
