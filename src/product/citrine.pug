@@ -1,0 +1,37 @@
+extends ../_layout
+
+
+block title
+	title Citrine Bot - Xeltica
+	+og(
+		"CitrineBot - Xeltica", 
+		"CitrineBot は、Misskey, Mastodon, Discordなどに対応したbotです。",
+		"bot, シトリン, Citrine, Chatbot, Misskey, Mastodon, Discord, DiscordBot",
+		false
+		)
+
+block body
+	header(style="text-align: left")
+		h1 Citrine Bot
+		p Xeltica うちの娘「シトリン」が、クロスプラットフォームなチャットアシスタントとして登場。現在、
+		ul
+			li Misskey
+			li Mastodon
+			li Discord
+		p をサポートしています。
+
+		p シトリンは、挨拶や簡単な会話、占い、天気予報、検索などができる高機能なアシスタントです。あなたのお役にもきっと立てることでしょう。
+
+		h2 シトリンとつながる
+
+		h3 Misskey, Mastodon で繋がる
+
+		p
+			a(href="https://social.xeltica.work/@Citrine") @Citrine@social.xeltica.work
+			| をリモートフォローして、今すぐメンションを送ろう！
+
+		h3 Discord で繋がる
+
+		p
+			a(href="https://discordapp.com/api/oauth2/authorize?client_id=587521569363066880&permissions=3660864&scope=bot") このラベル
+			| をクリックして、あなたのサーバーに追加しよう！
