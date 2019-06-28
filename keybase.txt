@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/xeltica
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://xeltica.work
+  * I am xeltica (https://keybase.io/xeltica) on keybase.
+  * I have a public key ASCef-vjuSSTR9hSDXc8H3-oj0WHcL8ZEjzIkJPkAxD5LQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010179b6e8d272159c784d399734a557926df53f1dca6e4954716785c408271466180a",
+      "host": "keybase.io",
+      "kid": "01209e7febe3b9249347d8520d773c1f7fa88f458770bf19123cc89093e40310f92d0a",
+      "uid": "9a78a638e19fd9c520dab5547715a919",
+      "username": "xeltica"
+    },
+    "merkle_root": {
+      "ctime": 1561707151,
+      "hash": "1e7005b819210b4fb106ac5f2eb476efccae4ba6da22a3b00b30a5c6f8df481997b4bd7893b5a3514284155c29616aefd94eec771f21365c9e704116f4e0089c",
+      "hash_meta": "da2751fd13153785682385d2ae73116aa82488544dfad7057ab59ceb02cfd7be",
+      "seqno": 5655163
+    },
+    "service": {
+      "entropy": "mRuy4G2adNJR4ZH948oOUX5i",
+      "hostname": "xeltica.work",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.1.0"
+  },
+  "ctime": 1561707170,
+  "expire_in": 504576000,
+  "prev": "854c8d440e8d411f17a9d923c4762c4afcd011ae5a06c9ce6e93316a95cc74a1",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgnn/r47kkk0fYUg13PB9/qI9Fh3C/GRI8yJCT5AMQ+S0Kp3BheWxvYWTESpcCFsQghUyNRA6NQR8XqdkjxHYsSvzQEa5aBsnObpMxapXMdKHEINilx3wQco974pRktrk6/YWLLgRP5YYYQ34XvUlWdq7LAgHCo3NpZ8RAjriQaROozcbmE8VuX8i+OAkEtFbzs+25IL4tFNJowP9XsYPNK79ENgJ1hZthXBe6QBdsKNf5OuBO49RhmTawCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOKOauz2KCP7LNEv1hQ/hKG4SKlnrmU0G2oMipZ5jBSko3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/xeltica
+
+==================================================================
