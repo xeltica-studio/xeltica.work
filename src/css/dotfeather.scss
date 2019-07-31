@@ -4,42 +4,42 @@
 }
 
 body {
-    margin: 1rem 2rem 0 2rem;
+	margin: 1rem 2rem 0 2rem;
 	background: #222;
-    height: 100%;
-    text-align: left;
-    margin-left: 10rem;
+	height: 100%;
+	text-align: left;
+	margin-left: 10rem;
 
-    color: #0f0;
-    text-shadow: 2px 2px 0 #040;
-    font-feature-settings: normal;
-    font-variant-ligatures: none;
-    font-family: "PixelMplus12", monospace;
+	color: #0f0;
+	text-shadow: 2px 2px 0 #040;
+	font-feature-settings: normal;
+	font-variant-ligatures: none;
+	font-family: "PixelMplus12", monospace;
 }
 
 #header h1:before {
-    content: none;
+	content: none;
 }
 
 h1>img {
-    max-width: 60%;
-    min-width: 256px;
-    height: auto;
+	max-width: 60%;
+	min-width: 256px;
+	height: auto;
 }
 
 footer {
-    border: none;
+	border: none;
 }
 
 a {
 	&:link, &:visited {
 		color: #ff0;
 		text-shadow: none;
-        text-decoration-line: underline;
+		text-decoration-line: underline;
 	}
 	&:hover {
 		color: #fff;
-        text-shadow: none;
+		text-shadow: none;
 	}
 
 	&:active {
@@ -51,18 +51,18 @@ a {
 }
 
 pre>code {
-    padding: 0.5rem;
-    display: block;
-    background: #444;
-    color: #fff;
-    text-shadow: none;
-    font-family: "PixelMplus12", monospace;
-    overflow: scroll;
+	padding: 0.5rem;
+	display: block;
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+	font-family: "PixelMplus12", monospace;
+	overflow: scroll;
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        margin-left: 0;
-        text-align: center;
-    }
+	body {
+		margin-left: 0;
+		text-align: center;
+	}
 }

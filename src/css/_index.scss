@@ -1,14 +1,14 @@
 @import "./variables";
 
 body {
-    background-color: $back;
-    color: $fore;
-    text-align: center;
-    font-size: 18px;
-    margin: 4rem;
-    font-feature-settings: "pkna";
-    transition: opacity 0.5s ease;
-    opacity: 1;
+	background-color: $back;
+	color: $fore;
+	text-align: center;
+	font-size: 18px;
+	margin: 4rem;
+	font-feature-settings: "pkna";
+	transition: opacity 0.5s ease;
+	opacity: 1;
 }
 
 
@@ -52,196 +52,196 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    display: block;
-    font-weight: normal;
-    margin: 2rem 0;
+	display: block;
+	font-weight: normal;
+	margin: 2rem 0;
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 img {
-    &#avatar {
-        width: 128px;
-        height: 128px;
-        border-radius: 96px;
-        cursor: pointer;
-    }
+	&#avatar {
+		width: 128px;
+		height: 128px;
+		border-radius: 96px;
+		cursor: pointer;
+	}
 }
 
 .shadowed {
-    box-shadow: 0 0 16px #111;
-    &:hover {
-        color: $back-light;
-    }
+	box-shadow: 0 0 16px #111;
+	&:hover {
+		color: $back-light;
+	}
 }
 
 
 p {
-    margin-top: 1rem 0 0 1rem;
+	margin-top: 1rem 0 0 1rem;
 }
 
 a {
-    text-shadow: 0 0 16px #111;
-    color: $fore;
+	text-shadow: 0 0 16px #111;
+	color: $fore;
 
-    &:hover {
-        color: $fore-light;
-    }
+	&:hover {
+		color: $fore-light;
+	}
 
-    &:active {
-        color: $fore-dark;
-    }
+	&:active {
+		color: $fore-dark;
+	}
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: justify;
-    list-style-type: none;
-    .button a {
-        display: block;
-        width: 32px;
-        height: 32px;
-        font-size: 32px;
-        margin: 1rem;
-    }
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: justify;
+	list-style-type: none;
+	.button a {
+		display: block;
+		width: 32px;
+		height: 32px;
+		font-size: 32px;
+		margin: 1rem;
+	}
 }
 
 .skill {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    width: 140px;
-    .img-wrapper {
-        width: 128px;
-        height: 128px;
-        background: $fore;
-        border-radius: 64px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img {
-            width: 80px;
-            height: 80px;
-        }
-    }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
+	width: 140px;
+	.img-wrapper {
+		width: 128px;
+		height: 128px;
+		background: $fore;
+		border-radius: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 75%;
+			max-height: 75%;
+		}
+	}
 }
 
 .product {
-    width: 300px;
-    min-height: 360px;
-    margin: 8px;
-    box-shadow: 0 0 16px #111;
-    background-size: cover !important;
-    a {
-        color: $back;
-        text-decoration: none;
-        text-shadow: none;
-    }
-    .description {
-        padding: 16px;
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        background: $fore;
-        color: $back;
-        transition: opacity 0.2s ease;
-        h1 {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin: 0.7rem 0;
-        }
-        .tag {
-            font-size: 0.8rem;
-        }
-        p {
-            font-size: 1rem;
-        }
-        &:hover {
-            opacity: 1;
-        }
-    }
+	width: 300px;
+	min-height: 360px;
+	margin: 8px;
+	box-shadow: 0 0 16px #111;
+	background-size: cover !important;
+	a {
+		color: $back;
+		text-decoration: none;
+		text-shadow: none;
+	}
+	.description {
+		padding: 16px;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		background: $fore;
+		color: $back;
+		transition: opacity 0.2s ease;
+		h1 {
+			font-weight: bold;
+			font-size: 1.2rem;
+			margin: 0.7rem 0;
+		}
+		.tag {
+			font-size: 0.8rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
 }
 
 
 
 article {
-    padding-top: 2rem;
+	padding-top: 2rem;
 }
 
 footer {
-    padding-top: 3rem;
+	padding-top: 3rem;
 }
 
 .cards {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-left: 128px;
-    margin-right: 128px;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: 128px;
+	margin-right: 128px;
 }
 
 .card {
-    position: relative;
-    width: 256px;
-    background: $fore-light;
-    text-decoration: none;
-    color: $back-dark;
-    padding: 3rem;
-    margin: 1rem;
-    border-radius: 16px;
-    text-shadow: none;
-    a {
-        color: $back-dark;
-        text-decoration: none;
-        &:hover {
-            color: $back-light;
-        }
-    }
-    h1 {
-        font-weight: bold;
-        margin: 0;
-        font-size: 1.3rem;
-    }
-    * {
-        position: relative;
-        z-index: 10;
-        font-size: 1rem;
-    }
-    i {
-        position: absolute;
-        right: 16px;
-        bottom: 16px;
-        font-size: 128px;
-        color: #ECEFF1;
-    }
+	position: relative;
+	width: 256px;
+	background: $fore-light;
+	text-decoration: none;
+	color: $back-dark;
+	padding: 3rem;
+	margin: 1rem;
+	border-radius: 16px;
+	text-shadow: none;
+	a {
+		color: $back-dark;
+		text-decoration: none;
+		&:hover {
+			color: $back-light;
+		}
+	}
+	h1 {
+		font-weight: bold;
+		margin: 0;
+		font-size: 1.3rem;
+	}
+	* {
+		position: relative;
+		z-index: 10;
+		font-size: 1rem;
+	}
+	i {
+		position: absolute;
+		right: 16px;
+		bottom: 16px;
+		font-size: 128px;
+		color: #ECEFF1;
+	}
 }
 
 .left {
-    text-align: left;
-    margin-left: 128px ;
+	text-align: left;
+	margin-left: 128px ;
 }
 
 .click-to-copy {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-    .cards {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .left {
-        margin-left: 0;
-    }
+	.cards {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.left {
+		margin-left: 0;
+	}
 
-    body {
-        margin: 16px;
-    }
+	body {
+		margin: 16px;
+	}
 }
