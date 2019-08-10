@@ -1,13 +1,14 @@
 extends _layout.pug
 
 block body
-	h1
-		a(href="/") Xeltica
 	h1 404 NOT 
 		span.blink FOUND
 	p この
 		span.blink ページ
-		| はもう存在しません。
+		| は
+		span(style="display: inline-block; transform: rotate(30deg); transform-origin: 10% 100%;") 
+			span(style="font-size: 150%;") 存在
+			| しません！
 
 block title
 	title 404 - Xeltica

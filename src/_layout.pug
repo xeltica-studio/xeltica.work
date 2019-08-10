@@ -19,12 +19,57 @@ html(lang="ja")
 		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
 		block css
 		block head
-	body
+	body(v-cloak)
+		+js("/js/theme")
+		nav#navbar
+			h1.title: a(href="/") Xeltica
+			a(href="/#skills")
+				span.fas.fa-medal.fa-fw
+				small skills
+			a(href="/#products")
+				span.fab.fa-app-store.fa-fw
+				small prod.
+			a(href="/#discography")
+				span.fab.fa-itunes-note.fa-fw
+				small disco.
+			a.pc(href="/#misc")
+				span.fas.fa-bars.fa-fw
+				small misc
+			button.pc#theme-button(onclick="toggleTheme()")
+				span.fas.fa-moon.fa-fw.theme-icon
+			
+			button.mobile.misc(onclick="toggleMisc()")
+				span.fas.fa-bars.fa-fw
+			#misc-menu
+				a.item(href="/gallery.html")
+					span.fas.fa-images.fa-fw
+					| &nbsp;ギャラリー
+				a.item(href="/donation.html")
+					span.fas.fa-hand-holding-usd.fa-fw
+					| &nbsp;寄付
+				a.item(href="/char.html") 
+					span.fas.fa-child.fa-fw
+					| &nbsp;キャラクター
+				a.item(href="/char/guideline.html") 
+					span.fas.fa-lock.fa-fw
+					| &nbsp;ガイドライン
+				p.item 
+					span.fas.fa-address-card.fa-fw
+					| &nbsp;連絡先
+				a.item.child(href="https://twitter.com/Xeltica") Twitter
+				a.item.child(href="https://social.xeltica.work/@Xeltica") Groundpolis
+				a.item.child(href="mailto:xeltica@gmail.com") メール
+				button.item(onclick="toggleTheme()")
+					span.fas.fa-moon.fa-fw.theme-icon
+					| &nbsp;テーマを変更
 		block body
 		#page-top
 			span.fas.fa-arrow-up
 		footer#footer
 			block footer
 			p (C)2018-2019 Xeltica
+				|  - 
+				a(href="#", onclick="resetTheme(); return false;") テーマをリセット
+				a(href="#", onclick="showHelpOfResetTheme(); return false;" style="vertical-align: top; font-size: 16px; margin-left: 4px;") ？
 		block script
 		+js("/js/main")

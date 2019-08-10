@@ -12,9 +12,9 @@ function getScrolled() {
 var topButton = document.getElementById( "page-top" );
 
 //ボタンの表示・非表示
-window.onscroll = function() {
+addEventListener("scroll", () => {
 	( getScrolled() > 30 ) ? topButton.classList.add( "show" ): topButton.classList.remove( "show" );
-};
+});
 
 //トップに移動する関数
 function scrollToTop() {
@@ -40,3 +40,24 @@ document
 			alert(`クリップボードにコピーしました！\n${text}`);
 		});
 	});
+
+addEventListener("load", () => {
+	console.log(location.pathname);
+	if (location.pathname !== "/") {
+		document.getElementById("navbar").classList.add("show");
+	}
+});
+
+const w = (window as any);
+
+w.miscIsShowing = false;
+
+w.toggleMisc = () => {
+	w.miscIsShowing = !w.miscIsShowing;
+	const miscMenu = document.getElementById("misc-menu");
+	if (w.miscIsShowing) {
+		miscMenu.classList.add("show");
+	} else {
+		miscMenu.classList.remove("show");
+	}
+};

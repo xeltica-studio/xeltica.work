@@ -2,3 +2,16 @@
 @import "view";
 @import "form";
 @import "alert";
+
+body {	
+	--fore: #f0f0f0;
+	--fore-light: #ffffff;
+	--fore-dark: #c8c8c8;
+	--back: #242424;
+	--back-light: #363636;
+	--back-dark: #000000;
+	--back-navbar: rgba(24, 24, 24, 0.7);
+	--accent: #FF5722;
+	--accent-light: #FF8A65;
+	--accent-dark: #E64A19;
+}

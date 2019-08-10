@@ -99,7 +99,7 @@
 }
 
 
-@media(max-width: 400px){
+@media(max-width: $mobile){
 	.char-card  {
 	  grid-template-columns: 1fr;
 	  margin: 8px 0;
