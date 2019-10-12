@@ -3,7 +3,6 @@ import Axios from "axios";
 
 (async () => {
 	var chars = (await Axios.get("/assets/chars.json")).data;
-	console.log(chars);
 	new Vue({
 		el: "#app",
 		data: {

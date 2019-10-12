@@ -13,7 +13,7 @@
         "birthday": "4月10日",
         "age": 20,
         "height": 156,
-        "weight": 45,
+        "weight": 47,
         "cross": "自由",
         "bust": "A",
         "points": [
@@ -22,7 +22,7 @@
             "赤目",
             "黒髪ロングストレート(髪は腰ぐらいまである)"
         ],
-        "avatarUrl": "/assets/gallery/fukap6_citrine.jpeg"
+        "avatarUrl": "/assets/char/citrine.png"
     }, 
     "kaho": {
         "name": "カホ",
@@ -38,7 +38,7 @@
         "birthday": "7月10日",
         "age": 18,
         "height": 148,
-        "weight": 45,
+        "weight": 41,
         "cross": "衣装に拘りがあります。",
         "reference": [
             "/assets/gallery/sis_kaho.jpg"
@@ -51,7 +51,7 @@
             "首掛けヘッドフォン",
             "黒髪ポニーテール"
         ],
-        "avatarUrl": "/assets/gallery/mi4_kaho.png"
+        "avatarUrl": "/assets/char/kaho.png"
     },
     "garne": {
         "name": "ガーネ",
@@ -65,17 +65,19 @@
         "birthday": "1月10日",
         "age": 25,
         "height": 162,
-        "weight": 55,
-        "cross": "自由（赤色生地の縦セーターとかが似合うかも。まだ容姿が確定していないです）",
+		"weight": 55,
+		"cross": "暗赤色の縦セーターと、暗緑色のベレー帽を着ています。",
         "bust": "F",
         "points": [
             "赤ブチメガネ",
             "赤目",
             "黒髪ロングストレート",
-            "暗赤色のベレー帽",
+			"暗緑色のベレー帽",
+			"暗赤色の縦セーター",
+			"こちらから見て、口の左にほくろ",
             "羽ペンを携帯している（右手に持っていることが多い）"
         ],
-        "avatarUrl": "/assets/no_image.png"
+        "avatarUrl": "/assets/char/garne.png"
     },
     "reg": {
         "name": "レグ",
@@ -98,6 +100,32 @@
             "ボサボサヘアー",
             "緑色の大きな髪留めリボン"
         ],
-        "avatarUrl": "/assets/gallery/fukap_reg.jpg"
-    }
+        "avatarUrl": "/assets/char/reg.png"
+    },
+    "mitsuki": {
+        "name": "ミツキ",
+        "descriptions": [
+			"ゲームが大好き。引きこもり体質で中学時代は部活も何もせず、お家でゲーム三昧だった。高校デビューのためにと髪を染め、ギャルっぽくなろうとしたものの、頑張って明るく振る舞っている感を隠せずにいるのが悩み。",
+			"シトリン、カホとは、某MMORPGのギルドで知り合った仲間である。その陰キャ体質はシトリンと馬が合うようだが、シトリン同様にカホとは相反するようだ。",
+			"三日月模様が好きな理由は、小さい頃に初めて感動したものが三日月だから。",
+			"得意なゲームはRPG。アクション, シューティング, 音楽ゲームなどは著しく苦手。いつかゲームを作りたいと思っている。",
+			"また、カラオケも趣味のひとつで、人並み以上に歌えることを自負している。しかし、歌う曲は偏りまくっている。"
+        ],
+        "realName": "秋名 海月",
+		"birthday": "7月2日",
+		"age": 17,
+        "height": 154,
+		"weight": 50,
+		"bust": "E",
+        "reference": [
+            "/assets/char/mitsuki_reference.jpeg"
+        ],
+        "points": [
+			"三日月模様の髪飾り",
+			"黒色ベースに赤色アクセントのヘッドセット",
+			"三日月模様のネックレス",
+			"こちらから見て、口の右側に八重歯が生えている"
+        ],
+        "avatarUrl": "/assets/no_image.png"
+	}
 }

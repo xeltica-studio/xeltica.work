@@ -15,7 +15,6 @@ block script
 	+js("/js/char")
 
 block body
-
 	mixin specification
 		h1 スペック
 		table
@@ -28,13 +27,15 @@ block body
 			tr(v-if="profile.bust")
 				th バスト
 				td {{ profile.bust }}
-		h1 衣装など
-		p {{ profile.cross }}
-		ul(v-if="profile.reference", v-for="ref in profile.reference")
-			li: a(:href="ref") 参考資料
-		h1 その他の特徴
-		ul
-			li(v-for="point in profile.points") {{ point }}
+		section(v-if="profile.cross || profile.reference")
+			h1 衣装など
+			p {{ profile.cross }}
+			ul(v-if="profile.reference", v-for="ref in profile.reference")
+				li: a(:href="ref") 参考資料
+		section(v-if="profile.points && profile.points.length > 0")
+			h1 その他の特徴
+			ul
+				li(v-for="point in profile.points") {{ point }}
 
 	#app(v-cloak)
 		header#header.root
