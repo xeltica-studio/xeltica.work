@@ -8,11 +8,11 @@ import Axios from "axios";
 		data: {
 			selected: location.hash ? location.hash.substring(1) : "citrine",
 			chars,
-			isMobile: window.innerWidth < 400,
+			isMobile: window.innerWidth < 680,
 		},
 		methods: {
 			handleResize() {
-				this.isMobile = window.innerWidth < 400;
+				this.isMobile = window.innerWidth < 680;
 			}
 		},
 		created() {
