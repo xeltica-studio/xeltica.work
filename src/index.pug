@@ -124,6 +124,10 @@ block body
 		article#products 
 			h2 PRODUCTS
 			.cards
+				+product("Take Up Jewel Reborn", "#", "ゲーム")
+					p トランジスタ王国のレジスタ街にある孤児院「ハフマンの家」で大切にされてきた宝物を、悪の組織「スパイウェ団」に盗まれてしまった。
+					p 立ち向かうことを決意した主人公は、彼らから宝物を取り返す長い旅に出る...。
+					p 鋭意開発中。
 				+product("Groundpolis", "https://social.xeltica.work", "ウェブアプリ", "assets/products/gp.png")
 					p Groundpolis - グランポリス - は、分散ソーシャルメディア Misskey をベースに開発中の、 Twitter に似たマイクロブログサービスです。
 					p ユーザーをフォローしたり投稿したりはもちろん、ゲームやアンケート作成、ウェブページの作成などもこなします。
@@ -151,6 +155,20 @@ block body
 		article#discography
 			h2 DISCOGRAPHY
 			.cards
+				+record("火種", "./assets/discography/cause.webp")
+					p 自らの変わり果てていたこと、自分の足跡の形の変貌を、気が付けば全ての事実に取り残されていた。今、無意識の罪が背中を這い登る。それでもいい。全てを背負って、覚悟を決め、懺悔の唄を轟かせる時が来ました。
+					p: a(href="https://linkco.re/7m60Hmud") 
+						span.fab.fa-apple.fa-fw
+						span.fab.fa-google-play.fa-fw
+						span.fab.fa-spotify.fa-fw
+						| お使いのサービスで
+				+record("夏色の手紙", "./assets/discography/summer.webp")
+					p 未来に広がる空も、変わらず青く、美しくあることを私は希うのです。
+					p: a(href="https://linkco.re/g8G7bs3s") 
+						span.fab.fa-apple.fa-fw
+						span.fab.fa-google-play.fa-fw
+						span.fab.fa-spotify.fa-fw
+						| お使いのサービスで
 				+record("書見台", "./assets/discography/bookstand.png")
 					p 迷い込んだのだろうか、連れ込まれたのだろうか。
 					p: a(href="https://linkco.re/XHBN0CtU") 
@@ -172,6 +190,8 @@ block body
 						span.fab.fa-bandcamp.fa-fw
 						| Bandcamp で
 				+record("その他...")
+					p 多くの曲を無料公開中！
+						a(href="/songs.html") 行く
 					p SoundCloud では、その他の曲、制作中の楽曲などを公開していたりします。
 						a(href="https://soundcloud.com/xeltica/") 行く
 					p YouTube にミュージックビデオもあります。
@@ -200,6 +220,4 @@ block body
 					h1 連絡先
 					p お仕事の話などはこちらから。
 					ul
-						li: a(href="https://twitter.com/xeltica") Twitter
-						li: a(href="https://social.xeltica.work/@Xeltica") Groundpolis
 						li: a(href="mailto:xeltica@gmail.com") メール
