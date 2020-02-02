@@ -1,17 +1,20 @@
 @import "./variables";
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: $back;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	color: $fore;
 	text-align: center;
 	font-size: 18px;
-	margin: 128px 64px;
+	margin: 80px 32px;
 	font-feature-settings: "pkna";
 	line-height: 150%;
 	transition: opacity 0.5s ease;
 	opacity: 1;
-	scroll-behavior: smooth;
 }
 
 
@@ -75,7 +78,7 @@ img {
 }
 
 .shadowed {
-	box-shadow: 0 0 16px #111;
+	box-shadow: 0 0 2px #111;
 	&:hover {
 		color: $back-light;
 	}
@@ -125,10 +128,11 @@ a {
 	flex-direction: row;
 	align-items: center;
 	padding: 0 32px;
-	border-bottom: 4px solid $back;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 	z-index: 100;
 	background: var(--back-navbar);
 	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 	transform: translateY(-64px);
 	transition: transform 0.2s ease-out;
 	
@@ -235,13 +239,13 @@ a {
 		.img-wrapper {
 			width: 64px;
 			height: 64px;
-			background: #f0f0f0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			img, svg {
 				max-width: 75%;
 				max-height: 75%;
+				filter: drop-shadow(0 0 2px white);
 			}
 		}
 	}
@@ -251,7 +255,7 @@ a {
 	width: 320px;
 	min-height: 320px;
 	margin: 8px;
-	box-shadow: 0 0 16px #111;
+	box-shadow: 0 0 2px #111;
 	background: $white;
 	color: $black;
 	font-size: 14px;
@@ -278,7 +282,7 @@ a {
 	min-height: 320px;
 	position: relative;
 	margin: 8px;
-	box-shadow: 0 0 16px $back-dark;
+	box-shadow: 0 0 2px $back-dark;
 	.background {
 		background-size: cover !important;
 		position: absolute;
@@ -331,15 +335,15 @@ footer {
 	align-items: stretch;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-left: 128px;
-	margin-right: 128px;
+	margin: 0 32px;
 
 	.card {
 		position: relative;
+		box-shadow: 0 0 2px $fore;
+		color: $fore;
+		
 		width: 256px;
-		background: $fore-dark;
 		text-decoration: none;
-		color: $back-dark;
 		padding: 3rem;
 		margin: 1rem;
 		text-shadow: none;
@@ -366,6 +370,7 @@ footer {
 			bottom: 16px;
 			font-size: 128px;
 			color: $fore;
+			opacity: 0.1;
 		}
 		li {
 			text-align: left;

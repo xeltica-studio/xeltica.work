@@ -20,7 +20,6 @@ html(lang="ja")
 		block css
 		block head
 	body(v-cloak)
-		+js("/js/theme")
 		nav#navbar
 			h1.title: a(href="/") Xeltica
 			a(href="/#skills")
@@ -35,8 +34,6 @@ html(lang="ja")
 			a.pc(href="/#misc")
 				span.fas.fa-bars.fa-fw
 				small misc
-			button.pc#theme-button(onclick="toggleTheme()")
-				span.fas.fa-moon.fa-fw.theme-icon
 			
 			button.mobile.misc(onclick="toggleMisc()")
 				span.fas.fa-bars.fa-fw
@@ -59,17 +56,11 @@ html(lang="ja")
 				a.item.child(href="https://twitter.com/Xeltica") Twitter
 				a.item.child(href="https://social.xeltica.work/@Xeltica") Groundpolis
 				a.item.child(href="mailto:xeltica@gmail.com") メール
-				button.item(onclick="toggleTheme()")
-					span.fas.fa-moon.fa-fw.theme-icon
-					| &nbsp;テーマを変更
 		block body
 		#page-top
 			span.fas.fa-arrow-up
 		footer#footer
 			block footer
-			p (C)2018-2019 Xeltica
-				|  - 
-				a(href="#", onclick="resetTheme(); return false;") テーマをリセット
-				a(href="#", onclick="showHelpOfResetTheme(); return false;" style="vertical-align: top; font-size: 16px; margin-left: 4px;") ？
+			p (C)2018-2020 Xeltica
 		block script
 		+js("/js/main")

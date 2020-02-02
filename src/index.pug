@@ -84,24 +84,21 @@ block script
 
 
 block body
-	header
-		button.planet(onclick="toggleTheme()")
-			span.fas.fa-moon.fa-fw.theme-icon
-		img#avatar.shadowed(src="assets/citrine.jpg")
-		h1 Xeltica
+	header.jumbo
+		h1 Xeltica.work
 		p アプリ, ウェブ, ゲーム, ライブラリ開発, 作曲, 映像制作などをする普通の大学生。
 
 		.buttons#buttons
 			.button#twitter
 				a(href="https://twitter.com/xeltica"): span.fab.fa-twitter.fa-fw
-			.button#soundcloud
-				a(href="https://soundcloud.com/Xeltica"): span.fab.fa-soundcloud.fa-fw
+			.button#wordpress
+				a(href="http://blog.xeltica.work"): span.far.fa-newspaper.fa-fw
 			.button#github
 				a(href="https://github.com/xeltica"): span.fab.fa-github.fa-fw
 			.button#youtube
 				a(href="https://www.youtube.com/channel/UCH3I30Y6NrXTNP1kEceRRZQ"): span.fab.fa-youtube.fa-fw
-			.button#wordpress
-				a(href="http://blog.xeltica.work"): span.far.fa-newspaper.fa-fw
+			.button#soundcloud
+				a(href="https://soundcloud.com/Xeltica"): span.fab.fa-soundcloud.fa-fw
 			.button#bandcamp
 				a(href="https://xeltica.bandcamp.com/"): span.fab.fa-bandcamp.fa-fw
 
@@ -115,7 +112,9 @@ block body
 				+skill("node.js", "./assets/skills/nodejs.png", "https://nodejs.org/ja/")
 				+skill("TypeScript", "./assets/skills/ts.svg", "https://www.typescriptlang.org/")
 				+skill("JavaScript", "./assets/skills/js.svg", "https://developer.mozilla.org/ja/docs/Web/JavaScript")
-				+skill("Vue.js", "./assets/skills/vue.svg", "https://vuejs.org/")
+				+skill("Vue.js", "./assets/skills/vue.svg", "https://jp.vuejs.org/")
+				+skill("React.js", "./assets/skills/react.svg", "https://ja.reactjs.org/")
+				+skill("Nuxt.js", "./assets/skills/nuxt.svg", "https://ja.nuxtjs.org/")
 				+skill("HTML5", "./assets/skills/html.svg", "https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5")
 				+skill("CSS3", "./assets/skills/css.svg", "https://developer.mozilla.org/ja/docs/Archive/CSS3")
 				+skill("pixi.js", "./assets/skills/pixi.png", "https://www.pixijs.com/")
@@ -128,7 +127,7 @@ block body
 					p トランジスタ王国のレジスタ街にある孤児院「ハフマンの家」で大切にされてきた宝物を、悪の組織「スパイウェ団」に盗まれてしまった。
 					p 立ち向かうことを決意した主人公は、彼らから宝物を取り返す長い旅に出る...。
 					p 鋭意開発中。
-				+product("Groundpolis", "https://social.xeltica.work", "ウェブアプリ", "assets/products/gp.png")
+				+product("Groundpolis", "https://github.com/xeltica/groundpolis", "ウェブアプリ", "assets/products/gp.png")
 					p Groundpolis - グランポリス - は、分散ソーシャルメディア Misskey をベースに開発中の、 Twitter に似たマイクロブログサービスです。
 					p ユーザーをフォローしたり投稿したりはもちろん、ゲームやアンケート作成、ウェブページの作成などもこなします。
 					p クリックして始める

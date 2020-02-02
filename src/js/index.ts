@@ -1,5 +1,3 @@
-
-
 addEventListener("scroll", () => {
 	// navbar を出したり出さなかったりしろ
 	const navbar = document.getElementById("navbar");
