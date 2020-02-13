@@ -93,10 +93,10 @@ block body
 				a(href="https://twitter.com/xeltica"): span.fab.fa-twitter.fa-fw
 			.button#wordpress
 				a(href="http://blog.xeltica.work"): span.far.fa-newspaper.fa-fw
-			.button#github
-				a(href="https://github.com/xeltica"): span.fab.fa-github.fa-fw
 			.button#youtube
 				a(href="https://www.youtube.com/channel/UCH3I30Y6NrXTNP1kEceRRZQ"): span.fab.fa-youtube.fa-fw
+			.button#github
+				a(href="https://github.com/xeltica"): span.fab.fa-github.fa-fw
 			.button#soundcloud
 				a(href="https://soundcloud.com/Xeltica"): span.fab.fa-soundcloud.fa-fw
 			.button#bandcamp
@@ -154,32 +154,39 @@ block body
 		article#discography
 			h2 DISCOGRAPHY
 			.cards
+				+record("飛行艇", "./assets/discography/airship.png")
+					p Xeltica Music 5th Single.
+					p: a(href="https://linkco.re/ZnGHccF3") 
+						span.fab.fa-apple.fa-fw
+						span.fab.fa-google-play.fa-fw
+						span.fab.fa-spotify.fa-fw
+						| サブスクで
 				+record("火種", "./assets/discography/cause.webp")
-					p 自らの変わり果てていたこと、自分の足跡の形の変貌を、気が付けば全ての事実に取り残されていた。今、無意識の罪が背中を這い登る。それでもいい。全てを背負って、覚悟を決め、懺悔の唄を轟かせる時が来ました。
+					p Xeltica Music 4th Single.
 					p: a(href="https://linkco.re/7m60Hmud") 
 						span.fab.fa-apple.fa-fw
 						span.fab.fa-google-play.fa-fw
 						span.fab.fa-spotify.fa-fw
-						| お使いのサービスで
+						| サブスクで
 				+record("夏色の手紙", "./assets/discography/summer.webp")
-					p 未来に広がる空も、変わらず青く、美しくあることを私は希うのです。
+					p Xeltica Music 3rd Single.
 					p: a(href="https://linkco.re/g8G7bs3s") 
 						span.fab.fa-apple.fa-fw
 						span.fab.fa-google-play.fa-fw
 						span.fab.fa-spotify.fa-fw
-						| お使いのサービスで
+						| サブスクで
 				+record("書見台", "./assets/discography/bookstand.png")
-					p 迷い込んだのだろうか、連れ込まれたのだろうか。
+					p Xeltica Music 2nd Single.
 					p: a(href="https://linkco.re/XHBN0CtU") 
 						span.fab.fa-apple.fa-fw
 						span.fab.fa-google-play.fa-fw
 						span.fab.fa-spotify.fa-fw
-						| お使いのサービスで
+						| サブスクで
 					p: a(href="https://xeltica.bandcamp.com/-") 
 						span.fab.fa-bandcamp.fa-fw
 						| Bandcamp で
 				+record("電子の海", "./assets/discography/denshi.jpg")
-					p あなたが今、見ているものの、裏の世界の物語。あなたを今、見ているものの、裏の世界の物語。
+					p Xeltica Music 1st Single.
 					p: a(href="https://soundcloud.com/xeltica/denshi_no_umi") 
 						span.fab.fa-soundcloud.fa-fw
 						| SoundCloud で
