@@ -22,7 +22,7 @@
             "赤目",
             "黒髪ロングストレート(髪は腰ぐらいまである)"
         ],
-        "avatarUrl": "/assets/char/citrine.png"
+        "avatarUrl": "/assets/no_image.png"
     }, 
     "kaho": {
         "name": "カホ",
@@ -51,7 +51,7 @@
             "首掛けヘッドフォン",
             "黒髪ポニーテール"
         ],
-        "avatarUrl": "/assets/char/kaho.png"
+        "avatarUrl": "/assets/no_image.png"
     },
     "garne": {
         "name": "ガーネ",
@@ -77,7 +77,7 @@
 			"こちらから見て、口の左にほくろ",
             "羽ペンを携帯している（右手に持っていることが多い）"
         ],
-        "avatarUrl": "/assets/char/garne.png"
+        "avatarUrl": "/assets/no_image.png"
     },
     "reg": {
         "name": "レグ",
@@ -100,7 +100,7 @@
             "ボサボサヘアー",
             "緑色の大きな髪留めリボン"
         ],
-        "avatarUrl": "/assets/char/reg.png"
+        "avatarUrl": "/assets/no_image.png"
     },
     "mitsuki": {
         "name": "ミツキ",
