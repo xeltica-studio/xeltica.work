@@ -1,28 +1,20 @@
-﻿# Xeltica Garage
+# xeltica.work
 
-ゼルチカの個人サイト．ついでに静的サイトジェネレーター．
-
-# Supported Technology
-
-- Pug
-- Sass (both SASS and SCSS)
-- TypeScript
-- other file to copy (should locate in `static` directory.
+Xeltica の個人サイト。
 
 ## Build
 
 ```sh
-git clone https://github.com/citringo/xeltica-garage
+git clone https://github.com/citringo/xeltica.work
 
-cd xeltica-garage
-npm install
+cd xeltica.work
+yarn
 
-# 出力ディレクトリを変更するには、 webpack.config.ts の 9 行目を各自弄ること
 
-# 静的サイトのビルド
-npm run build
 # デバッグサーバーの起動
-npm run serve
+yarn build
+# 静的ビルド
+yarn serve
 ```
 
 ## LICENSE
