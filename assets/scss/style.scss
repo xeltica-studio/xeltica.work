@@ -1,0 +1,80 @@
+body {
+  background: #212121;
+  font-family: 'Lato', 'Noto Sans JP', sans-serif;
+  color: #EEEEEE;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+article {
+  padding: 64px 128px; 
+  font-size: 24px;
+  > h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+  }
+}
+
+button, ._button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+
+  &.primary {
+    border-color: $accent1;
+    color: $accent1;
+    &:hover {
+      background: $accent1;
+      color: white;
+    }
+  }
+}
+
+._slide-in {
+  animation: slideIn 1.2s ease-out;
+}
+
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(32px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  article {
+    text-align: center;
+    font-size: 16px;
+    > h1 {
+      font-size: 24px;
+    }
+    padding: 32px 16px;
+  }
+}
