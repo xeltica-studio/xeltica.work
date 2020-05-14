@@ -1,13 +1,21 @@
 <template>
   <div class="links">
-    <a v-for="(link, i) in linksData" :key="i" class="_button primary" :class="{ active: link.__x_visibility__ }" :href="link.href"><font-awesome-icon :icon="link.icon" /></a>
+    <a
+      v-for="(link, i) in linksData"
+      :key="i"
+      class="_button primary"
+      :class="{ active: link.__x_visibility__ }"
+      :href="link.href"
+    >
+      <font-awesome-icon :icon="link.icon" />
+    </a>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { Link } from '@/data/link';
 import { delay } from '@/misc/delay';
+import { Link } from '@/data/links';
 
 @Component
 export default class SnsLinks extends Vue {
@@ -37,15 +45,16 @@ export default class SnsLinks extends Vue {
     display: inline-flex;
     width: 48px;
     height: 48px;
-    font-size: 24px;
     margin: 8px;
+    font-size: 24px;
     transform: translateY(32px);
+    border-radius: 24px;
     opacity: 0;
     transition: opacity 1s ease, transform 1s ease;
     &:hover {
-    color: white;
-    background-color: $accent1;
-    border-color: $accent1;
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
     }
     &.active {
       opacity: 1;

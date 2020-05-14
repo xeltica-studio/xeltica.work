@@ -1,7 +1,12 @@
+@import './colors';
 
-$accent1: #EC407A;
-$accent1-light: #F48FB1;
-$accent2: #26C6DA;
-$accent3: #FFCA28;
-
+$accent: $md-light-blue-700;
+$primary: $md-light-green-500;
+$secondary: $md-blue-grey-500;
+$white: $md-white;
+$black: $md-black;
+$dark-gray: $md-grey-800;
+$gray: $md-grey-700;
+$light-gray: $md-grey-400;
+$disabled-gray: $md-grey-500;
 $barSize: 64px;

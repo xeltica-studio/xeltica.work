@@ -1,7 +1,12 @@
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faTwitter, faYoutube, faBandcamp, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-import { Link } from '@/data/link';
+export interface Link {
+    name: string;
+    icon: IconProp
+    href: string;
+}
 
 export const links: Link[] = [
   {

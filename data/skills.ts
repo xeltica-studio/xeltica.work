@@ -1,22 +1,37 @@
-import { Skill } from './skill';
+const programmingSkill = (name: string, icon: string, percentage: number): Skill => ({ name, icon, percentage });
+const otherSkill = (name: string, icon: string, desc = ''): Skill => ({ name, icon, desc });
 
-const s = (name: string, icon: string, percentage: number): Skill => ({ name, icon, percentage });
+export interface Skill {
+  name: string;
+  icon: string;
+  percentage?: number;
+  desc?: string;
+}
 
-export const skills: Skill[] = [
+export const programmingSkills: Skill[] = [
 
-  s('C#', require('@/assets/skills/csharp.svg'), 100),
-  s('CSS', require('@/assets/skills/css.svg'), 60),
-  s('HTML', require('@/assets/skills/html.svg'), 56),
-  s('JavaScript', require('@/assets/skills/js.svg'), 50),
-  s('Node.js', require('@/assets/skills/nodejs.png'), 70),
-  s('Nuxt.js', require('@/assets/skills/nuxt.svg'), 68),
-  s('Pixi.js', require('@/assets/skills/pixi.png'), 58),
-  s('Pug', require('@/assets/skills/pug.svg'), 84),
-  s('React', require('@/assets/skills/react.svg'), 40),
-  s('Sass(SCSS)', require('@/assets/skills/sass.png'), 84),
-  s('TypeScript', require('@/assets/skills/ts.svg'), 100),
-  s('Unity', require('@/assets/skills/unity.svg'), 60),
-  s('Vue', require('@/assets/skills/vue.svg'), 82),
-  s('Xamarin', require('@/assets/skills/xamarin.svg'), 80)
+  programmingSkill('C#', require('@/assets/skills/csharp.svg'), 100),
+  programmingSkill('CSS', require('@/assets/skills/css.svg'), 42),
+  programmingSkill('HTML', require('@/assets/skills/html.svg'), 87),
+  programmingSkill('JavaScript', require('@/assets/skills/js.svg'), 38),
+  programmingSkill('Node.js', require('@/assets/skills/nodejs.png'), 72),
+  programmingSkill('Nuxt.js', require('@/assets/skills/nuxt.svg'), 75),
+  programmingSkill('Pixi.js', require('@/assets/skills/pixi.png'), 60),
+  programmingSkill('Pug', require('@/assets/skills/pug.svg'), 57),
+  programmingSkill('React', require('@/assets/skills/react.svg'), 40),
+  programmingSkill('Sass(SCSS)', require('@/assets/skills/sass.png'), 84),
+  programmingSkill('TypeScript', require('@/assets/skills/ts.svg'), 100),
+  programmingSkill('Unity', require('@/assets/skills/unity.svg'), 60),
+  programmingSkill('Vue', require('@/assets/skills/vue.svg'), 72),
+  programmingSkill('Xamarin', require('@/assets/skills/xamarin.svg'), 71)
 
-].sort((a, b) => b.percentage - a.percentage);
+].sort((a, b) => (b.percentage || 0) - (a.percentage || 0));
+
+export const otherSkills: Skill[] = [
+
+  otherSkill('Logic Pro X', require('@/assets/skills/logicx.png')),
+  otherSkill('Aseprite', require('@/assets/skills/aseprite.png')),
+  otherSkill('Visual Studio Code', require('@/assets/skills/vscode.png')),
+  otherSkill('Adobe CC', require('@/assets/skills/cc.png'))
+
+].sort((a, b) => (b.percentage || 0) - (a.percentage || 0));

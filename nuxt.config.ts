@@ -6,7 +6,7 @@ const Sass = require('sass');
 const Fiber = require('fibers');
 
 const nuxtConfig: Configuration = {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */

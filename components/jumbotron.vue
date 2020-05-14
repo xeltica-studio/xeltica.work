@@ -3,7 +3,8 @@
     <div class="jumbotron-inner">
       <h1>Xeltica</h1>
       <p>
-        ソフトウェア開発、DTM、ゲームなどいろいろしているけど、<br>簡単に言えば創作が好き！そんな学生をしています。
+        ソフトウェア開発、作曲、編曲、ゲーム、料理などいろいろやってはいるけれど、
+        ひとことで言うならば創作が好き、そんな学生を営んでいます。
       </p>
       <sns-links :links="links" />
       <div class="buttons">
@@ -48,15 +49,6 @@ export default class Jumbotron extends Vue {
     background: rgba(#212121, 0.45);
     justify-content: center;
 
-    > h1 {
-      margin: 0;
-      font-size: 56px;
-    }
-
-    > p {
-      font-size: 24px;
-    }
-
     > .buttons {
       display: flex;
       margin-top: 32px;
@@ -72,12 +64,6 @@ export default class Jumbotron extends Vue {
   .jumbotron {
     > .jumbotron-inner {
       padding: $barSize 32px;
-      > h1 {
-        font-size: 32px;
-      }
-      > p {
-        font-size: 16px;
-      }
     }
   }
 }
