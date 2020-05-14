@@ -8,10 +8,10 @@
       </p>
       <sns-links :links="links" />
       <div class="buttons">
-        <nuxt-link to="/contact" class="_button primary xd-slide-in">
+        <nuxt-link to="/contact.html" class="xd-button primary xd-slide-in">
           仕事を依頼する
         </nuxt-link>
-        <nuxt-link to="/donation" class="_button xd-slide-in">
+        <nuxt-link to="/donation.html" class="xd-button xd-slide-in">
           寄付
         </nuxt-link>
       </div>

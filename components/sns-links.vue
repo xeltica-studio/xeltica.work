@@ -3,7 +3,7 @@
     <a
       v-for="(link, i) in linksData"
       :key="i"
-      class="_button primary"
+      class="xd-button primary"
       :class="{ active: link.__x_visibility__ }"
       :href="link.href"
     >
