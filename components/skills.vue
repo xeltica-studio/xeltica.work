@@ -26,7 +26,7 @@
         </div>
       </li>
     </ul>
-    <button v-if="isMobile && collapsed" class="inline" @click="collapsed = false">
+    <button v-if="isMobile && collapsed" class="display-inline" @click="collapsed = false">
       もっと見る
     </button>
   </article>

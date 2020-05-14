@@ -111,7 +111,7 @@ a, .link {
 .px-auto { padding-left: auto; padding-right: auto; }
 .py-auto { padding-top: auto; padding-bottom: auto; }
 
-@for $v from -5 to 5 {
+@for $v from -5 through 5 {
   $size: $v * 8px;
   .ma-#{$v} { margin: $size; }
   .ml-#{$v} { margin-left: $size; }
@@ -130,7 +130,7 @@ a, .link {
   .py-#{$v} { padding-top: $size; padding-bottom: $size; }
 }
 
-._slide-in {
+.xd-slide-in {
   animation: slideIn 1s ease-out;
 }
 
@@ -151,10 +151,9 @@ figure {
   padding: 0;
 }
 
-@each $mode in block, inline, flex, grid, inline-block, inline-flex  {
-  .#{$mode} { display: $mode; }
+@each $mode in none, block, inline, flex, grid, inline-block, inline-flex  {
+  .display-#{$mode} { display: $mode; }
 }
-.inline { display: inline; }
 
 @media screen and (min-width: 901px) {
   .hide-on-pc {
@@ -172,4 +171,43 @@ figure {
   .hide-on-mobile {
     display: none !important;
   }
+}
+
+@for $i from -18 through 18 {
+  .xd-tilt-#{$i * 5} {
+    display: inline-block;
+    transform: rotateZ($i * 5deg);
+  }
+}
+
+@keyframes blink {
+  0% { opacity: 1 }
+  10% { opacity: 1 }
+  12% { opacity: 0 }
+  14% { opacity: 1 }
+  20% { opacity: 1 }
+  21% { opacity: 0 }
+  39% { opacity: 0 }
+  40% { opacity: 1 }
+  48% { opacity: 1 }
+  49% { opacity: 0 }
+  50% { opacity: 1 }
+  54% { opacity: 1 }
+  55% { opacity: 0 }
+  56% { opacity: 1 }
+  85% { opacity: 1 }
+  89% { opacity: 0 }
+  95% { opacity: 1 }
+}
+
+.xd-big {
+  font-size: 2rem;
+}
+
+.xd-small {
+  font-size: 0.5rem;
+}
+
+.xd-blink {
+  animation: blink 2s infinite linear;
 }

@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <button v-if="collapsed" class="hide-on-pc hide-on-tablet ma-1 inline" @click="collapsed = false">
+    <button v-if="collapsed" class="hide-on-pc hide-on-tablet ma-1 display-inline" @click="collapsed = false">
       もっと見る
     </button>
   </article>
