@@ -2,6 +2,11 @@
 
 ._article, footer {
   padding: 64px 128px;
+  &._top {
+    background: $md-grey-900;
+    margin-top: $barSize;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -14,4 +19,12 @@
   ._article, footer {
     text-align: center;
   }
+}
+
+.page-enter-active, .page-leave-active {
+  transition: all .2s ease-out
+}
+.page-enter, .page-leave-active {
+  transform: translateY(32px);
+  opacity: 0;
 }

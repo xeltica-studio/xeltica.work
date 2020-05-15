@@ -76,6 +76,7 @@ export default class Jumbotron extends Vue {
 .skills {
   background: $md-light-blue-700;
   > .xd-cards {
+      margin-left: 0;
     > .xd-card {
       display: flex;
       width: 96px;
@@ -133,8 +134,8 @@ export default class Jumbotron extends Vue {
       @media screen and (max-width: 640px) {
         cursor: default;
         width: 100%;
-        margin-left: 48px;
-        margin-right: 48px;
+        margin-left: 24px;
+        margin-right: 24px;
         text-align: left;
         > .desc {
           margin-left: 8px;

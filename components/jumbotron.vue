@@ -1,10 +1,9 @@
 <template>
   <header class="jumbotron">
     <div class="jumbotron-inner">
-      <h1>Xeltica</h1>
+      <h1>Xeltica.work</h1>
       <p>
-        ソフトウェア開発、作曲、編曲、ゲーム、料理などいろいろやってはいるけれど、
-        ひとことで言うならば創作が好き、そんな学生を営んでいます。
+        ソフトウェア開発、作曲、ゲーム、料理など...創作好きな学生です。
       </p>
       <sns-links :links="links" />
       <div class="buttons">
@@ -21,8 +20,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
-import SnsLinks from '@/components/sns-links.vue';
 
+import SnsLinks from '@/components/sns-links.vue';
 import { links } from '@/data/links';
 
 @Component({

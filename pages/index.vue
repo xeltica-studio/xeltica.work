@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <x-jumbotron />
     <x-skills />
     <x-products />
@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
+import { MetaInfo } from 'vue-meta';
 import XJumbotron from '@/components/jumbotron.vue';
 import XSkills from '@/components/skills.vue';
 import XProducts from '@/components/products.vue';
@@ -26,9 +27,5 @@ import XFooter from '@/components/footer.vue';
   }
 })
 export default class Index extends Vue {
-
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

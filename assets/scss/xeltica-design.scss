@@ -11,6 +11,7 @@ html {
   @media screen and (max-width: 640px) {
     font-size: 15px;
   }
+  font-feature-settings: "palt";
 }
 
 body {
@@ -21,6 +22,22 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+dl {
+  > dt {
+    font-weight: bold;
+  }
+  > dd {
+    margin-left: 2rem;
+    @media screen and (max-width: 640px) {
+      margin-left: 0;
+    }
+  }
 }
 
 h1 { font-size: 2.5rem; }
@@ -37,6 +54,7 @@ button, .xd-button {
   border: 1px solid white;
   background: transparent;
   border-radius: 2px;
+  font-size: 1rem;
   color: $white;
   padding: 8px 16px;
   text-decoration: none;
@@ -57,6 +75,11 @@ button, .xd-button {
   }
 }
 
+ul, ol {
+  margin-left: 32px;
+  margin-bottom: 1rem;
+}
+
 a, .link {
   text-decoration: none;
   color: $primary;
@@ -70,6 +93,7 @@ a, .link {
   background: $md-grey-800;
   color: $md-grey-100;
   border-radius: 2px;
+  overflow: hidden;
 
   h1 { font-size: 2rem; }
   h2 { font-size: 1.5rem; }
@@ -210,4 +234,17 @@ figure {
 
 .xd-blink {
   animation: blink 2s infinite linear;
+}
+
+img, .xd-responsive {
+  max-width: 100%;
+}
+
+.centerized {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }

@@ -1,11 +1,10 @@
 <template>
   <div>
-    <nav class="bar" :class="{ skeleton }">
+    <nav v-if="$route.path !== '/'" class="bar" :class="{ skeleton }">
       <h1>
-        <nuxt-link v-if="$route.path !== '/'" to="/">
+        <nuxt-link to="/">
           Xeltica.work
         </nuxt-link>
-        <span v-else>Xeltica.work</span>
       </h1>
     </nav>
     <nuxt />
@@ -26,6 +25,8 @@ export default class Default extends Vue {
       this.$nextTick(() => {
         this.updateState();
       });
+    } else {
+      this.skeleton = false;
     }
   }
 
@@ -74,6 +75,10 @@ export default class Default extends Vue {
   > h1 {
       font-size: 1.5rem;
       margin: auto auto auto 0;
+
+      @media screen and (max-width: 640px) {
+        margin: auto;
+      }
     }
 
   > .right {
@@ -83,5 +88,27 @@ export default class Default extends Vue {
       margin-right: 8px;
     }
   }
+}
+
+.v-enter {
+  transform: translate(-100px, 0);
+  opacity: 0;
+}a
+.v-enter-to {
+  opacity: 1;
+}
+.v-enter-active {
+  transition: all 1s 0s ease;
+}
+.v-leave {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.v-leave-to {
+  transform: translate(100px, 0);
+  opacity: 0;
+}
+.v-leave-active {
+  transition: all 1s 0s ease;
 }
 </style>
