@@ -56,6 +56,7 @@ const nuxtConfig: Configuration = {
     '@nuxtjs/style-resources',
     'nuxt-fontawesome'
   ],
+
   transition: {
     name: 'page',
     mode: 'out-in'
@@ -75,6 +76,10 @@ const nuxtConfig: Configuration = {
         }
       };
     }
+  },
+
+  generate: {
+    fallback: true
   }
 };
 
