@@ -27,12 +27,12 @@ export const links: Link[] = [
   {
     name: 'GitHub',
     href: 'https://github.com/Xeltica',
-    icon: faSoundcloud
+    icon: faGithub
   },
   {
     name: 'SoundCloud',
     href: 'https://soundcloud.com/Xeltica',
-    icon: faGithub
+    icon: faSoundcloud
   },
   {
     name: 'Bandcamp',
