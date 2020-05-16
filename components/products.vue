@@ -42,31 +42,31 @@ export default class Product extends Vue {
   private products: IProduct[] = [
     {
       title: 'DotFeather',
-      description: '2D ゲームに必要な機能、高い拡張性、シンプルな API を備えたゲームエンジン。',
+      description: '2D ゲームに必要な機能、高い拡張性、シンプルな API を備えた次世代のゲームエンジン。',
       link: '/product/dotfeather.html',
       wip: true
     },
     {
       title: 'BotBone',
-      description: 'Chatbot を気軽に作成できるフレームワーク。少ないコードで、多くのSNSに展開。',
+      description: 'Chatbot を気軽に作成できるフレームワーク。対応する全ての SNS で、同じモジュールが動作します。',
       link: '/product/botbone.html',
       wip: true
     },
     {
       title: 'Groundpolis',
-      description: '楽しさ、新しさに重きを置いた、次世代のマイクロブログ。新天地を今すぐ体験。',
+      description: 'Misskey ベースの、楽しさ、新しさに重きを置いた、次世代のマイクロブログ。新天地を今すぐ体験しよう。',
       externalLink: 'https://groundpolis.app',
       linkString: '公式サーバーを見る'
     },
     {
       title: 'RainyTune',
-      description: '標準 MIDI 音源を読み込み、視覚的に再生。滴る雨粒に癒やされませんか？',
+      description: '標準 MIDI 音源を読み込み、視覚的に再生。滴る雨粒が奏でる音色に、あなたも癒やされませんか。',
       link: '/product/rainytune.html',
       wip: true
     },
     {
       title: 'PaperStock',
-      description: '組織向け、完全無料、オンプレミス型プライベート Wiki エンジン。',
+      description: '組織向け、完全無料のオンプレミス型 プライベート Wiki エンジン。知見を書き溜め、共有しよう。',
       link: '/product/rainytune.html',
       footer: '鋭意開発中'
     }
