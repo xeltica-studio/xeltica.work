@@ -15,7 +15,7 @@ html {
 
 body {
   background: $black;
-  font-family: 'Lato', 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   color: $white;
 }
 
@@ -77,6 +77,9 @@ button, .xd-button {
 ul, ol {
   margin-left: 32px;
   margin-bottom: 1rem;
+  > ul, > ol {
+    margin-bottom: 0;
+  }
 }
 
 a, .link {
@@ -86,6 +89,13 @@ a, .link {
   &:hover {
     opacity: 0.7;
   }
+}
+
+code {
+  border-radius: 2px;
+  color: #0f0;
+  background: #000;
+  padding: 8px;
 }
 
 .xd-card {
@@ -233,6 +243,10 @@ figure {
 
 .xd-blink {
   animation: blink 2s infinite linear;
+}
+
+.xd-fluid {
+  width: 100%;
 }
 
 img, .xd-responsive {

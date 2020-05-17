@@ -6,7 +6,7 @@ const Sass = require('sass');
 const Fiber = require('fibers');
 
 const nuxtConfig: Configuration = {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -19,7 +19,7 @@ const nuxtConfig: Configuration = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap' }
     ]
   },
   /*
