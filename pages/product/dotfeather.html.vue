@@ -118,10 +118,13 @@
 
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
+import { MetaInfo } from 'vue-meta';
 import { faPaintBrush, faVolumeUp, faFilm, faStar } from '@fortawesome/free-solid-svg-icons';
+
 import ExternalLink from '@/components/external-link.vue';
 import XFooter from '@/components/footer.vue';
 import XFeatureCard from '@/components/products/dotfeather/feature-card.vue';
+import { generateMeta } from '~/misc/generate-meta';
 
 @Component({
   components: {
@@ -135,6 +138,13 @@ export default class Jumbotron extends Vue {
   private faVolumeUp = faVolumeUp;
   private faFilm = faFilm;
   private faStar = faStar;
+
+  meta (): MetaInfo {
+    return {
+      title: 'DotFeather',
+      meta: [...generateMeta('DotFeather', 'パワフルを、シンプルに。令和時代の2Dゲームエンジン。')]
+    };
+  }
 }
 </script>
 
