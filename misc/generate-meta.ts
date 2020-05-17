@@ -7,19 +7,14 @@ export function generateMeta (title?: string, description?: string) {
   const t = title ? `${title} - xeltica.work` : 'xeltica.work';
   return [
     { hid: 'description', name: 'description', content: d },
-    { property: 'twitter:card', content: 'summary' },
-    { property: 'twitter:title', content: t },
-    { property: 'twitter:site', content: twitterAuthor },
-    { property: 'twitter:creator', content: twitterAuthor },
-    { property: 'twitter:description', content: d },
+    { hid: 'twitter:card', property: 'twitter:card', content: 'summary' },
+    { hid: 'twitter:site', property: 'twitter:site', content: twitterAuthor },
+    { hid: 'twitter:creator', property: 'twitter:creator', content: twitterAuthor },
+    { hid: 'og:title', property: 'og:title', content: t },
+    { hid: 'og:description:', property: 'og:description', content: d },
+    { hid: 'og:type:', property: 'og:type', content: 'website' },
     {
-      property: 'twitter:image',
-      content: favicon
-    },
-    { property: 'og:title', content: t },
-    { property: 'og:description', content: d },
-    { property: 'og:type', content: 'website' },
-    {
+      hid: 'og:image',
       property: 'og:image',
       content: favicon
     }
