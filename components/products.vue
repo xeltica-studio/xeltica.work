@@ -43,8 +43,7 @@ export default class Product extends Vue {
     {
       title: 'DotFeather',
       description: '2D ゲームに必要な機能、高い拡張性、シンプルな API を備えた次世代のゲームエンジン。',
-      link: '/product/dotfeather.html',
-      wip: true
+      link: '/product/dotfeather.html'
     },
     {
       title: 'BotBone',

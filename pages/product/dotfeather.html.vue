@@ -89,7 +89,17 @@
     </article>
     <article id="work" class="_article">
       <h1>採用事例</h1>
-      <p>DotFeather 開発チームは、DotFeather を用いて作られたゲーム作品を募集しています！あなたの作品をこのページに掲載しませんか？</p>
+      <p>DotFeather 開発チームは、DotFeather を用いて作られた作品を募集しています！あなたの作品をこのページに掲載しませんか？</p>
+    </article>
+    <article id="donation" class="_article">
+      <h1>開発者へのサポート</h1>
+      <p>
+        DotFeather は永久に無料で、ロイヤリティフリーでご利用頂ける、自由なソフトウェアです。
+        開発者に月イチのチョコレートを恵んでくれたら...もっと素敵なゲームエンジンに成長するかもしれません。
+      </p>
+      <external-link class="xd-button display-inline-flex primary" href="https://www.patreon.com/Xeltica">
+        Pateron で寄付する
+      </external-link>
     </article>
     <article id="download" class="_article">
       <h1>ダウンロード</h1>
