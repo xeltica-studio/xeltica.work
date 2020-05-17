@@ -54,7 +54,7 @@ import { generateMeta } from '../misc/generate-meta';
 
 @Component
 export default class Guideline extends Vue {
-  meta (): MetaInfo {
+  head (): MetaInfo {
     return {
       title: '二次創作ガイドライン',
       meta: [...generateMeta('二次創作ガイドライン', 'Xeltica 作品の二次利用に関するガイドライン。')]

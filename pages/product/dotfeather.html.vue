@@ -139,7 +139,7 @@ export default class Jumbotron extends Vue {
   private faFilm = faFilm;
   private faStar = faStar;
 
-  meta (): MetaInfo {
+  head (): MetaInfo {
     return {
       title: 'DotFeather',
       meta: [...generateMeta('DotFeather', 'パワフルを、シンプルに。令和時代の2Dゲームエンジン。')]

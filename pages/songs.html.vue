@@ -87,7 +87,7 @@ export default class Songs extends Vue {
     };
   }
 
-  meta (): MetaInfo {
+  head (): MetaInfo {
     return {
       title: '楽曲配布',
       meta: [...generateMeta('楽曲配布', 'Xeltica Music の楽曲を続々、無料配布しています。')]

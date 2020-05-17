@@ -62,7 +62,7 @@ import ExternalLink from '@/components/external-link.vue';
   }
 })
 export default class Donation extends Vue {
-  meta (): MetaInfo {
+  public head (): MetaInfo {
     return {
       title: '寄付',
       meta: [...generateMeta('寄付')]

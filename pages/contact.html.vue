@@ -36,7 +36,7 @@ import XFooter from '@/components/footer.vue';
   }
 })
 export default class Contact extends Vue {
-  meta (): MetaInfo {
+  head (): MetaInfo {
     return {
       title: '仕事上の連絡先',
       meta: [...generateMeta('仕事上の連絡先')]
