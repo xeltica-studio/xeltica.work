@@ -1,5 +1,5 @@
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter, faYoutube, faBandcamp, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter, faYoutube, faBandcamp, faSoundcloud, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface Link {
@@ -38,5 +38,10 @@ export const links: Link[] = [
     name: 'Bandcamp',
     href: 'https://xeltica.bandcamp.com/',
     icon: faBandcamp
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/xeltica/',
+    icon: faInstagram
   }
 ];
