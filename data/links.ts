@@ -16,7 +16,7 @@ export const links: Link[] = [
   },
   {
     name: 'Blog',
-    href: 'https://blog.xeltica.work',
+    href: 'https://note.com/xeltica',
     icon: faNewspaper
   },
   {
