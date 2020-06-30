@@ -16,6 +16,7 @@ export const programmingSkills: Skill[] = [
   programmingSkill('JavaScript', require('@/assets/skills/js.svg'), 38),
   programmingSkill('Node.js', require('@/assets/skills/nodejs.png'), 72),
   programmingSkill('Nuxt.js', require('@/assets/skills/nuxt.svg'), 75),
+  programmingSkill('Firebase', require('@/assets/skills/firebase.png'), 67),
   programmingSkill('Pixi.js', require('@/assets/skills/pixi.png'), 60),
   programmingSkill('Pug', require('@/assets/skills/pug.svg'), 57),
   programmingSkill('React', require('@/assets/skills/react.svg'), 40),

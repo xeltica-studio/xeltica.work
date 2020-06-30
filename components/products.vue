@@ -10,9 +10,9 @@
         <div class="footer">
           <span v-if="p.footer" v-text="p.footer " />
           <span v-else-if="p.wip">ページは工事中です。</span>
-          <nuxt-link v-else-if="p.link" :to="p.link" v-text="p.linkString || '詳しく見る…'" />
+          <nuxt-link v-else-if="p.link" :to="p.link" v-text="p.linkString || '詳しく見る'" />
           <external-link v-else-if="p.externalLink" :href="p.externalLink" target="_blank">
-            {{ p.linkString || '詳しく見る…' }}
+            {{ p.linkString || '詳しく見る' }}
           </external-link>
         </div>
       </div>
@@ -52,22 +52,28 @@ export default class Product extends Vue {
       wip: true
     },
     {
+      title: 'ひとりすきー',
+      description: 'SNS に疲れたあなたへ。独り言を気兼ねなく書ける、まったくあたらしい匿名マイクロブログ。',
+      externalLink: 'https://hitorisskey.xeltica.work',
+      linkString: '試してみる'
+    },
+    {
       title: 'Groundpolis',
       description: 'Misskey ベースの、楽しさ、新しさに重きを置いた、次世代のマイクロブログ。新天地を今すぐ体験しよう。',
       externalLink: 'https://groundpolis.app',
       linkString: '公式サーバーを見る'
     },
     {
-      title: 'RainyTune',
-      description: '標準 MIDI 音源を読み込み、視覚的に再生。滴る雨粒が奏でる音色に、あなたも癒やされませんか。',
-      link: '/product/rainytune.html',
-      wip: true
-    },
-    {
       title: 'PaperStock',
       description: '組織向け、完全無料のオンプレミス型 プライベート Wiki エンジン。知見を書き溜め、共有しよう。',
       link: '/product/rainytune.html',
       footer: '鋭意開発中'
+    },
+    {
+      title: 'RainyTune',
+      description: '標準 MIDI 音源を読み込み、視覚的に再生。滴る雨粒が奏でる音色に、あなたも癒やされませんか。',
+      link: '/product/rainytune.html',
+      wip: true
     }
 
   ];
