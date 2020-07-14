@@ -9,6 +9,12 @@ export interface Discography {
 
 export const discographies = [
   {
+    imgsrc: require('@/assets/discography/hsm.jpg'),
+    title: '氷雨',
+    description: '7th single.',
+    tunecore: 'BGeee7qy'
+  },
+  {
     imgsrc: require('@/assets/discography/sacred_fire.png'),
     title: '聖火',
     description: '6th single.',

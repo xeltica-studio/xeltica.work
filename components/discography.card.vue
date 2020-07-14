@@ -7,7 +7,7 @@
     </div>
     <div class="footer">
       <external-link v-if="discography.tunecore" :href="'https://linkco.re/' + discography.tunecore">
-        お使いのサービスで入手
+        サブスク配信から
       </external-link>
       <external-link v-if="discography.bandcamp" :href="'https://xeltica.bandcamp.com/' + discography.bandcamp">
         BandCampで購入
