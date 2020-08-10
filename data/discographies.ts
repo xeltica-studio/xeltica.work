@@ -42,7 +42,6 @@ export const discographies = [
     imgsrc: require('@/assets/discography/bookstand.png'),
     title: '書見台',
     description: '2nd single.',
-    tunecore: 'XHBN0CtU',
     bandcamp: '-'
   },
   {
