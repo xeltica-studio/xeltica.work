@@ -74,8 +74,13 @@ export default class Product extends Vue {
       description: '標準 MIDI 音源を読み込み、視覚的に再生。滴る雨粒が奏でる音色に、あなたも癒やされませんか。',
       link: '/product/rainytune.html',
       wip: true
-    }
-
+    },
+    {
+      title: 'みす廃あらーと',
+      description: '1日の Misskey での活動を集計、深夜0時に自動投稿する Misskey 連携アプリ。',
+      externalLink: 'https://misshaialert.xeltica.work',
+      linkString: '試してみる'
+    },
   ];
 }
 
