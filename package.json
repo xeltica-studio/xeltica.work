@@ -18,10 +18,13 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "@nuxt/typescript-runtime": "^0.4.6",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@types/prismjs": "^1.16.1",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-property-decorator": "^2.7.2",
-    "sanitize.css": "^11.0.0"
+    "prismjs": "^1.21.0",
+    "sanitize.css": "^11.0.0",
+    "vue-prism-component": "^1.2.0"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",

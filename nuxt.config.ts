@@ -42,6 +42,7 @@ const nuxtConfig: Configuration = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/prism'
   ],
   /*
   ** Nuxt.js dev-modules

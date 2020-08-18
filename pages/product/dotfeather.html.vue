@@ -22,7 +22,6 @@
         DotFeather は、2D グラフィックのゲームを作る為の、最も良いアプローチです。
         グラフィック、オーディオ、インプットと、ゲームを作るのに必要最低限な機能を、わかりやすくシンプルな API で用意しました。
       </p>
-      <h2>DotFeather の特徴</h2>
       <div class="cards">
         <div class="xd-card">
           <div class="body">
@@ -54,6 +53,11 @@
           </div>
         </div>
       </div>
+    </article>
+
+    <article id="code" class="_article">
+      <h1>コード例</h1>
+      <prism language="csharp" :code="code"/>
     </article>
 
     <article id="features" class="_article">
@@ -90,6 +94,10 @@
     <article id="work" class="_article">
       <h1>採用事例</h1>
       <p>DotFeather 開発チームは、DotFeather を用いて作られた作品を募集しています！あなたの作品をこのページに掲載しませんか？</p>
+
+      <external-link class="xd-button display-inline-flex primary" :href="`mailto:xeltica@gmail.com?subject=${encodeURI('DotFeather 採用事例への掲載希望')}`">
+        メールで掲載を希望する
+      </external-link>
     </article>
     <article id="donation" class="_article">
       <h1>開発者へのサポート</h1>
@@ -119,6 +127,7 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator';
 import { MetaInfo } from 'vue-meta';
+import Prism from 'vue-prism-component'
 import { faPaintBrush, faVolumeUp, faFilm, faStar } from '@fortawesome/free-solid-svg-icons';
 
 import ExternalLink from '@/components/external-link.vue';
@@ -128,6 +137,8 @@ import { generateMeta } from '~/misc/generate-meta';
 
 @Component({
   components: {
+    Prism,
+
     ExternalLink,
     XFooter,
     XFeatureCard
@@ -138,6 +149,22 @@ export default class Jumbotron extends Vue {
   private faVolumeUp = faVolumeUp;
   private faFilm = faFilm;
   private faStar = faStar;
+
+  private code = `using DotFeather;
+
+public class Game : GameBase
+{
+  public Game() : base(640, 480, "", 60, false, true)
+  {
+    Print("Hello, world!");
+  }
+
+  static void Main()
+  {
+    new Game().Run();
+  }
+}
+`;
 
   head (): MetaInfo {
     return {
