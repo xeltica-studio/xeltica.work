@@ -19,7 +19,7 @@ export const programmingSkills: Skill[] = [
   programmingSkill('Firebase', require('@/assets/skills/firebase.png'), 67),
   programmingSkill('Pixi.js', require('@/assets/skills/pixi.png'), 60),
   programmingSkill('Pug', require('@/assets/skills/pug.svg'), 57),
-  programmingSkill('React', require('@/assets/skills/react.svg'), 40),
+  programmingSkill('React', require('@/assets/skills/react.svg'), 80),
   programmingSkill('Sass(SCSS)', require('@/assets/skills/sass.png'), 84),
   programmingSkill('TypeScript', require('@/assets/skills/ts.svg'), 100),
   programmingSkill('Unity', require('@/assets/skills/unity.svg'), 60),
