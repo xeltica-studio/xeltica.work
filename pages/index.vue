@@ -3,18 +3,17 @@
     <x-jumbotron />
     <x-skills />
     <x-products />
-    <x-discography />
     <x-footer />
   </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'nuxt-property-decorator';
-import XJumbotron from '@/components/jumbotron.vue';
-import XSkills from '@/components/skills.vue';
-import XProducts from '@/components/products.vue';
-import XDiscography from '@/components/discography.vue';
-import XFooter from '@/components/footer.vue';
+import { Vue, Component } from "nuxt-property-decorator";
+import XJumbotron from "@/components/jumbotron.vue";
+import XSkills from "@/components/skills.vue";
+import XProducts from "@/components/products.vue";
+import XDiscography from "@/components/discography.vue";
+import XFooter from "@/components/footer.vue";
 
 @Component({
   components: {
@@ -22,9 +21,8 @@ import XFooter from '@/components/footer.vue';
     XSkills,
     XProducts,
     XDiscography,
-    XFooter
-  }
+    XFooter,
+  },
 })
-export default class Index extends Vue {
-}
+export default class Index extends Vue {}
 </script>
