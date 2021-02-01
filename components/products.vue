@@ -80,7 +80,7 @@ export default class Product extends Vue {
       description: '1日の Misskey での活動を集計、深夜0時に自動投稿する Misskey 連携アプリ。',
       externalLink: 'https://misshaialert.xeltica.work',
       linkString: '試してみる'
-    },
+    }
   ];
 }
 

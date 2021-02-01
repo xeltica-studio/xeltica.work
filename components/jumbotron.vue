@@ -5,22 +5,24 @@
       <p>ソフトウェア開発、作曲、ゲーム、料理など...創作好きな学生です。</p>
       <sns-links :links="links" />
       <div class="buttons">
-        <nuxt-link to="/donation.html" class="xd-button primary xd-slide-in">寄付</nuxt-link>
+        <nuxt-link to="/donation.html" class="xd-button primary xd-slide-in">
+          寄付
+        </nuxt-link>
       </div>
     </div>
   </header>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "nuxt-property-decorator";
+import { Vue, Component } from 'nuxt-property-decorator';
 
-import SnsLinks from "@/components/sns-links.vue";
-import { links } from "@/data/links";
+import SnsLinks from '@/components/sns-links.vue';
+import { links } from '@/data/links';
 
 @Component({
   components: {
-    SnsLinks,
-  },
+    SnsLinks
+  }
 })
 export default class Jumbotron extends Vue {
   private readonly links = links;

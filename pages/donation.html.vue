@@ -11,15 +11,6 @@
       </p>
       <div class="xd-cards">
         <div class="xd-card">
-          <img src="~assets/kyash.png" alt="kyash qr" class="media" />
-          <div class="body">
-            <h1>Kyash</h1>
-          </div>
-          <div class="footer">
-            <a href="kyash://qr/u/3702122165913462930">Kyash アプリを開く</a>
-          </div>
-        </div>
-        <div class="xd-card">
           <div class="body">
             <h1>欲しい物</h1>
             <p>Amazon 欲しい物リストを公開しています。</p>
@@ -48,23 +39,23 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "nuxt-property-decorator";
-import { MetaInfo } from "vue-meta";
-import { generateMeta } from "../misc/generate-meta";
-import XFooter from "@/components/footer.vue";
-import ExternalLink from "@/components/external-link.vue";
+import { Vue, Component } from 'nuxt-property-decorator';
+import { MetaInfo } from 'vue-meta';
+import { generateMeta } from '../misc/generate-meta';
+import XFooter from '@/components/footer.vue';
+import ExternalLink from '@/components/external-link.vue';
 
 @Component({
   components: {
     XFooter,
-    ExternalLink,
-  },
+    ExternalLink
+  }
 })
 export default class Donation extends Vue {
-  public head(): MetaInfo {
+  public head (): MetaInfo {
     return {
-      title: "寄付",
-      meta: [...generateMeta("寄付")],
+      title: '寄付',
+      meta: [...generateMeta('寄付')]
     };
   }
 }

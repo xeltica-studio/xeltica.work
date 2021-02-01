@@ -1,5 +1,5 @@
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter, faYoutube, faBandcamp, faSoundcloud, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface Link {

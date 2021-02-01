@@ -25,7 +25,7 @@
         src="~assets/products/df-example1.png"
         class="display-block mx-auto"
         style="width: 752px; margin-top: -14rem"
-      />
+      >
       <p>
         DotFeather は、2D
         グラフィックのゲームを作る為の、最も良いアプローチです。
@@ -167,20 +167,20 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "nuxt-property-decorator";
-import { MetaInfo } from "vue-meta";
-import Prism from "vue-prism-component";
+import { Vue, Component } from 'nuxt-property-decorator';
+import { MetaInfo } from 'vue-meta';
+import Prism from 'vue-prism-component';
 import {
   faPaintBrush,
   faVolumeUp,
   faFilm,
-  faStar,
-} from "@fortawesome/free-solid-svg-icons";
+  faStar
+} from '@fortawesome/free-solid-svg-icons';
 
-import ExternalLink from "@/components/external-link.vue";
-import XFooter from "@/components/footer.vue";
-import XFeatureCard from "@/components/products/dotfeather/feature-card.vue";
-import { generateMeta } from "~/misc/generate-meta";
+import ExternalLink from '@/components/external-link.vue';
+import XFooter from '@/components/footer.vue';
+import XFeatureCard from '@/components/products/dotfeather/feature-card.vue';
+import { generateMeta } from '~/misc/generate-meta';
 
 @Component({
   components: {
@@ -188,8 +188,8 @@ import { generateMeta } from "~/misc/generate-meta";
 
     ExternalLink,
     XFooter,
-    XFeatureCard,
-  },
+    XFeatureCard
+  }
 })
 export default class Jumbotron extends Vue {
   private faPaintBrush = faPaintBrush;
@@ -213,15 +213,15 @@ public class Game : GameBase
 }
 `;
 
-  head(): MetaInfo {
+  head (): MetaInfo {
     return {
-      title: "DotFeather",
+      title: 'DotFeather',
       meta: [
         ...generateMeta(
-          "DotFeather",
-          "パワフルを、シンプルに。令和時代の2Dゲームエンジン。"
-        ),
-      ],
+          'DotFeather',
+          'パワフルを、シンプルに。令和時代の2Dゲームエンジン。'
+        )
+      ]
     };
   }
 }
