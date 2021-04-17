@@ -2,7 +2,7 @@
   <header class="jumbotron">
     <div class="jumbotron-inner">
       <h1>Xeltica.work</h1>
-      <p>ソフトウェア開発、作曲、ゲーム、料理など...創作好きな学生です。</p>
+      <p>ソフトウェア開発、作曲、ゲームなどいろいろしている、ただの会社員です。</p>
       <sns-links :links="links" />
       <div class="buttons">
         <nuxt-link to="/donation.html" class="xd-button primary xd-slide-in">
