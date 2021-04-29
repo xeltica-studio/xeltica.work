@@ -1,6 +1,8 @@
 <template>
   <article class="_article _top">
     <h1>楽曲配布</h1>
+    <p>現在、楽曲の配布を中止しています。</p>
+<!--
     <p>Xeltica Music の楽曲を続々、無料配布しています。</p>
     <article id="tos">
       <h1>利用規約</h1>
@@ -68,6 +70,7 @@
         </external-link>
       </p>
     </article>
+-->
   </article>
 </template>
 
