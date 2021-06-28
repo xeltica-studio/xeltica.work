@@ -22,7 +22,7 @@
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-property-decorator": "^2.7.2",
-    "prismjs": "^1.21.0",
+    "prismjs": "^1.24.0",
     "sanitize.css": "^11.0.0",
     "vue-prism-component": "^1.2.0"
   },
