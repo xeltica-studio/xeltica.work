@@ -77,7 +77,7 @@ export const App = () => {
               <a href="https://github.com/Xeltica" target="_blank" rel="noopener noreferrer" className="btn primary social-icon" style={{'--primary': '#333'} as any}>
                 <i className="bi bi-github" />
               </a>
-              <a href="mailto://xeltica@gmail.com" className="btn social-icon">
+              <a href="mailto:xeltica@gmail.com" className="btn social-icon">
                 <i className="bi bi-envelope-fill" />
               </a>
             </div>
@@ -135,10 +135,10 @@ export const App = () => {
         </div>
         <div css={[misshaiStyle, parallaxBackgroundStyle]}>
           <Article className="container">
-            <h1>ミス廃あらーと</h1>
-            <p>ついついSNSをやりすぎてしまう人もいるでしょう。ミス廃あらーとは、1日の投稿数、フォロー・フォロワー数の増減を確認できるMisskey用の連携サービスです。</p>
-            <p>登録はカンタンなので、今すぐMisskey中毒になってないか確認しましょう！</p>
-            <a href="//misshaialert.xeltica.work" target="_blank" rel="noreferrer noopener" className="btn primary">
+            <h1>Misskey Tools</h1>
+            <p>Misskeyをもっと効果的に。様々な機能を持った、Misskeyのためのオールインワンツール。</p>
+            <p>いますぐ登録して、Misskeyアカウントを管理しましょう。</p>
+            <a href="//misskey.tools" target="_blank" rel="noreferrer noopener" className="btn primary">
               はじめる <Small>外部サイトが開きます</Small>
             </a>
           </Article>
