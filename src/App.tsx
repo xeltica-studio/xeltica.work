@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useMemo } from 'react';
-import Typewriter from 'typewriter-effect';
-
-import { hobbies } from './data/hobbies';
-import { aboutMeHistory } from './data/history';
-
-import { 
+import styled from '@emotion/styled';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import React, { useEffect, useMemo, useState } from 'react';
+import 'xeltica-ui/dist/css/xeltica-ui.min.css';
+import './style.scss';
+import {
   Article,
   Chevron,
   dotFeatherStyle,
@@ -16,17 +14,24 @@ import {
   misshaiStyle,
   parallaxBackgroundStyle,
   profileCardMobileStyle,
-  profileCardStyle,
-  Small,
-  xelticaMcStyle
+  profileCardStyle, xelticaMcStyle
 } from './styles';
+import XelticaSymbol from './XelticaSymbol';
 
-import 'xeltica-ui/dist/css/xeltica-ui.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import './style.scss';
+const SkillList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  gap: 12px;
 
-const strings = hobbies.map(h => '趣味: ' + h);
-const engineerAge = new Date().getFullYear() - 2011;
+  > li {
+    padding: 4px 8px;
+    border-radius: var(--radius);
+    background: var(--panel);
+    box-shadow: 0 1px 4px var(--shadow-color);
+  }
+`;
 
 export const App = () => {
   const [ width, setWidth ] = useState(document.documentElement.clientWidth);
@@ -46,29 +51,40 @@ export const App = () => {
   return (
     <>
       <header css={[headerStyle, parallaxBackgroundStyle]}>
-        <div className="hero container text-center">
+        <div className={`hero ${isMobile ? '' : 'container'} text-center`}>
+          <XelticaSymbol style={{fontSize: '6rem', fill: 'var(--white)', filter: 'drop-shadow(0 2px 8px var(--black))', marginBottom: '24px'}} />
           <h1>Xeltica Studio</h1>
-          <h2>
-            <Typewriter options={{
-              strings,
-              loop: true,
-              autoStart: true,
-            }}/>
-          </h2>
-          <p>広く浅く、時々深く。ものづくりから自堕落生活まで、様々な活動をしています。</p>
+          <p>Xelticaにしか作れないものを。</p>
+          <div className="flex f-center" style={{flexWrap: 'wrap', gap: 12}}>
+            <a href="https://twitter.com/xeltica" target="_blank" rel="noopener noreferrer" className="btn primary" style={{'--primary': '#1DA1F2'} as any}>
+              <i className="bi bi-twitter mr-1" />
+              Twitter
+            </a>
+            <a href="https://blog.xeltica.work" target="_blank" rel="noopener noreferrer" className="btn primary" style={{'--primary': '#21759b'} as any}>
+              <i className="bi bi-newspaper mr-1" />
+              Blog
+            </a>
+            <a href="https://www.youtube.com/channel/UCEJpWNY5kqXLREmX7FjLzyg" target="_blank" rel="noopener noreferrer" className="btn primary" style={{'--primary': '#CD201F'} as any}>
+              <i className="bi bi-youtube mr-1" />
+              YouTube
+            </a>
+          </div>
           <Chevron className="bi bi-chevron-down"/>
         </div>
       </header>
-      <Header className="mt-4 shadow-3" id="about">ABOUT ME</Header>
+      <Header className="mt-4 shadow-3" id="about">MEMBER</Header>
       <Article className="container vstack">
         <div className="card shadow-3" css={isMobile ? profileCardMobileStyle : profileCardStyle}>
           <div className="icon clickable">
             <img src="/icon.png" alt="icon" className="shadow-3" />
           </div>
-          <div className="body pa-4">
-            <h1 style={{fontSize: '2.5rem'}}>Xeltica</h1>
-            <p>横浜生まれ・横浜育ちのウェブエンジニア。エビフライ、焼きサーモンが好き。在宅でウェブエンジニアをしながら、スキマ時間にいろいろな活動をしている。</p>
-            <p>エンジニア歴{engineerAge}年。</p>
+          <div className="body pa-4 profile">
+            <h1>海老瀬るちか</h1>
+            <p>
+              横浜生まれ・横浜育ちのウェブエンジニア。
+              エビフライ、焼きサーモンが好き。在宅でウェブエンジニアをしながら、スキマ時間にいろいろな活動をしている。
+            </p>
+            <p>エンジニア歴{new Date().getFullYear() - 2011}年。</p>
 
             <div className="hstack" style={{lineHeight: 1}}>
               <a href="https://twitter.com/adxlw" target="_blank" rel="noopener noreferrer" className="btn primary social-icon" style={{'--primary': '#1DA1F2'} as any}>
@@ -77,34 +93,14 @@ export const App = () => {
               <a href="https://github.com/Xeltica" target="_blank" rel="noopener noreferrer" className="btn primary social-icon" style={{'--primary': '#333'} as any}>
                 <i className="bi bi-github" />
               </a>
-              <a href="mailto:xeltica@gmail.com" className="btn social-icon">
+              <a href="mailto:xeltica@gmail.com" className="btn primary social-icon">
                 <i className="bi bi-envelope-fill" />
               </a>
             </div>
           </div>
         </div>
-        <table className="table fluid shadow-3">
-          <thead>
-            <tr>
-              <th>年</th>
-              <th>内容</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              aboutMeHistory.map(h => (
-                <tr>
-                  <td>{h.date}</td>
-                  <td>{h.content}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
       </Article>
-      <Header className="mt-4 shadow-3" id="projects">
-        PROJECTS
-      </Header>
+      <Header className="mt-4 shadow-3" id="projects">PROJECTS</Header>
       <div className="bg-black vstack">
         <div css={[hitorisskeyStyle, parallaxBackgroundStyle]}>
           <Article className="container">
@@ -118,7 +114,7 @@ export const App = () => {
               何かを発信したいけれど、邪魔はされたくない。もしあなたがそう思うなら、ひとりすきーは、きっとあなたの「居場所」になるでしょう。
             </p>
             <a href="//hitorisskey.xeltica.work" target="_blank" rel="noreferrer noopener" className="btn primary">
-              はじめる <Small>外部サイトが開きます</Small>
+              はじめる <i className="bi bi-box-arrow-up-right"></i>
             </a>
           </Article>
         </div>
@@ -127,9 +123,9 @@ export const App = () => {
             <h1>XelticaMC</h1>
             <h2>集え、全てのマインクラフター。</h2>
             <p>建築、生活、バトル、ミニゲーム、収集、どんな遊び方も楽しめるMinecraftサーバー。独自プラグインで様々な楽しさを提供。期間限定イベントもあります。</p>
-            <p>約10名のスタッフと共に運営中。</p>
+            <p>約20名のスタッフと共に運営中。</p>
             <a href="//craft.xeltica.work" target="_blank" rel="noreferrer noopener" className="btn primary">
-              詳しく <Small>外部サイトが開きます</Small>
+              詳しく <i className="bi bi-box-arrow-up-right"></i>
             </a>
           </Article>
         </div>
@@ -139,7 +135,7 @@ export const App = () => {
             <p>Misskeyをもっと効果的に。様々な機能を持った、Misskeyのためのオールインワンツール。</p>
             <p>いますぐ登録して、Misskeyアカウントを管理しましょう。</p>
             <a href="//misskey.tools" target="_blank" rel="noreferrer noopener" className="btn primary">
-              はじめる <Small>外部サイトが開きます</Small>
+              はじめる <i className="bi bi-box-arrow-up-right"></i>
             </a>
           </Article>
         </div>
@@ -148,19 +144,39 @@ export const App = () => {
             <h1>DotFeather</h1>
             <p>DotFeatherは、C#と2Dゲームのための、軽量で汎用的なゲームエンジンです。</p>
             <a href="//github.com/Xeltica/DotFeather" target="_blank" rel="noreferrer noopener" className="btn primary">
-              詳しく <Small>GitHubが開きます</Small>
+              詳しく <i className="bi bi-box-arrow-up-right"></i>
             </a>
           </Article>
         </div>
       </div>
-      <Header className="mt-4 shadow-3" id="donate">
-        DONATE
-      </Header>
+      <Header className="mt-4 shadow-3" id="skill-map">SKILL</Header>
+      <Article className="container pt-5 text-125">
+        <aside className="mb-2">
+          <div className="text-green">● プログラミング言語</div>
+          <div className="text-orange">● フレームワーク</div>
+          <div className="text-skyblue">● その他</div>
+        </aside>
+        <SkillList>
+          <li className="text-green">TypeScript</li>
+          <li className="text-orange">React.js</li>
+          <li className="text-orange">Vue.js</li>
+          <li className="text-green">SCSS</li>
+          <li className="text-green">C#</li>
+          <li className="text-orange">Unity</li>
+          <li className="text-green">Kotlin</li>
+          <li className="text-green">Java</li>
+          <li className="text-orange">Spigot</li>
+          <li className="text-orange">MinecraftForge</li>
+          <li className="text-skyblue">ドット絵</li>
+          <li className="text-skyblue">UIデザイン</li>
+        </SkillList>
+      </Article>
+      <Header className="mt-4 shadow-3" id="donate">DONATE</Header>
       <Article className="container pt-5">
         <p>Xelticaに寄付したい方のために、様々な手段を用意しています。</p>
         <p>頂いた寄付は、様々な活動のための支えとして使わせていただきます。</p>
         <div className="row mt-5 pt-5">
-          <div className="col-12 tab-4 pa-2">
+          <div className="col-4 col-12-sm">
             <div className="card shadow-6" style={{height: '100%'}}>
               <div className="body">
                 <h1>Kyash QR</h1>
@@ -168,7 +184,7 @@ export const App = () => {
               <img src="kyash.png" alt="Kyash QR" className="fluid"/>
             </div>
           </div>
-          <div className="col-12 tab-4 pa-2">
+          <div className="col-4 col-12-sm">
             <div className="card shadow-6" style={{height: '100%'}}>
               <div className="body">
                 <h1>Patreon</h1>
@@ -179,7 +195,7 @@ export const App = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 tab-4 pa-2">
+          <div className="col-4 col-12-sm">
             <div className="card shadow-6" style={{height: '100%'}}>
               <div className="body">
                 <h1>欲しい物リスト</h1>
@@ -193,7 +209,7 @@ export const App = () => {
         </div>
       </Article>
       <Footer>
-        (C)2021 Xeltica Studio. All rights reserved.
+        (C)2021-2022 Xeltica Studio. All rights reserved.
       </Footer>
     </>
   );

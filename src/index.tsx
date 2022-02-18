@@ -7,6 +7,12 @@ import reportWebVitals from './reportWebVitals';
 
 document.documentElement.style.scrollBehavior = 'smooth';
 
+const q = window.matchMedia('(prefers-color-scheme: dark)');
+const sync = (isDark: boolean) => document.body.classList[isDark ? 'add' : 'remove']('dark');
+
+sync(q.matches);
+q.addListener(e => sync(e.matches));
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

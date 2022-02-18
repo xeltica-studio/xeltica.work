@@ -111,6 +111,10 @@ overflow: visible;
   }
 }
 
+> .profile {
+  padding-top: 64px !important;
+}
+
 > .body {
   flex: 1;
 }
